@@ -1,0 +1,304 @@
+/*Set a font*/
+html,h2,h3,h4,h5,h6,a,span,div{
+ font-family: "Quicksand", 'Hiragino Sans GB', Tahoma, Helvetica, Arial, sans-serif;
+ display:block;
+}
+
+h1 {
+  font-family: 'Hiragino Sans GB', sans-serif;
+  font-weight: 700;
+  color: #568e30;
+}
+
+h1.text-center {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+a:link, a:visited {
+  /* color: #008b96; */
+}
+
+/* define navbar appearance */
+.navbar{
+  background:white;
+}
+
+.nav-link,.navbar-brand{
+  color: grey;
+  cursor: pointer;
+  padding:8px;
+}
+
+.nav-link{
+  margin-right: 1em !important;}
+
+.nav-link:hover, .navbar-brand:hover{
+  background-color:#2b441e;
+  color: #f4f4f4;
+  border-radius: 5px;
+}
+
+.navbar-collapse{
+  justify-content: flex-end;}
+
+.navbar-toggler{
+  /* background:#215772 !important; */
+  /* border: solid 1px; */
+}
+
+.fa-bars{
+  margin-top:5px;
+  color:grey;
+}
+
+/*header style*/
+.header{
+ background-image: url("finalCover.jpeg");
+ background-attachment: fixed;
+ background-size: cover;
+ background-position: center;
+ text-align: center;
+ vertical-align: middle;
+}
+
+.overlay{
+ position: absolute;
+ min-height: 104%;
+ min-width: 100%;
+ left: 0;
+ top: 0;
+ bottom:0;
+ background: rgba(244, 244, 244, 0.60);
+}
+
+
+.description{
+    position: relative;
+    top: 0%;
+    left:2%;
+    /* margin: auto; */
+    padding: 10em;
+}
+
+.description.row{
+  padding: 20% 0;
+}
+
+.description img {
+  width:200px;
+  height: auto;
+}
+
+
+.description h1{
+ color:#414042;
+ font-weight: bold;
+ text-align: left;
+ font-size:300%;
+ margin: 20px 0;
+}
+
+.description p{
+ color:#1c1c1c;
+ font-size: 20px;
+ text-align: left;
+ line-height: 1.5;
+}
+
+.description h6{
+ color:#1c1c1c;
+ text-align: left;
+}
+
+.arrow{
+  color: black;
+  height: 1000%;
+  margin: auto;
+}
+
+.description button{
+ background:#317191;
+ color:#fff;
+ font-size:15px;
+ margin: 70px 0;
+ box-shadow: 2px 2px 4px #383838;
+}
+
+.description .btn a{
+  color:white;
+}
+
+.description .btn a:hover{
+  color:#d8d8d8;
+  text-decoration: none;
+}
+
+/*styling the About section*/
+.about{
+ margin: 10px 15%;
+ position: relative;
+}
+.about h1{
+  margin: 2em 0 1em;
+}
+
+.about .desc{
+ padding: 0 2em;
+ border-left:2px solid #414042;
+}
+.about .desc h3{
+ color: #414042;
+ transition: color 1s;
+}
+
+.about .desc h3:hover{
+ color: #AC3B61;
+}
+.about .desc p{
+ line-height:2;
+ color:#888;
+}
+
+.about a{
+  display: inline;
+  /* color: #1b75bc; */
+}
+
+/* news */
+.news{
+  margin: 0 10%;
+}
+
+.news h1{
+ margin: 2em 0 1em;
+}
+
+.news a{
+  display: inline;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+
+/* papers */
+.papers {
+ margin: 10px 10%;
+ position: relative;
+}
+
+.papers h1{
+  margin: 2em 0 1em;
+  font-size: 220%;
+}
+
+.papers h4{
+ margin: 0px 0px 30px;
+ font-weight: bold;
+ color: grey;
+ font-size: 180%;
+}
+.papers h5 {
+  font-family: 'Hiragino Sans GB', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.papers h6 {
+  font-size: 14px;
+}
+
+.paper p{
+  font-size:15px;
+  margin: 0 0 6px;
+  /* font-family: 'Hiragino Sans GB', sans-serif; */
+}
+
+.paper span, .about span{
+  font-family: 'Hiragino Sans GB', sans-serif !important;
+  display: inline;
+  /* color: red; */
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.papers a{
+  display: inline;
+}
+
+.btn {
+font-family: 'Hiragino Sans GB', sans-serif;
+ padding: 2px 4px !important;
+ height: 20px !important;
+ font-size: 12px !important;
+ font-weight: 800 !important;
+}
+
+.btn-primary.arxiv{
+  background: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-primary.circ{
+  background: #28A745;
+  border-color: #28A745;
+}
+
+.btn-primary.github{
+  background: #343a40;
+  border-color: #343a40;
+}
+
+
+.btn-outline-primary.arxiv{
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.btn-outline-primary.circ{
+  border-color: #28A745;
+  color: #28A745;
+}
+
+.btn-outline-primary.github{
+  border-color: #343a40;
+  color: #343a40;
+}
+
+.btn-outline-primary.blog{
+  border-color: #00adbb;
+  color: #00adbb;
+}
+
+.btn-outline-primary.talk{
+  border-color: #6a52ab;
+  color: #6a52ab;
+}
+
+.btn-outline-primary.slides{
+  border-color: #f2bc57;
+  color: #f2bc57;
+}
+
+/*footer*/
+.featurette-divider{
+  margin:30px 10% 40px 10%;
+}
+
+.footer a{
+  color:grey;
+  text-decoration: underline;
+}
+
+.flex-container{
+  margin:30px 10%;
+  display:flex;
+  justify-content: space-between;
+}
+
+.flex-container .footer_link{
+  color: #317191;
+}

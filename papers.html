@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="ch">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" >
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Work+Sans:400,700,800&display=swap" rel="stylesheet">
+
+    <!-- this might need to go away -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!--JS-->
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+
+    <base target="_blank">
+
+    <title>Steven Wu</title>
+  </head>
+
+  <!-- navbar -->
+ <nav class="navbar navbar-expand-lg fixed-top">
+   <a href="index.html#" target="_self">
+    <img src="Images/ZSW.jpg" class="rounded-circle" style="height:50px; margin:10px">
+    </a>
+   <a class="navbar-brand" href="index.html#" target="_self">STEVEN WU</a>
+    <button id='btn1' class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon">
+      <i class="fas fa-bars vertical center"></i>
+    </span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav mr-4">
+        <li class="nav-item">
+          <a class="nav-link" data-value="about" href="index.html#about" target="_self">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-value="news" href="index.html#news" target="_self">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " data-value="papers" href="papers.html" target="_self">Papers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " data-value="teaching" href="index.html#teaching" target="_self">Teaching</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " data-value="services" href="index.html#services" target="_self">Services</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+
+<body>
+
+  <img src="images/banner.jpg" class= "responsive">
+
+  <!--Papers-->
+    <div class="papers wow fadeIn" id="papers">
+      <h1 class="text-center">PUBLICATIONS</h1>
+
+       <div class="row">
+	 <div class="col-md-2">
+	   <h4> </h4>
+	 </div>
+	 <div class="col-md-10">
+	   <p>(Unless specified otherwise, authors are listed in alphabetical order. * indicates equal contribution.) </p><br><br>
+	 </div>
+	</div>
+
+<!-- Manuscripts -->
+   <div class="row wow slideInUp">
+     <div class="col-md-2">
+       <h4 style="font-size:140%">Preprints</h4>
+     </div>
+     <div class="col-md-10">
+
+      <div class = "paper">
+	<h5>Distributed Training with Heterogeneous Data: Bridging Median- and Mean-Based Algorithms</h5>
+         <p>
+	   <a href="https://scholar.google.com/citations?user=M0ki5ZgAAAAJ&hl=en">Xiangyi Chen*</a>,
+	   Tiancong Chen*,
+	   <a href="http://people.ece.umn.edu/users/sun00111/">Haoran Sun</a>,
+           <a href="http://www.zstevenwu.com" target="_blank">Z. S. W.</a>,
+            and  <a href="http://people.ece.umn.edu/~mhong/mingyi.html">Mingyi Hong</a> (contributional order) <br> </p>
+	 <a class="btn btn-outline-primary arxiv" href="https://arxiv.org/abs/1906.01736">arXiv</a>
+	 <br><br>
+      </div>
+
+      <div class="paper">
+	<h5>Private Hypothesis Selection</h5>
+         <p>
+         with <a href="https://www.bu.edu/cs/profiles/mark-bun/">Mark Bun</a>,
+         <a href="http://www.gautamkamath.com/">Gautam Kamath</a>, and
+         <a href="http://www.thomas-steinke.net/">Thomas Steinke</a><br></p>
+         <a  class="btn btn-outline-primary arxiv" href="https://arxiv.org/abs/1905.13229">arXiv</a>
+	 <br> <br>
+      </div>
+
+
+      <div class="paper">
+         <h5>Eliciting and Enforcing Subjective Individual Fairness</h5>
+	 <p>
+         with  <a href="https://www.cis.upenn.edu/~chrjung/">Chris Jung</a>,
+         <a href="https://www.cis.upenn.edu/~mkearns/">Michael Kearns</a>,
+         <a href="https://sethstatistics.wordpress.com/">Seth Neel</a>,
+         <a href="http://www.cis.upenn.edu/~aaroth">Aaron Roth</a>, and
+         Logan Stapleton<br></p>
+	 <a class="btn btn-outline-primary arxiv" href="https://arxiv.org/abs/1905.10660">arXiv</a>
+	 <br> <br>
+      </div>
+
+
+      <div class="paper">
+	<h5>Equal Opportunity in Online Classification with Partial Feedback</h5>
+	<p>
+          with
+         <a href="http://www.cs.huji.ac.il/~katrina/">Yahav Bechavod</a>,
+         <a href="http://www.cs.huji.ac.il/~katrina/">Katrina Ligett</a>,
+         <a href="http://www.cis.upenn.edu/~aaroth/">Aaron Roth</a>,
+         and
+         <a href="http://www.bowaggoner.com/">Bo Waggoner</a><br></p>
+	<a class="btn btn-outline-primary arxiv" href="https://arxiv.org/abs/1902.02242">arXiv</a><br> <br>
+      </div>
+
+
+      <div class="paper">
+	<h5>Locally Private Gaussian Estimation</h5>
+	<p>
+         with
+         <a href="http://www.cis.upenn.edu/~majos/">Matthew Joseph</a>,
+         <a href="https://users.cs.duke.edu/~kulkarni/">Janardhan Kulkarni</a>,
+         and
+         <a href="https://sites.google.com/seas.upenn.edu/jiemingmao/">Jieming Mao</a><br></p>
+	<a class="btn btn-outline-primary arxiv" href="https://arxiv.org/abs/1811.08382">arXiv</a><br> <br>
+      </div>
+
+      <div class="paper">
+	<h5>Incentivizing Exploration with Unbiased Histories</h5>
+	<p>
+         with
+         <a href="http://www.immorlica.com">Nicole Immorlica</a>,
+         <a href="https://sites.google.com/seas.upenn.edu/jiemingmao/">Jieming Mao</a>,
+         and
+         <a href="https://www.microsoft.com/en-us/research/people/slivkins/"> Alex Slivkins</a><br></p>
+	<a class="btn btn-outline-primary arxiv" href="https://arxiv.org/abs/1811.06026">arXiv</a><br> <br>
+      </div>
+
+
+
+
+      </div>
+  </div>
+
+
+       <!-- 2019 papers -->
+       <div class="row wow slideInUp">
+         <div class="col-md-2">
+           <h4>2019</h4>
+         </div>
+         <div class="col-md-10">
+
+           <div class = "paper">
+             <h5>Privacy-Preserving Generative Deep Neural Networks Support Clinical Data Sharing</h5>
+
+             <p> <a href="https://www.linkedin.com/in/beaulieujones/">Brett Beaulieu-Jones</a>, <a href="http://www.zstevenwu.com/">Z. S. W.</a>, <a href="http://www.greenelab.com/">Chris Williams</a>, Ran Lee, Sanjeev Bhavnani, James Byrd, and <a href="http://www.greenelab.com/">Casey Greene</a> (contributional order)<br>
+
+              <i><span> Circulation: Cardiovascular Quality and Outcomes 2019; 12</span> </i></p>
+             <a class="btn btn-outline-primary arxiv" href="http://www.biorxiv.org/content/early/2017/07/05/159756" role="button">bioRxiv</a>
+             <a class="btn btn-outline-primary circ" href="https://www.ahajournals.org/doi/10.1161/CIRCOUTCOMES.118.005122" role="button">Circ link</a>
+             <a class="btn btn-outline-primary github" href="https://github.com/greenelab/SPRINT_gan" role="button">GitHub</a>
+             <br><br>
+          </div>
+
+          <div class = "paper">
+             <h5>How to Use Heuristics for Differential Privacy</h5>
+             <p> with <a href="https://sethstatistics.wordpress.com/">Seth Neel </a> and <a href="http://www.cis.upenn.edu/~aaroth/">Aaron Roth</a><br>
+             <i> The 60th Annual IEEE Symposium on Foundations of Computer Science <span>(FOCS'19)</span> </i> </p>
+             <a class="btn btn-outline-primary arxiv" href="https://arxiv.org/abs/1811.07765" role="button">arXiv</a>
+             <br><br>
+          </div>
+
+          <div class = "paper">
+             <h5>Fair Regression: Quantitative Definitions and Reduction-Based Algorithms</h5>
+             <p> with
+                   <a href="http://alekhagarwal.net/">Alekh Agarwal</a> and
+          	 <a href="https://www.microsoft.com/en-us/research/people/mdudik/">Miro Dudik</a><br>
+             <i>The 36th International Conference on Machine Learning <span>(ICML'19) </span> </i> </p>
+             <a class="btn btn-outline-primary arxiv" href="https://arxiv.org/abs/1905.12843" role="button">arXiv</a>
+             <br><br>
+          </div>
+
+
+          <div class = "paper">
+             <h5>Locally Private Bayesian Inference for Count Models</h5>
+             <p> <a href="https://people.cs.umass.edu/~aschein/">Aaron Schein</a>,
+    	 <a href="http://zstevenwu.com/">Z. S. W.</a>,
+    	 <a href="http://www.cs.cornell.edu/~xanda/default.html">Xanda Schofield</a>,
+             <a href="https://mingyuanzhou.github.io/">Mingyuan Zhou</a>, and
+    	 <a href="http://dirichlet.net/">Hanna Wallach</a> (contributional order)<br>
+             <i>The 36th International Conference on Machine Learning  <span>(ICML'19)</span> </i></p>
+             <a class="btn btn-outline-primary arxiv" href="https://arxiv.org/abs/1803.08471" role="button">arXiv</a>
+             <br><br>
+          </div>
+
+          <div class = "paper">
+             <h5>Orthogonal Random Forest for Causal Inference</h5>
+             <p>with
+                   <a href="https://www.microsoft.com/en-us/research/people/moprescu/">Miruna Oprescu</a> and
+          	 <a href="http://vsyrgkanis.com/"> Vasilis Syrgkanis</a><br>
+             <i>The 36th International Conference on Machine Learning <span>(ICML'19)</span> </i></p>
+             <a class="btn btn-outline-primary arxiv" href="https://arxiv.org/abs/1806.03467" role="button">arXiv</a>
+             <a class="btn btn-outline-primary github" href="https://github.com/Microsoft/EconML/tree/master/prototypes/orthogonal_forests" role="button">GitHub</a>
+             <br><br>
+          </div>
+
+          <div class = "paper">
+             <h5>The Perils of Exploration under Competition: A Computational Modeling Approach</h5>
+             <p>with
+                   <a href="http://www.guyaridor.net/">Guy Aridor</a>,
+          	 <a href="http://www.zstevenwu.com/">Kevin Liu</a>,
+          	 and
+          	 <a href="https://www.microsoft.com/en-us/research/people/slivkins/"> Alex Slivkins</a><br>
+             <i>The 20th ACM conference on Economics and Computation <span>(EC'19)</span> </i></p>
+             <a class="btn btn-outline-primary arxiv" href="https://arxiv.org/abs/1902.05590" role="button">arXiv</a>
+             <br><br>
+          </div>
+
+          <div class = "paper">
+             <h5>Bayesian Exploration with Heterogeneous Agents</h5>
+             <p>with
+                   <a href="http://www.immorlica.com">Nicole Immorlica</a>,
+          	 <a href="https://sites.google.com/seas.upenn.edu/jiemingmao/">Jieming Mao</a>,
+          	 and
+          	 <a href="https://www.microsoft.com/en-us/research/people/slivkins/"> Alex Slivkins</a><br>
+             <i>The Web Conference 2019 <span>(TheWebConf'19 w/ Oral presentation)</span></i></p>
+             <a class="btn btn-outline-primary arxiv" href="https://arxiv.org/abs/1902.07119" role="button">arXiv</a>
+             <a class="btn btn-outline-primary blog" href="https://www.microsoft.com/en-us/research/blog/incentivizing-information-explorers-when-theyd-really-rather-exploit/?ocid=msr_blog_bayesian_webconf_fb" role="button">MSFT Blog Post</a>
+             <br><br>
+          </div>
+
+          <div class = "paper">
+             <h5>An Empirical Study of Rich Subgroup Fairness for Machine Learning</h5>
+             <p>with  <a href="https://www.cis.upenn.edu/~mkearns/">Michael Kearns</a>,
+    	 <a href="https://sethstatistics.wordpress.com/">Seth Neel</a> and
+             <a href="http://www.cis.upenn.edu/~aaroth">Aaron Roth</a><br>
+             <i>The Second Annual ACM Conference on Fairness, Accountability, and
+    	   Transparency <span>(FAT*'19)</span> </i></p>
+             <a class="btn btn-outline-primary arxiv" href="https://arxiv.org/abs/1808.08166" role="button">arXiv</a>
+             <a class="btn btn-outline-primary github" href="https://github.com/algowatchpenn/GerryFair" role="button">GitHub</a>
+             <br><br>
+          </div>
+
+
+         </div>
+       </div>
+
+<!-- 2018 papers -->
+       <div class="row wow slideInUp">
+         <div class="col-md-2">
+           <h4>2018</h4>
+         </div>
+         <div class="col-md-10">
+
+           <div class = "paper">
+              <h5>A Smoothed Analysis of the Greedy Algorithm for the Linear Contextual Bandit Problem</h5>
+              <p>with  <a href="https://www.cis.upenn.edu/~kannan/">Sampath Kannan</a>,
+     	 <a href="http://jamiemorgenstern.com/">Jamie Morgenstern</a>,
+              <a href="http://www.cis.upenn.edu/~aaroth">Aaron Roth</a>  and
+              <a href="http://www.bowaggoner.com">Bo Waggoner</a><br>
+              <i>The Thirty-Second Conference on Neural Information Processing Systems <span>(NeurIPS'18 w/ Spotlight)</span> </i></p>
+              <a class="btn btn-outline-primary arxiv" href="https://arxiv.org/abs/1801.03423" role="button">arXiv</a>
+              <br><br>
+           </div>
+
+           <div class = "paper">
+              <h5>Preventing Fairness Gerrymandering: Auditing and Learning for Subgroup Fairness</h5>
+              <p>with  <a href="https://www.cis.upenn.edu/~mkearns/">Michael Kearns</a>,
+     	 <a href="https://sethstatistics.wordpress.com/">Seth Neel</a> and
+              <a href="http://www.cis.upenn.edu/~aaroth">Aaron Roth</a><br>
+              <i>The 35th International Conference on Machine Learning <span>(ICML'18)</span> </i></p>
+              <a class="btn btn-outline-primary arxiv" href="https://arxiv.org/abs/1711.05144" role="button">arXiv</a>
+              <a class="btn btn-outline-primary blog" href="https://medium.com/penn-engineering/combatting-fairness-gerrymandering-with-socially-conscious-algorithms-17e3e63cdbd1" role="button">Penn News Coverage</a>
+              <a class="btn btn-outline-primary blog" href="https://medium.com/penn-engineering/combatting-fairness-gerrymandering-with-socially-conscious-algorithms-17e3e63cdbd1" role="button">Aaron's Blog Post</a>
+              <a class="btn btn-outline-primary talk" href="https://www.youtube.com/watch?v=TPnZtdZPamM" role="button">TCS + talk by MK</a>
+              <br><br>
+           </div>
+
+           <div class = "paper">
+              <h5>Semiparametric Contextual Bandits</h5>
+              <p><a href="https://people.cs.umass.edu/~akshay/">Akshay Krishnamurthy</a>,
+     	 <a href="http://zstevenwu.com/">Z. S. W.</a>, and
+              <a href="http://vsyrgkanis.com/">Vasilis Syrgkanis</a> (contributional order)<br>
+              <i>The 35th International Conference on Machine Learning <span>(ICML'18)</span> </i></p>
+              <a class="btn btn-outline-primary arxiv" href="https://arxiv.org/abs/1803.04204" role="button">arXiv</a>
+              <br><br>
+           </div>
+
+           <div class = "paper">
+              <h5>The Externalities of Exploration and How Data Diversity Helps Exploitation</h5>
+              <p>with  <a href="http://www.cs.cornell.edu/~manish/">Manish Raghavan</a>,
+     	 <a href="https://www.microsoft.com/en-us/research/people/slivkins/">Alex Slivkins</a> and
+      <a href="http://www.jennwv.com/">Jenn Wortman Vaughan</a><br>
+              <i>The 31st Annual Conference on Learning Theory <span>(COLT'18)</span> </i></p>
+              <a class="btn btn-outline-primary arxiv" href="https://arxiv.org/abs/1806.00543" role="button">arXiv</a>
+              <br><br>
+           </div>
+
+           <div class = "paper">
+              <h5>Strategic Classification from Revealed Preferences</h5>
+              <p>with  <a href="https://www.math.upenn.edu/~jinshuo/">Jinshuo Dong</a>,
+              <a href="http://www.cis.upenn.edu/~aaroth">Aaron Roth</a>,
+     	 <a href="http://zachschutzman.com/">Zachary Schutzman</a> and
+     	 <a href="http://www.bowaggoner.com/">Bo Waggoner</a><br>
+              <i>The 19th ACM conference on Economics and Computation <span>(EC'18)</span> </i></p>
+              <a class="btn btn-outline-primary arxiv" href="https://arxiv.org/abs/1710.07887" role="button">arXiv</a>
+              <br><br>
+           </div>
+
+           <div class = "paper">
+              <h5>Competing Bandits: Learning under Competition</h5>
+              <p>with  <a href="https://www.tau.ac.il/~mansour/">Yishay Mansour</a> and
+     	 <a href="https://www.microsoft.com/en-us/research/people/slivkins/">Alex Slivkins</a><br>
+              <i>The 9th Innovations in Theoretical Computer Science <span>(ITCS'18)</span> </i></p>
+              <a class="btn btn-outline-primary arxiv" href="http://arxiv.org/abs/1702.08533" role="button">arXiv</a>
+              <a class="btn btn-outline-primary talk" href="https://www.youtube.com/watch?v=_Ih8YCtvL0k" role="button">Talk</a>
+
+              <br><br>
+           </div>
+
+         </div>
+      </div>
+
+<!-- 2017 papers -->
+       <div class="row wow slideInUp">
+         <div class="col-md-2">
+           <h4>2017</h4>
+         </div>
+         <div class="col-md-10">
+
+            <div class = "paper">
+               <h5>Accuracy First: Selecting a Differential Privacy Level for Accuracy-Constrained ERM</h5>
+               <p>with  <a href="http://users.cms.caltech.edu/~katrina/">Katrina Ligett</a>,
+      	    <a href="https://sethstatistics.wordpress.com/">Seth Neel</a>,
+                  <a href="http://www.cis.upenn.edu/~aaroth">Aaron Roth</a> and
+      	    <a href="http://www.bowaggoner.com/">Bo Waggoner</a><br>
+               <i>The Thirty-First Annual Conference on Neural Information Processing Systems <span>(NIPS'17)</span> </i></p>
+               <a class="btn btn-outline-primary arxiv" href="http://arxiv.org/abs/1705.10829" role="button">arXiv</a>
+               <a class="btn btn-outline-primary github" href="https://github.com/steven7woo/Accuracy-First-Differential-Privacy" role="button">GitHub</a>
+               <br><br>
+            </div>
+
+            <div class = "paper">
+               <h5>Meritocratic Fairness in Cross-Population Selection</h5>
+               <p>with  <a href="http://www.cis.upenn.edu/~mkearns">Michael Kearns</a> and
+      	 <a href="http://www.cis.upenn.edu/~aaroth">Aaron Roth</a><br>
+               <i>The 34th International Conference on Machine Learning <span>(ICML'17)</span> </i></p>
+               <a class="btn btn-outline-primary circ" href="http://proceedings.mlr.press/v70/kearns17a.html" role="button">Proceeding</a>
+               <br><br>
+            </div>
+
+            <div class = "paper">
+               <h5>Predicting with Distributions</h5>
+               <p>with  <a href="http://www.cis.upenn.edu/~mkearns">Michael Kearns</a><br>
+               <i>The 30th Annual Conference on Learning Theory <span>(COLT'17)</span> </i></p>
+               <a class="btn btn-outline-primary arxiv" href="http://arxiv.org/abs/1606.01275" role="button">arXiv</a>
+               <br><br>
+            </div>
+
+            <div class = "paper">
+               <h5>Multidimensional Dynamic Pricing for Welfare Maximization</h5>
+               <p>with  <a href="http://www.cis.upenn.edu/~aaroth">Aaron Roth</a>,
+      	 <a href="http://research.microsoft.com/en-us/people/slivkins/">Alex Slivkins</a> and	 <a href="http://www.cs.columbia.edu/~jullman/">Jonathan Ullman</a><br>
+               <i>The 18th ACM Conference on Economics and Computation <span>(EC'17)</span></i>
+             </p>
+               <a class="btn btn-outline-primary arxiv" href="http://arxiv.org/abs/1607.05397" role="button">arXiv</a>
+               <a class="btn btn-outline-primary talk" href="https://www.youtube.com/watch?v=2hGILYy-fc8" role="button">Talk</a>
+
+               <br><br>
+            </div>
+
+            <div class = "paper">
+               <h5>Fairness Incentives for Myopic Agents</h5>
+               <p>with  <a href="http://www.cis.upenn.edu/~kannan/">Sampath Kannan</a>,
+      	 <a href="http://www.cis.upenn.edu/~mkearns">Michael Kearns</a>,
+      	 <a href="http://www.cis.upenn.edu/~jamiemor">Jamie Morgenstern</a>,
+      	 <a href="https://sites.google.com/view/malleshpai/">Mallesh Pai</a>,
+      	 <a href="http://www.cis.upenn.edu/~aaroth">Aaron Roth</a> and
+      	 <a href="https://sites.google.com/site/quaerereverum9/">Rakesh Vohra</a><br>
+               <i>The 18th ACM Conference on Economics and Computation <span>(EC'17)</span> </i></p>
+               <a class="btn btn-outline-primary arxiv" href="http://arxiv.org/abs/1705.02321" role="button">arXiv</a>
+               <br><br>
+            </div>
+
+
+
+         </div>
+      </div>
+
+<!-- 2016 papers -->
+       <div class="row wow slideInUp">
+         <div class="col-md-2">
+           <h4>2016</h4>
+         </div>
+         <div class="col-md-10">
+
+           <div class = "paper">
+              <h5>Learning from Rational Behavior: Predicting Solutions to Unknown Linear Programs</h5>
+              <p>with  <a href="http://www.cis.upenn.edu/~jabbari">Shahin Jabbari</a>,
+     	    <a href="https://www.math.upenn.edu/~ryrogers">Ryan Rogers</a> and
+                 <a href="http://www.cis.upenn.edu/~aaroth">Aaron Roth</a><br>
+              <i>The Thirtieth Annual Conference on Neural Information Processing Systems <span>(NIPS'16)</span> </i></p>
+              <a class="btn btn-outline-primary arxiv" href="http://arxiv.org/abs/1506.02162" role="button">arXiv</a>
+              <br><br>
+           </div>
+
+           <div class = "paper">
+              <h5>Bayesian Exploration: Incentivizing Exploration in Bayesian Games</h5>
+              <p>with  <a href="http://www.math.tau.ac.il/~mansour/">Yishay Mansour</a>,
+     	    <a href="http://research.microsoft.com/en-us/people/slivkins/">Alex Slivkins</a> and
+                 <a href="http://research.microsoft.com/en-us/um/people/vasy/">Vasilis Syrgkanis</a><br>
+              <i>The 17th ACM Conference on Economics and Computation <span>(EC'16)</span></i></p>
+              <a class="btn btn-outline-primary arxiv" href="http://arxiv.org/abs/1602.07570" role="button">arXiv</a>
+              <br><br>
+           </div>
+
+           <div class = "paper">
+              <h5>Private Algorithms for the Protected in Social Network Search</h5>
+              <p>with  <a href="http://www.cis.upenn.edu/~mkearns">Michael Kearns</a>,
+                 <a href="http://www.cis.upenn.edu/~aaroth">Aaron Roth</a> and
+              <a href="http://www.grigory.us">Grigory Yaroslavtsev</a><br>
+              <i>In Proceedings of the National Academy of Sciences <span>(PNAS), 2016</span> </i></p>
+              <a class="btn btn-outline-primary circ" href="http://www.pnas.org/content/early/2016/01/05/1510612113" role="button">PNAS Link</a>
+              <a class="btn btn-outline-primary arxiv" href="http://arxiv.org/abs/1506.00242" role="button">arXiv</a> <br>
+              <p>Press coverage by
+              <a class="btn btn-outline-primary blog" href="http://qz.com/593255/there-may-be-a-way-to-allow-mass-surveillance-and-preserve-our-privacy-at-the-same-time/" role="button">Quartz</a>
+              <a class="btn btn-outline-primary blog" href="ttp://www.psmag.com/politics-and-law/the-nsa-has-your-data-is-there-a-way-to-use-it-that-wont-further-violate-your-privacy" role="button">Pacific Standard</a>
+              <a class="btn btn-outline-primary blog" href="http://www.thenakedscientists.com/HTML/specials/show/20160118/" role="button">Naked Scientist</a>
+              </p>
+              <br>
+           </div>
+
+           <div class = "paper">
+              <h5>Watch and Learn: Optimizing from Revealed Preferences Feedback</h5>
+              <p>with <a href="http://www.cis.upenn.edu/~aaroth">Aaron Roth</a> and
+		<a href="http://www.cs.columbia.edu/~jullman/">Jonathan Ullman</a><br>
+              <i>The 48th ACM Symposium on Theory of Computing <span>(STOC'16)</span></i> </p>
+              <a class="btn btn-outline-primary arxiv" href="http://arxiv.org/abs/1504.01033" role="button">arXiv</a>
+              <a class="btn btn-outline-primary slides" href="./Slides/agt-data.pdf" role="button">Slides</a>
+              <a class="btn btn-outline-primary blog" href="http://www.sigecom.org/exchanges/volume_14/1/ROTH.pdf" role="button">Sigecom Exchanges</a>
+              <br><br>
+           </div>
+
+           <div class = "paper">
+              <h5>Adaptive Learning with Robust Generalization Guarantees</h5>
+              <p>with  <a href="http://users.cms.caltech.edu/~rachelc/">Rachel Cummings</a>,
+     	    <a href="http://users.cms.caltech.edu/~katrina/">Katrina Ligett</a>,
+     	    <a href="https://www.cs.bgu.ac.il/~kobbi/">Kobbi Nissim</a> and
+                 <a href="http://www.cis.upenn.edu/~aaroth">Aaron Roth</a><br>
+              <i>The 29th Annual Conference on Learning Theory <span>(COLT'16)</span> </i></p>
+              <a class="btn btn-outline-primary arxiv" href="http://arxiv.org/abs/1602.07726" role="button">arXiv</a>
+              <br><br>
+           </div>
+
+           <div class = "paper">
+              <h5>Logarithmic Query Complexity for Approximate Nash Computation in Large Games</h5>
+              <p>with  <a href="http://www.cs.ox.ac.uk/people/paul.goldberg/index1.html">Paul Goldberg</a>
+     	and <a href="https://www.cs.ox.ac.uk/people/francisco.marmolejocossio/">Francisco J. Marmolejo Cossio</a><br>
+              <i>The 9th International Symposium on Algorithmic Game Theory <span>(SAGT'16)</span> </i></p>
+              <a class="btn btn-outline-primary blog" href="http://link.springer.com/chapter/10.1007%2F978-3-662-53354-3_1" role="button">Springer Link</a>
+              <a class="btn btn-outline-primary arxiv" href="https://arxiv.org/abs/1610.08906" role="button">arXiv</a>
+              <br><br>
+           </div>
+
+           <div class = "paper">
+              <h5>Coordination Complexity: Small Information Coordinating Large Populations</h5>
+              <p>with  <a href="http://users.cms.caltech.edu/~rachelc/">Rachel Cummings</a>,
+                  <a href="http://users.cms.caltech.edu/~katrina/">Katrina Ligett</a>,
+                  <a href="http://www.tcs.tifr.res.in/~jaikumar/">Jaikumar Radhakrishnan</a> and
+                  <a href="http://www.cis.upenn.edu/~aaroth">Aaron Roth</a><br>
+              <i>The 7th Innovations in Theoretical Computer Science <span>(ITCS'16)</span> </i></p>
+              <a class="btn btn-outline-primary arxiv" href="http://arxiv.org/abs/1508.03735" role="button">arXiv</a>
+              <br><br>
+           </div>
+
+           <div class = "paper">
+              <h5>Jointly Private Convex Programming</h5>
+              <p>with <a href="http://www.cis.upenn.edu/~justhsu">Justin Hsu</a>,
+           	 <a href="http://i.cs.hku.hk/~zhiyi/">Zhiyi Huang</a> and
+           	 <a href="http://www.cis.upenn.edu/~aaroth">Aaron Roth</a><br>
+              <i>The 27th ACM-SIAM Symposium on Discrete Algorithms <span>(SODA'16)</span> </i></p>
+              <a class="btn btn-outline-primary arxiv" href="http://arxiv.org/abs/1411.0998" role="button">arXiv</a>
+              <br><br>
+           </div>
+
+        </div>
+      </div>
+
+<!-- 2015 papers -->
+      <div class="row wow slideInUp">
+        <div class="col-md-2">
+          <h4>2015</h4>
+        </div>
+        <div class="col-md-10">
+
+         <div class = "paper">
+            <h5>Privacy and Truthful Equilibrium Selection for Aggregative Games</h5>
+            <p>with <a href="http://users.eecs.northwestern.edu/~rac322">Rachel Cummings</a>,
+         	 <a href="https://www.cis.upenn.edu/~mkearns">Michael Kearns</a> and
+         	 <a href="http://www.cis.upenn.edu/~aaroth">Aaron Roth</a><br>
+            <i>The 11th Conference on Web and Internet Economics <span>(WINE'15)</span> </i></p>
+            <a class="btn btn-outline-primary arxiv" href="http://arxiv.org/abs/1407.7740" role="button">arXiv</a>
+            <br><br>
+         </div>
+
+         <div class = "paper">
+            <h5>Inducing Approximately Optimal Flow Using Truthful Mediators</h5>
+            <p>with <a href="http://hans.math.upenn.edu/~ryrogers/">Ryan Rogers</a>,
+            <a href="http://www.cis.upenn.edu/~aaroth">Aaron Roth</a> and
+            <a href="http://www.cs.columbia.edu/~jullman/">Jonathan Ullman</a><br>
+            <i>The 16th ACM Conference on Economics and Computation <span>(EC'15)</span> </i></p>
+            <a class="btn btn-outline-primary arxiv" href="http://arxiv.org/abs/1502.04019" role="button">arXiv</a>
+            <a class="btn btn-outline-primary slides" href="./Slides/mediator-toll-ec.pdf" role="button">Slides</a>
+            <br><br>
+         </div>
+
+         <div class = "paper">
+            <h5>Accuracy for Sale: Aggregating Data with a Variance Constraint</h5>
+            <p>with <a href="http://users.eecs.northwestern.edu/~rac322">Rachel Cummings</a>,
+            <a href="http://users.cms.caltech.edu/~katrina/">Katrina Ligett</a>,
+            <a href="http://www.cis.upenn.edu/~aaroth">Aaron Roth</a> and
+      <a href="mailto:jziani@caltech.edu">Juba Ziani </a><br>
+            <i>The 6th Innovations in Theoretical Computer Science <span>(ITCS'15)</span> </i></p>
+            <a class="btn btn-outline-primary circ" href="https://dl.acm.org/citation.cfm?id=2688106" role="button">Proceeding</a>
+            <br><br>
+         </div>
+
+         <div class = "paper">
+            <h5>Approximately Stable, School Optimal, and Student-Truthful Many-to-One Matchings (via Differential Privacy)</h5>
+            <p>with <a href="http://cis.upenn.edu/~kannan">Sampath Kannan</a>,
+         	 <a href="https://www.cs.cmu.edu/~jamiemmt">Jamie Morgenstern</a> and
+         	 <a href="http://www.cis.upenn.edu/~aaroth">Aaron Roth</a><br>
+            <i>The 26th ACM-SIAM Symposium on Discrete Algorithms <span>(SODA'15)</span> </i></p>
+            <a class="btn btn-outline-primary arxiv" href="http://arxiv.org/abs/1407.2640" role="button">arXiv</a>
+            <a class="btn btn-outline-primary blog" href="https://rjlipton.wordpress.com/2016/10/14/why-is-being-truthful-a-good-thing/" role="button">Blog Post by Lipton and Regan</a>
+            <br><br>
+         </div>
+
+       </div>
+     </div>
+
+
+<!-- 2014 papers -->
+   <div class="row wow slideInUp">
+     <div class="col-md-2">
+       <h4>2014</h4>
+     </div>
+     <div class="col-md-10">
+
+      <div class = "paper">
+         <h5>Dual Query: Practical Private Query Release for High Dimensional Data</h5>
+         <p>with <a href="http://www.cs.unibo.it/~gaboardi/">Marco Gaboardi</a>,
+      	 <a href="https://cis.upenn.edu/~emilioga/">Emilio  Jesús Gallego Arias</a>,
+      	 <a href="http://www.cis.upenn.edu/~justhsu">Justin Hsu</a> and
+      	 <a href="http://www.cis.upenn.edu/~aaroth">Aaron Roth</a><br>
+         <i>The 31st International Conference on Machine Learning <span>(ICML'14)</span><br>
+         In the special issue of Journal of Privacy and Confidentiality, 2016</i></p>
+         <a class="btn btn-outline-primary arxiv" href="http://arxiv.org/abs/1402.1526" role="button">arXiv</a>
+         <a class="btn btn-outline-primary talk" href="http://techtalks.tv/talks/dual-query-practical-private-query-release-for-high-dimensional-data/60952/" role="button">Talk</a>
+         <a class="btn btn-outline-primary github" href="http://github.com/ejgallego/dualquery" role="button">GitHub</a>
+         <br><br>
+      </div>
+
+      <div class = "paper">
+         <h5>Private Matchings and Allocations</h5>
+         <p>with <a href="http://www.cis.upenn.edu/~justhsu">Justin Hsu</a>,
+      	 <a href="http://i.cs.hku.hk/~zhiyi/">Zhiyi Huang</a>,
+      	 <a href="http://www.cis.upenn.edu/~aaroth">Aaron Roth</a> and
+      	 <a href="http://www.cs.stanford.edu/~tim">Tim Roughgarden</a><br>
+         <i>The 46th ACM Symposium on Theory of Computing <span>(STOC'14)</span><br>
+         SIAM Journal on Computing, 45(6):1953–1984, 2016.</i></p>
+         <a class="btn btn-outline-primary arxiv" href="http://arxiv.org/abs/1311.2828" role="button">arXiv</a>
+         <br><br>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+<hr class="featurette-divider">
+<footer class="footer mt-auto py-3">
+
+  <div class="flex-container">
+    <span class="flex-item text-muted">© 2019 STEVEN WU. Designed by VXG. </span>
+    <div class="flex-item"><a class="footer_link" href="#" target="_self">Back to Top</a></div>
+  </div>
+</footer>
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- add in custom jquery code -->
+      <script type="text/javascript" src='js/jquery-3.4.1.min.js'></script>
+      <script type="text/javascript" src='js/effects.js'></script>
+      <script type="text/javascript" src='js/main.js'></script>
+      <script>
+        window.addEventListener("hashchange", function() { scrollBy(0, -90) })
+      </script>
+      <script>
+        window.addEventListener("pageshow", function() { scrollBy(0, -60) })
+      </script>
+
+    </body>
+  </html>

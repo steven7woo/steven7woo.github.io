@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="ch">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" >
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Work+Sans:400,700,800&display=swap" rel="stylesheet">
+
+    <!-- this might need to go away -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!--JS-->
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+
+    <title>Steven Wu</title>
+  </head>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <a href="index.html#" target="_self">
+       <img src="Images/ZSW.jpg" class="rounded-circle" style="height:50px; margin:10px">
+       </a>
+      <a class="navbar-brand" href="index.html#" target="_self">STEVEN WU</a>
+       <button id='btn1' class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon">
+         <i class="fas fa-bars vertical center"></i>
+       </span>
+       </button>
+       <div class="collapse navbar-collapse " id="navbarSupportedContent">
+         <ul class="navbar-nav mr-4">
+           <li class="nav-item">
+             <a class="nav-link" data-value="about" href="index.html#about" target="_self">About Me</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" data-value="news" href="index.html#news" target="_self">News</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link " data-value="papers" href="papers.html" target="_self">Papers</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link " data-value="teaching" href="index.html#teaching" target="_self">Teaching</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link " data-value="services" href="index.html#services" target="_self">Services</a>
+           </li>
+         </ul>
+       </div>
+  </nav>
+  <br>
+
+<!--header-->
+    <header class="header">
+      <!--add an overlay to the header image-->
+      <div class="overlay"></div>
+      <!--add a container to place the description inside-->
+      <div class="container">
+        <div class = "description row">
+          <div class="col-md-4 col-sm-12">
+            <img src="Images/ZSW.jpg" class="rounded-circle">
+          </div>
+          <div class="col-md-8 col-sm-12">
+            <h1> Steven Wu</h1>
+            <p> Assistant Professor<br>
+                Computer Science & Engineering Department<br>
+                University of Minnesota</p><br>
+            <h6>Email: zsw [at] umn.edu<br>
+              6-225E Keller Hall<br>
+              200 Union Street SE<br>
+              Minneapolis, MN 55455<br>
+            </h6>
+            <!-- <button class="btn btn-lg" type="button" onclick="clickAni()"><a href="#about">More Information</a></button> -->
+          </div>
+
+         <!-- implement an arrow when possible -->
+          <!-- <a class="smoth-scroll" href="#about">
+            <i class="fa fa-angle-down arrow lift"></i>
+          </a> -->
+
+        </div>
+      </div>
+    </header>
+
+<body>
+
+  <!--About-->
+    <div class="about wow zoomIn" id="about">
+       <h1 class="text-center">ABOUT ME</h1>
+
+      <div class="row">
+          <p>My name is Zhiwei Steven Wu. I am an Assistant Professor at the <a href="https://twin-cities.umn.edu/" target="_blank" onclick="_gaq.push(['_trackEvent', 'Download', this.href])">University of Minnesota</a> in the <a href="https://www.cs.umn.edu/" target="_blank" onclick="_gaq.push(['_trackEvent', 'Download', this.href])">Computer Science &amp; Engineering Department</a>. I spent a year as a post-doctoral researcher at <a href="http://research.microsoft.com/en-us/labs/newyork/" target="_blank" onclick="_gaq.push(['_trackEvent', 'Download', this.href])">Microsoft Research-New York City</a>. Before that, I received my PhD in Computer Science from the <a href="http://www.upenn.edu/" style="text-decoration:none" target="_blank">University of Pennsylvania</a>, where I was extremely fortunate to have been co-advised by <a href="http://www.cis.upenn.edu/~mkearns" style="text-decoration:none" target="_blank"> Michael Kearns </a> and <a href="http://www.cis.upenn.edu/~aaroth" style="text-decoration:none" target="_blank"> Aaron Roth</a>.  </p>
+
+          <p>I am broadly interested in algorithms and machine learning, especially in the areas of privacy-preserving data analysis, fairness in machine learning, and algorithmic economics.</p>
+
+	  <p>My research has been generously supported by the <a href="https://nsf.gov/">National Science Foundation</a>, <a href="https://ai.google/research/outreach/faculty-research-awards/recipients/" style="text-decoration:none" target="_blank">a Google Faculty Research Award</a>, <a href="https://www.jpmorgan.com/global/technology/ai/awards/faculty-award-recipients" style="text-decoration:none" target="_blank">a J.P. Morgan Faculty Award</a>,  <a href="https://research.fb.com/announcing-the-winners-of-the-facebook-mechanism-design-for-social-good-research-awards/" style="text-decoration:none" target="_blank">a Facebook Research Award</a>, and <a href="https://blog.mozilla.org/blog/2019/07/05/mozillas-latest-research-grants-prioritizing-research-for-the-internet/" style="text-decoration:none" target="_blank">a Mozilla Research Grant</a>.</p>
+
+
+
+          <p>My CV can be found <a href="cv.pdf" target="_blank"
+            onclick="_gaq.push(['_trackEvent', 'Download', 'PDF',
+            this.href])">here</a>. <br><br> <span>I am currently
+            looking for self-motivated and mathematically mature PhD
+            students!</span></p>
+     </div>
+    </div>
+
+<hr class="featurette-divider wow zoomIn">
+
+<!--News-->
+  <div class="news wow zoomIn" id="news">
+
+     <h1 class="text-center">NEWS</h1>
+
+    <div class="row">
+      <div class="col-md-2">
+        <p><b>July, 2019</b></p>
+      </div>
+      <div class="col-md-10">
+        <p>I received a <a href="https://blog.mozilla.org/blog/2019/07/05/mozillas-latest-research-grants-prioritizing-research-for-the-internet/" style="text-decoration:none" target="_blank">Mozilla Research Grant.</a></p>
+      </div>
+    </div>
+
+  <div class="row">
+    <div class="col-md-2">
+      <p><b>April, 2019</b></p>
+    </div>
+    <div class="col-md-10">
+     <p>One paper accepted at EC'19.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2">
+      <p><b>April, 2019</b></p>
+    </div>
+    <div class="col-md-10">
+      <p>Three papers accepted at ICML'19.</p>
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2">
+      <p><b>Feb, 2019</b></p>
+    </div>
+    <div class="col-md-10">
+     <p>I received a <a href="https://ai.google/research/outreach/faculty-research-awards/recipients/" style="text-decoration:none" target="_blank">Google Faculty Research Award</a>.</p>
+   </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2">
+      <p><b>Feb, 2019</b></p>
+    </div>
+    <div class="col-md-10">
+     <p>I received a <a href="https://www.jpmorgan.com/global/technology/ai/awards/faculty-award-recipients" style="text-decoration:none" target="_blank">J.P. Morgan Faculty Award</a>.</p>
+   </div>
+</div>
+
+<div class="row">
+  <div class="col-md-2">
+    <p><b>Jan, 2019</b></p>
+  </div>
+  <div class="col-md-10">
+   <p>One paper accepted at The Web Conference'19 with oral presentation.</p>
+ </div>
+</div>
+
+<div class="row">
+  <div class="col-md-2">
+    <p><b>Jan, 2019</b></p>
+  </div>
+  <div class="col-md-10">
+     <p>With Haiyi Zhu, we received the <a href="https://research.fb.com/announcing-the-winners-of-the-facebook-mechanism-design-for-social-good-research-awards/" style="text-decoration:none" target="_blank">Facebook Mechanism Design for Social Good research award</a>.</p>
+  </div>
+  </div>
+</div>
+
+
+<hr class="featurette-divider wow zoomIn">
+
+<!--Teaching-->
+  <div class="news wow zoomIn" id="teaching">
+    <h1 class="text-center">TEACHING</h1>
+    <div class="row">
+      <div class="col-md-2">
+        <p><b>Spring 2019</b></p>
+      </div>
+      <div class="col-md-10">
+        <p>Machine Learning</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+	<p><b>Fall 2018</b></p>
+      </div>
+      <div class="col-md-10">
+        <p><a href="https://www-users.cs.umn.edu/~zsw/courses/privacyF18.html" style="text-decoration:none" target="_blank">The Algorithmic Foundations of Data Privacy</a></p>
+      </div>
+    </div>
+
+
+
+
+ </div>
+
+
+ <hr class="featurette-divider wow zoomIn">
+ <!--Services-->
+   <div class="news wow zoomIn" id="services">
+
+      <h1 class="text-center">SERVICES</h1>
+      <div class="row">
+        <div class="col-md-2">
+          <p><b>Program Committees</b></p>
+        </div>
+        <div class="col-md-4">
+           <p>
+             ICLR 2020 (area chair)<br>
+             FAT* 2019 (track co-chair)<br>
+	     TheWebConf 2020, 2018<br>
+             EC 2019, 2018<br>
+             ICML 2018, 2017<br>
+	     TPDP 2019<br>
+             AAAI 2019<br>
+             NPSML4H18<br>
+           </p>
+        </div>
+          <div class="col-md-2">
+            <p><b>Other</b></p>
+          </div>
+          <div class="col-md-4">
+           <p>
+             During my undergraduate, I was involved in the <a href="https://bpi.bard.edu/">Bard Prison Initiative</a> and serving as a math tutor in New York Eastern Correctional Facility.
+           </p>
+        </div>
+    </div>
+
+
+      <div class="row">
+        <div class="col-md-2">
+          <p><b>Workshop</b></p>
+        </div>
+        <div class="col-md-10">
+           <p>
+	     <a href="https://simons.berkeley.edu/workshops/fairness-workshop-2">Recent
+	     Developments in Research on Fairness</a>. The Simons
+	     Institute for the Theory of Computing, Berkeley, CA. July 8-10, 2019.
+           </p>
+        </div>
+    </div>
+
+
+
+  </div>
+
+
+<hr class="featurette-divider wow zoomIn">
+  <footer class="footer mt-auto py-3">
+
+    <div class="flex-container">
+      <span class="flex-item text-muted">© 2019 STEVEN WU. Designed by
+      VXG. </span>
+      <div class="flex-item"><a class="footer_link" href="#" target="_self">Back to Top</a></div>
+    </div>
+  </footer>
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- add in custom jquery code -->
+      <script type="text/javascript" src='js/jquery-3.4.1.min.js'></script>
+      <script type="text/javascript" src='js/effects.js'></script>
+      <script type="text/javascript" src='js/main.js'></script>
+      <script>
+        window.addEventListener("hashchange", function() { scrollBy(0, -90) })
+      </script>
+      <script>
+        window.addEventListener("pageshow", function() { scrollBy(0, -60) })
+      </script>
+
+    </body>
+  </html>
