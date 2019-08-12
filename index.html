@@ -286,11 +286,10 @@
       <script type="text/javascript" src='js/effects.js'></script>
       <script type="text/javascript" src='js/main.js'></script>
       <script>
-        window.addEventListener("hashchange", function() { scrollBy(0, -90) })
+	window.onhashchange(scrollBy(0, -100))
       </script>
       <script>
-        window.addEventListener("pageshow", function() { scrollBy(0, -60) })
+        window.addEventListener("pageshow", function() { scrollBy(0, -100) });
       </script>
-
     </body>
   </html>
