@@ -23,6 +23,11 @@
       new WOW().init();
     </script>
 
+    <script>
+      window.addEventListener("pageshow", function() {
+        scrollBy(0, -100) })
+    </script>
+
     <base target="_blank">
 
     <title>Steven Wu</title>
@@ -616,14 +621,10 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <!-- add in custom jquery code -->
-      <script type="text/javascript" src='js/jquery-3.4.1.min.js'></script>
-      <script type="text/javascript" src='js/effects.js'></script>
       <script type="text/javascript" src='js/main.js'></script>
       <script>
-        window.addEventListener("hashchange", function() { scrollBy(0, -100) })
+        // window.addEventListener("hashchange", function() { scrollBy(0, -100) })
       </script>
-      <script>
-        window.addEventListener("pageshow", function() { scrollBy(0, -100) })
-      </script>
+
     </body>
   </html>

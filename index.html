@@ -23,6 +23,12 @@
       new WOW().init();
     </script>
 
+    <script>
+      window.addEventListener("pageshow", function() {
+        scrollBy(0, -100) });
+    </script>
+
+
     <title>Steven Wu</title>
   </head>
 
@@ -40,13 +46,13 @@
        <div class="collapse navbar-collapse " id="navbarSupportedContent">
          <ul class="navbar-nav mr-4">
            <li class="nav-item">
-             <a class="nav-link" data-value="about" href="index.html#about" target="_self">About Me</a>
+             <a class="nav-link " data-value="about" href="index.html#about" target="_self">About Me</a>
            </li>
            <li class="nav-item">
-             <a class="nav-link" data-value="news" href="index.html#news" target="_self">News</a>
+             <a class="nav-link " data-value="news" href="index.html#news" target="_self">News</a>
            </li>
            <li class="nav-item">
-             <a class="nav-link " data-value="papers" href="papers.html" target="_self">Papers</a>
+             <a class="nav-link" data-value="papers" href="papers.html" target="_self">Papers</a>
            </li>
            <li class="nav-item">
              <a class="nav-link " data-value="teaching" href="index.html#teaching" target="_self">Teaching</a>
@@ -60,38 +66,81 @@
   <br>
 
 <!--header-->
-    <header class="header">
-      <!--add an overlay to the header image-->
-      <div class="overlay"></div>
-      <!--add a container to place the description inside-->
-      <div class="container">
-        <div class = "description row">
-          <div class="col-md-4 col-sm-12">
-            <img src="images/ZSW.jpg" class="rounded-circle">
-          </div>
-          <div class="col-md-8 col-sm-12">
-            <h1> Steven Wu</h1>
-            <p> Assistant Professor<br>
-                Computer Science & Engineering Department<br>
-                University of Minnesota</p><br>
-            <h6>Email: zsw [at] umn.edu<br>
-              6-225E Keller Hall<br>
-              200 Union Street SE<br>
-              Minneapolis, MN 55455<br>
-            </h6>
-            <!-- <button class="btn btn-lg" type="button" onclick="clickAni()"><a href="#about">More Information</a></button> -->
-          </div>
+<!-- <header class="header"> -->
+  <!--add an overlay to the header image-->
+  <!-- <div class="overlay"></div> -->
+  <!--add a container to place the description inside-->
 
+<!-- </header> -->
+
+<body>
+
+
+  <div>
+  <div class="s-bg-image s-bg-light-text s-new-title-section s-section background-image lazyloaded"
+  data-react-style="{
+    "backgroundRepeat":"no-repeat",
+    "backgroundSize":"cover",
+    "backgroundColor":"transparent",
+    "backgroundPosition":"50% 50%"}"
+    style="
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: transparent;
+    background-position: 50% 50%;
+    background-image: url('css/finalCover.jpeg');
+    min-height: 0px;
+    padding-top: 196px;
+    padding-bottom: 196px;">
+  <!-- <div class="container" style="z-index: 3;">
+    <div class="sixteen columns">
+      <div class="s-title-group s-only-title-group ">
+        <div class="s-subtitle">
+          <div class="s-component s-text">
+            <h4 class="s-component-content s-font-heading">
+              <p style="font-size: 130%;" class="s-text-color-white">
+                <em>Hey, I'm</em></p></h4>
+          </div>
+        </div>
+            <div class="s-title sb-title-center-align has-fresh-line">
+              <div class="s-component s-text">
+                <h1 class="s-component-content s-font-title">
+                  <p style="text-align: center; font-size: 130%;">
+                    <strong>Steven Wu</strong></p></h1>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div class="container description" style="text-align: center">
+        <!-- <div class = "row"> -->
+          <!-- <div class="col-md-4 col-sm-12"> -->
+            <img src="images/ZSW.jpg" class="rounded-circle">
+          <!-- </div> -->
+          <!-- <div class="col-md-8 col-sm-12" > -->
+            <div style="text-align: center">
+            <h1> Steven Wu</h1>
+              <p> Assistant Professor<br>
+                  Computer Science & Engineering Department<br>
+                  University of Minnesota</p><br>
+              <h6>Email: zsw [at] umn.edu<br>
+                6-225E Keller Hall<br>
+                200 Union Street SE<br>
+                Minneapolis, MN 55455<br>
+              </h6>
+            </div>
+            <!-- <button class="btn btn-lg" type="button" onclick="clickAni()"><a href="#about">More Information</a></button> -->
+          <!-- </div> -->
          <!-- implement an arrow when possible -->
           <!-- <a class="smoth-scroll" href="#about">
             <i class="fa fa-angle-down arrow lift"></i>
           </a> -->
-
-        </div>
+        <!-- </div> -->
       </div>
-    </header>
 
-<body>
+    </div>
+  </div>
 
   <!--About-->
     <div class="about wow zoomIn" id="about">
@@ -286,10 +335,8 @@
       <script type="text/javascript" src='js/effects.js'></script>
       <script type="text/javascript" src='js/main.js'></script>
       <script>
-	window.onhashchange(scrollBy(0, -100))
+      	// window.onhashchange(scrollBy(0, -100))
       </script>
-      <script>
-        window.addEventListener("pageshow", function() { scrollBy(0, -100) });
-      </script>
+
     </body>
   </html>

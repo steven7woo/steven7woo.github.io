@@ -60,30 +60,31 @@ a:link, a:visited {
  background-position: center;
  text-align: center;
  vertical-align: middle;
+ display:block;
 }
 
-.overlay{
+/* .overlay{
  position: absolute;
- min-height: 104%;
+ min-height: 110%;
  min-width: 100%;
  left: 0;
  top: 0;
  bottom:0;
  background: rgba(244, 244, 244, 0.60);
-}
+} */
 
 
-.description{
+/* .description{
     position: relative;
     top: 0%;
     left:2%;
-    /* margin: auto; */
+    margin: auto;
     padding: 10em;
-}
+} */
 
-.description.row{
+/* .description.row{
   padding: 20% 0;
-}
+} */
 
 .description img {
   width:200px;
@@ -94,7 +95,7 @@ a:link, a:visited {
 .description h1{
  color:#414042;
  font-weight: bold;
- text-align: left;
+
  font-size:300%;
  margin: 20px 0;
 }
@@ -102,13 +103,13 @@ a:link, a:visited {
 .description p{
  color:#1c1c1c;
  font-size: 20px;
- text-align: left;
+
  line-height: 1.5;
 }
 
 .description h6{
  color:#1c1c1c;
- text-align: left;
+
 }
 
 .arrow{
@@ -302,4 +303,3 @@ font-family: 'Hiragino Sans GB', sans-serif;
 .flex-container .footer_link{
   color: #317191;
 }
-
