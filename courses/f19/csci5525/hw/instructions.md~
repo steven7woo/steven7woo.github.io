@@ -1,0 +1,99 @@
+# Instructions
+
+## Basics
+
+Homeworks will be posted on Canvas *after* class the day they are assigned, and
+they will be due *before* class on the due date. **Late homework will not be
+accepted**. Instead, your lowest homework grade will be dropped.
+
+Each homework will have two parts: a programming exercise, and a written
+component. You should upload your homework in a single zip file, including
+source code (`.hs` or the whole Cargo project) for the programming part and a
+single document (`.pdf`, or a scanned image) for the written part.
+
+While not required, we highly recommend you typeset your homeworks in
+[LaTeX](https://www.latex-tutorial.com/); we are happy to help you get started.
+
+## Grading
+
+The programming portion is worth **100 points**, and the written portion is
+worth **30 points**. We will give partial credit for solutions that make
+substantial progress. The homeworks will say how many points each question is
+worth.
+
+## Programming Assignments
+
+The programming assignments will give you hands-on experience working in Haskell
+and Rust. We will give you a source file with the some parts deleted, and you
+will have to complete the code according to the instructions in the comments.
+**Do not change the code we have provided.**
+
+If the problems are unclear or you are uncertain about some edge case, **please
+ask on Piazza**.
+
+We will give you a basic driver and some tests to try out on your code, but we
+highly recommend you **write your own tests**. We will evaluate your programming
+assignments using our own test suites, and we will deduct points if tests fail.
+We will also look at your code manually.
+
+**Style definitely counts**: write clean code. Consult style guides for Haskell
+or Rust are a good places to learn about conventions.
+
+## Fix warnings, lint code!
+
+In both Haskell and Rust, your code should compile **without warnings or errors**.
+
+- **Haskell**: Run GHC with `-Wall -Werror` flags before submitting to check for
+  warnings. Also, run `hlint` on your code and try to follow its suggestions.
+  **Warning**: rarely, the suggestions may break your code (in which case you
+  can obviously ignore them). Always check to see if things still work.
+- **Rust**: Run `rustfmt` on your source code to format it properly.
+
+## Written Assignments
+
+The written assignments will give you practice working with models of
+programming languages. We will not be doing any proofs in this class, but we
+will evaluate your solutions with the following points in mind (not necessarily
+in this order):
+
+- **Correctness**: does the solution do what it should?
+- **Completeness**: are all cases considered?
+- **Simplicity**: is the solution simple, or is it very complex?
+
+We are not expecting long submissions---if your answers are more than a few
+pages in total, you should probably come talk to us.
+
+## Collaboration Policy
+
+The collaboration policy for this course is very simple. You are free to discuss
+the homework problems with others, provided you adhere to the following three
+rules:
+
+1. Do not take make any records of your discussions. For instance, you may work
+   on the board or on a piece of paper, but you should not take any photos, keep
+   any notes, etc.
+2. Write up your homework **individually**. You should be able to reconstruct
+   your assignment from scratch, given just the language documentation.
+3. Indicate who you have discussed the homework with at the top of your
+   solutions.
+
+If you follow these three rules, you will be completely fine. If, however, we
+find that several homeworks are too similar, we may ask students to explain
+their submissions to us individually.
+
+**If you can't explain why your solution works, we don't care if it behaves perfectly. We will give you a zero.**
+
+## Outside Sources
+
+Outside sources are a bit less clear. We encourage you to use Haskell and Rust
+documentation, look up functions on Hoogle, etc. You should **not**:
+
+- Google around for solutions to homework problems.
+- Ask for help on online, e.g., `#haskell`, `#rust`, Reddit, Discords, etc.
+- Look up things/post on sites like Quora, StackExchange, etc.
+
+## The Bottom Line
+
+**If you are unsure about whether a source is permissible, or if you
+are falling behind in the course and feel a strong temptation to bend these
+rules, please come talk to us instead.**
