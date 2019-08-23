@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.1">
     
     
       
@@ -46,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/application.0284f74d.css">
+      <link rel="stylesheet" href="../../stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../../stylesheets/application-palette.01803549.css">
+        <link rel="stylesheet" href="../../stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -394,6 +394,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-setup" title="Basic setup" class="md-nav__link">
+    Basic setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-setup" title="Full setup" class="md-nav__link">
+    Full setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#folder-structure" title="Folder Structure" class="md-nav__link">
+    Folder Structure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#instructions" title="Instructions" class="md-nav__link">
     Instructions
   </a>
@@ -492,6 +526,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#vertical-slide-navigation" title="Vertical Slide Navigation" class="md-nav__link">
+    Vertical Slide Navigation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navigation-mode" title="Navigation Mode" class="md-nav__link">
+    Navigation Mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#touch-navigation" title="Touch Navigation" class="md-nav__link">
     Touch Navigation
   </a>
@@ -502,6 +556,19 @@
   <a href="#lazy-loading" title="Lazy Loading" class="md-nav__link">
     Lazy Loading
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lazy-loading-iframes" title="Lazy Loading Iframes" class="md-nav__link">
+    Lazy Loading Iframes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -673,6 +740,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#resize-event" title="Resize Event" class="md-nav__link">
+    Resize Event
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#postmessage-api" title="postMessage API" class="md-nav__link">
     postMessage API
   </a>
@@ -818,33 +892,12 @@
     MathJax
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" title="Installation" class="md-nav__link">
-    Installation
-  </a>
-  
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#basic-setup" title="Basic setup" class="md-nav__link">
-    Basic setup
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#full-setup" title="Full setup" class="md-nav__link">
-    Full setup
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#folder-structure" title="Folder Structure" class="md-nav__link">
-    Folder Structure
+  <a href="#mathjax-in-markdown" title="MathJax in Markdown" class="md-nav__link">
+    MathJax in Markdown
   </a>
   
 </li>
@@ -884,6 +937,10 @@
 <h2 id="table-of-contents">Table of contents</h2>
 <ul>
 <li><a href="#online-editor">Online Editor</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#basic-setup">Basic setup</a></li>
+<li><a href="#full-setup">Full setup</a></li>
+<li><a href="#folder-structure">Folder Structure</a></li>
 <li><a href="#instructions">Instructions</a></li>
 <li><a href="#markup">Markup</a></li>
 <li><a href="#markdown">Markdown</a></li>
@@ -895,6 +952,7 @@
 <li><a href="#ready-event">Ready Event</a></li>
 <li><a href="#auto-sliding">Auto-sliding</a></li>
 <li><a href="#keyboard-bindings">Keyboard Bindings</a></li>
+<li><a href="#vertical-slide-navigation">Vertical Slide Navigation</a></li>
 <li><a href="#touch-navigation">Touch Navigation</a></li>
 <li><a href="#lazy-loading">Lazy Loading</a></li>
 <li><a href="#api">API</a></li>
@@ -913,6 +971,7 @@
 <li><a href="#fullscreen-mode">Fullscreen mode</a></li>
 <li><a href="#embedded-media">Embedded media</a></li>
 <li><a href="#stretching-elements">Stretching elements</a></li>
+<li><a href="#resize-event">Resize Event</a></li>
 <li><a href="#postmessage-api">postMessage API</a></li>
 <li><a href="#pdf-export">PDF Export</a></li>
 <li><a href="#theming">Theming</a></li>
@@ -924,10 +983,6 @@
 <li><a href="#client-presentation">Client presentation</a></li>
 <li><a href="#socketio-server">Socket.io server</a></li>
 <li><a href="#mathjax">MathJax</a></li>
-<li><a href="#installation">Installation</a></li>
-<li><a href="#basic-setup">Basic setup</a></li>
-<li><a href="#full-setup">Full setup</a></li>
-<li><a href="#folder-structure">Folder Structure</a></li>
 <li><a href="#license">License</a></li>
 </ul>
 <h4 id="more-reading">More reading</h4>
@@ -939,6 +994,53 @@
 </ul>
 <h2 id="online-editor">Online Editor</h2>
 <p>Presentations are written using HTML or Markdown but there's also an online editor for those of you who prefer a graphical interface. Give it a try at <a href="https://slides.com?ref=github">https://slides.com</a>.</p>
+<h2 id="installation">Installation</h2>
+<p>The <strong>basic setup</strong> is for authoring presentations only. The <strong>full setup</strong> gives you access to all reveal.js features and plugins such as speaker notes as well as the development tasks needed to make changes to the source.</p>
+<h3 id="basic-setup">Basic setup</h3>
+<p>The core of reveal.js is very easy to install. You'll simply need to download a copy of this repository and open the index.html file directly in your browser.</p>
+<ol>
+<li>Download the latest version of reveal.js from <a href="https://github.com/hakimel/reveal.js/releases">https://github.com/hakimel/reveal.js/releases</a></li>
+<li>Unzip and replace the example contents in index.html with your own</li>
+<li>Open index.html in a browser to view it</li>
+</ol>
+<h3 id="full-setup">Full setup</h3>
+<p>Some reveal.js features, like external Markdown and speaker notes, require that presentations run from a local web server. The following instructions will set up such a server as well as all of the development tasks needed to make edits to the reveal.js source code.</p>
+<ol>
+<li>
+<p>Install <a href="http://nodejs.org/">Node.js</a> (4.0.0 or later)</p>
+</li>
+<li>
+<p>Clone the reveal.js repository
+   <code>sh
+   $ git clone https://github.com/hakimel/reveal.js.git</code></p>
+</li>
+<li>
+<p>Navigate to the reveal.js folder
+   <code>sh
+   $ cd reveal.js</code></p>
+</li>
+<li>
+<p>Install dependencies
+   <code>sh
+   $ npm install</code></p>
+</li>
+<li>
+<p>Serve the presentation and monitor source files for changes
+   <code>sh
+   $ npm start</code></p>
+</li>
+<li>
+<p>Open <a href="http://localhost:8000">http://localhost:8000</a> to view your presentation</p>
+</li>
+</ol>
+<p>You can change the port by using <code>npm start -- --port=8001</code>.</p>
+<h3 id="folder-structure">Folder Structure</h3>
+<ul>
+<li><strong>css/</strong> Core styles without which the project does not function</li>
+<li><strong>js/</strong> Like above but for JavaScript</li>
+<li><strong>plugin/</strong> Components that have been developed as extensions to reveal.js</li>
+<li><strong>lib/</strong> All other third party assets (JavaScript, CSS, fonts)</li>
+</ul>
 <h2 id="instructions">Instructions</h2>
 <h3 id="markup">Markup</h3>
 <p>Here's a barebones example of a fully working reveal.js presentation:</p>
@@ -1025,7 +1127,7 @@
 <p>We use <a href="https://github.com/chjj/marked">marked</a> to parse Markdown. To customise marked's rendering, you can pass in options when <a href="#configuration">configuring Reveal</a>:</p>
 <pre><code class="javascript">Reveal.initialize({
     // Options which are passed into marked
-    // See https://github.com/chjj/marked#options-1
+    // See https://marked.js.org/#/USING_ADVANCED.md#options
     markdown: {
         smartypants: true
     }
@@ -1056,7 +1158,11 @@
     // Display the page number of the current slide
     slideNumber: false,
 
-    // Push each slide change to the browser history
+    // Add the current slide number to the URL hash so that reloading the
+    // page/copying the URL will return you to the same slide
+    hash: false,
+
+    // Push each slide change to the browser history. Implies `hash: true`
     history: false,
 
     // Enable keyboard shortcuts for navigation
@@ -1076,6 +1182,9 @@
 
     // Change the presentation direction to be RTL
     rtl: false,
+
+    // See https://github.com/hakimel/reveal.js/#navigation-mode
+    navigationMode: 'default',
 
     // Randomizes the order of slides each time the presentation loads
     shuffle: false,
@@ -1104,6 +1213,13 @@
     // - false: No media will autoplay, regardless of individual setting
     autoPlayMedia: null,
 
+    // Global override for preloading lazy-loaded iframes
+    // - null: Iframes with data-src AND data-preload will be loaded when within
+    //   the viewDistance, iframes with only data-src will be loaded when visible
+    // - true: All iframes with data-src will be loaded when within the viewDistance
+    // - false: All iframes with data-src will be loaded only when visible
+    preloadIframes: null,
+
     // Number of milliseconds between automatically proceeding to the
     // next slide, disabled when set to 0, this value can be overwritten
     // by using a data-autoslide attribute on your slides
@@ -1122,6 +1238,12 @@
 
     // Enable slide navigation via mouse wheel
     mouseWheel: false,
+
+    // Hide cursor if inactive
+    hideInactiveCursor: true,
+
+    // Time before the cursor is hidden (in ms)
+    hideCursorTime: 5000,
 
     // Hides the address bar on mobile devices
     hideAddressBar: true,
@@ -1209,9 +1331,6 @@ Reveal.configure({ autoSlide: 5000 });
 <p>Reveal.js doesn't <em>rely</em> on any third party scripts to work but a few optional libraries are included by default. These libraries are loaded as dependencies in the order they appear, for example:</p>
 <pre><code class="javascript">Reveal.initialize({
     dependencies: [
-        // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
-        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-
         // Interpret Markdown in &lt;section&gt; elements
         { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
         { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
@@ -1236,7 +1355,6 @@ Reveal.configure({ autoSlide: 5000 });
 - <strong>async</strong>: [optional] Flags if the script should load after reveal.js has started, defaults to false
 - <strong>callback</strong>: [optional] Function to execute when the script has loaded
 - <strong>condition</strong>: [optional] Function which must return true for the script to be loaded</p>
-<p>To load these dependencies, reveal.js requires <a href="http://headjs.com/">head.js</a> <em>(a script loading library)</em> to be loaded before reveal.js.</p>
 <h3 id="ready-event">Ready Event</h3>
 <p>A <code>ready</code> event is fired when reveal.js has loaded all non-async dependencies and is ready to start navigating. To check if reveal.js is already 'ready' you can call <code>Reveal.isReady()</code>.</p>
 <pre><code class="javascript">Reveal.addEventListener( 'ready', function( event ) {
@@ -1275,12 +1393,39 @@ Reveal.configure({
 });
 </code></pre>
 
+<h3 id="vertical-slide-navigation">Vertical Slide Navigation</h3>
+<p>Slides can be nested within other slides to create vertical stacks (see <a href="#markup">Markup</a>). When presenting, you use the left/right arrows to step through the main (horizontal) slides. When you arrive at a vertical stack you can optionally press the up/down arrows to view the vertical slides or skip past them by pressing the right arrow. Here's an example showing a bird's-eye view of what this looks like in action:</p>
+<p><img src="https://static.slid.es/support/reveal.js-vertical-slides.gif" width="450"></p>
+<h4 id="navigation-mode">Navigation Mode</h4>
+<p>You can finetune the reveal.js navigation behavior by using the <code>navigationMode</code> config option. Note that these options are only useful for presnetations that use a mix of horizontal and vertical slides. The following navigation modes are available:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">default</td>
+<td align="left">Left/right arrow keys step between horizontal slides. Up/down arrow keys step between vertical slides. Space key steps through all slides (both horizontal and vertical).</td>
+</tr>
+<tr>
+<td align="left">linear</td>
+<td align="left">Removes the up/down arrows. Left/right arrows step through all slides (both horizontal and vertical).</td>
+</tr>
+<tr>
+<td align="left">grid</td>
+<td align="left">When this is enabled, stepping left/right from a vertical stack to an adjacent vertical stack will land you at the same vertical index.<br><br>Consider a deck with six slides ordered in two vertical stacks:<br><code>1.1</code>&nbsp;&nbsp;&nbsp;&nbsp;<code>2.1</code><br><code>1.2</code>&nbsp;&nbsp;&nbsp;&nbsp;<code>2.2</code><br><code>1.3</code>&nbsp;&nbsp;&nbsp;&nbsp;<code>2.3</code><br><br>If you're on slide 1.3 and navigate right, you will normally move from 1.3 -&gt; 2.1. With navigationMode set to "grid" the same navigation takes you from 1.3 -&gt; 2.3.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="touch-navigation">Touch Navigation</h3>
 <p>You can swipe to navigate through a presentation on any touch-enabled device. Horizontal swipes change between horizontal slides, vertical swipes change between vertical slides. If you wish to disable this you can set the <code>touch</code> config option to false when initializing reveal.js.</p>
 <p>If there's some part of your content that needs to remain accessible to touch events you'll need to highlight this by adding a <code>data-prevent-swipe</code> attribute to the element. One common example where this is useful is elements that need to be scrolled.</p>
 <h3 id="lazy-loading">Lazy Loading</h3>
 <p>When working on presentation with a lot of media or iframe content it's important to load lazily. Lazy loading means that reveal.js will only load content for the few slides nearest to the current slide. The number of slides that are preloaded is determined by the <code>viewDistance</code> configuration option.</p>
-<p>To enable lazy loading all you need to do is change your <code>src</code> attributes to <code>data-src</code> as shown below. This is supported for image, video, audio and iframe elements. Lazy loaded iframes will also unload when the containing slide is no longer visible.</p>
+<p>To enable lazy loading all you need to do is change your <code>src</code> attributes to <code>data-src</code> as shown below. This is supported for image, video, audio and iframe elements.</p>
 <pre><code class="html">&lt;section&gt;
   &lt;img data-src=&quot;image.png&quot;&gt;
   &lt;iframe data-src=&quot;http://hakim.se&quot;&gt;&lt;/iframe&gt;
@@ -1291,6 +1436,20 @@ Reveal.configure({
 &lt;/section&gt;
 </code></pre>
 
+<h4 id="lazy-loading-iframes">Lazy Loading Iframes</h4>
+<p>Note that lazy loaded iframes ignore the <code>viewDistance</code> configuration and will only load when their containing slide becomes visible. Iframes are also unloaded as soon as the slide is hidden.</p>
+<p>When we lazy load a video or audio element, reveal.js won't start playing that content until the slide becomes visible. However there is no way to control this for an iframe since that could contain any kind of content. That means if we loaded an iframe before the slide is visible on screen it could begin playing media and sound in the background.</p>
+<p>You can override this behavior with the <code>data-preload</code> attribute. The iframe below will be loaded
+according to the <code>viewDistance</code>.</p>
+<pre><code class="html">&lt;section&gt;
+    &lt;iframe data-src=&quot;http://hakim.se&quot; data-preload&gt;&lt;/iframe&gt;
+&lt;/section&gt;
+</code></pre>
+
+<p>You can also change the default globally with the <code>preloadIframes</code> configuration option. If set to
+<code>true</code> ALL iframes with a <code>data-src</code> attribute will be preloaded when within the <code>viewDistance</code>
+regardless of individual <code>data-preload</code> attributes. If set to <code>false</code>, all iframes will only be
+loaded when they become visible.</p>
 <h3 id="api">API</h3>
 <p>The <code>Reveal</code> object exposes a JavaScript API for controlling navigation and reading state:</p>
 <pre><code class="javascript">// Navigation
@@ -1344,6 +1503,9 @@ Reveal.isLastSlide();
 Reveal.isOverview();
 Reveal.isPaused();
 Reveal.isAutoSliding();
+
+// Returns the top-level DOM element
+getRevealElement(); // &lt;div class=&quot;reveal&quot;&gt;...&lt;/div&gt;
 </code></pre>
 
 <h3 id="custom-key-bindings">Custom Key Bindings</h3>
@@ -1619,7 +1781,7 @@ Reveal.addEventListener( 'fragmenthidden', function( event ) {
 </code></pre>
 
 <h3 id="code-syntax-highlighting">Code syntax highlighting</h3>
-<p>By default, Reveal is configured with <a href="https://highlightjs.org/">highlight.js</a> for code syntax highlighting. To enable syntax highlighting, you'll have to load the highlight plugin (<a href="plugin/highlight/highlight.js">plugin/highlight/highlight.js</a>) and a highlight.js CSS theme (Reveal comes packaged with the zenburn theme: <a href="lib/css/zenburn.css">lib/css/zenburn.css</a>).</p>
+<p>By default, Reveal is configured with <a href="https://highlightjs.org/">highlight.js</a> for code syntax highlighting. To enable syntax highlighting, you'll have to load the highlight plugin (<a href="plugin/highlight/highlight.js">plugin/highlight/highlight.js</a>) and a highlight.js CSS theme (Reveal comes packaged with the Monokai themes: <a href="lib/css/monokai.css">lib/css/monokai.css</a>).</p>
 <pre><code class="javascript">Reveal.initialize({
     // More info https://github.com/hakimel/reveal.js#dependencies
     dependencies: [
@@ -1651,6 +1813,12 @@ Reveal.configure({ slideNumber: true });
 //    &quot;c&quot;:  flattened slide number
 //  &quot;c/t&quot;:  flattened slide number / total slides
 Reveal.configure({ slideNumber: 'c/t' });
+
+// You can provide a function to fully customize the number:
+Reveal.configure({ slideNumber: function() {
+    // Ignore numbering of vertical slides
+    return [ Reveal.getIndices().h ];
+}});
 
 // Control which views the slide number displays on using the &quot;showSlideNumber&quot; value:
 //     &quot;all&quot;: show on all views (default)
@@ -1691,6 +1859,13 @@ Reveal.toggleOverview();
 <p>Limitations:
 - Only direct descendants of a slide section can be stretched
 - Only one descendant per slide section can be stretched</p>
+<h3 id="resize-event">Resize Event</h3>
+<p>When reveal.js changes the scale of the slides it fires a resize event. You can subscribe to the event to resize your elements accordingly.</p>
+<pre><code class="javascript">Reveal.addEventListener( 'resize', function( event ) {
+    // event.scale, event.oldScale, event.size
+} );
+</code></pre>
+
 <h3 id="postmessage-api">postMessage API</h3>
 <p>The framework has a built-in postMessage API that can be used when communicating with a presentation inside of another window. Here's an example showing how you'd make a reveal.js instance in the given window proceed to slide 2:</p>
 <pre><code class="javascript">&lt;window&gt;.postMessage( JSON.stringify({ method: 'slide', args: [ 2 ] }), '*' );
@@ -1718,7 +1893,7 @@ Reveal.toggleOverview();
 </code></pre>
 
 <h2 id="pdf-export">PDF Export</h2>
-<p>Presentations can be exported to PDF via a special print stylesheet. This feature requires that you use <a href="http://google.com/chrome">Google Chrome</a> or <a href="https://www.chromium.org/Home">Chromium</a> and to be serving the presentation from a webserver.
+<p>Presentations can be exported to PDF via a special print stylesheet. This feature requires that you use <a href="http://google.com/chrome">Google Chrome</a> or <a href="https://www.chromium.org/Home">Chromium</a> and to be serving the presentation from a web server.
 Here's an example of an exported presentation that's been uploaded to SlideShare: http://www.slideshare.net/hakimel/revealjs-300.</p>
 <h3 id="separate-pages-for-fragments">Separate pages for fragments</h3>
 <p><a href="#fragments">Fragments</a> are printed on separate slides by default. Meaning if you have a slide with three fragment steps, it will generate three separate slides where the fragments appear incrementally.</p>
@@ -1796,7 +1971,7 @@ This will only display in the notes window.
 
 <h4 id="share-and-print-speaker-notes">Share and Print Speaker Notes</h4>
 <p>Notes are only visible to the speaker inside of the speaker view. If you wish to share your notes with others you can initialize reveal.js with the <code>showNotes</code> configuration value set to <code>true</code>. Notes will appear along the bottom of the presentations.</p>
-<p>When <code>showNotes</code> is enabled notes are also included when you <a href="https://github.com/hakimel/reveal.js#pdf-export">export to PDF</a>. By default, notes are printed in a semi-transparent box on top of the slide. If you'd rather print them on a separate page after the slide, set <code>showNotes: "separate-page"</code>.</p>
+<p>When <code>showNotes</code> is enabled notes are also included when you <a href="https://github.com/hakimel/reveal.js#pdf-export">export to PDF</a>. By default, notes are printed in a box on top of the slide. If you'd rather print them on a separate page, after the slide, set <code>showNotes: "separate-page"</code>.</p>
 <h4 id="speaker-notes-clock-and-timers">Speaker notes clock and timers</h4>
 <p>The speaker notes window will also show:</p>
 <ul>
@@ -1852,7 +2027,7 @@ This will only display in the notes window.
 
     // Don't forget to add the dependencies
     dependencies: [
-        { src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
+        { src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js', async: true },
         { src: 'plugin/multiplex/master.js', async: true },
 
         // and if you want speaker notes
@@ -1878,7 +2053,7 @@ This will only display in the notes window.
 
     // Don't forget to add the dependencies
     dependencies: [
-        { src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
+        { src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js', async: true },
         { src: 'plugin/multiplex/client.js', async: true }
 
         // other dependencies...
@@ -1911,7 +2086,7 @@ This will only display in the notes window.
 
     // Don't forget to add the dependencies
     dependencies: [
-        { src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
+        { src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js', async: true },
         { src: 'plugin/multiplex/client.js', async: true }
 
         // other dependencies...
@@ -1932,7 +2107,7 @@ This will only display in the notes window.
 
     // Don't forget to add the dependencies
     dependencies: [
-        { src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
+        { src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js', async: true },
         { src: 'plugin/multiplex/master.js', async: true },
         { src: 'plugin/multiplex/client.js', async: true }
 
@@ -1951,6 +2126,8 @@ This will only display in the notes window.
     math: {
         mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
         config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+        // pass other options into `MathJax.Hub.Config()`
+        TeX: { Macros: macros }
     },
 
     dependencies: [
@@ -1960,56 +2137,14 @@ This will only display in the notes window.
 </code></pre>
 
 <p>Read MathJax's documentation if you need <a href="http://docs.mathjax.org/en/latest/start.html#secure-access-to-the-cdn">HTTPS delivery</a> or serving of <a href="http://docs.mathjax.org/en/latest/configuration.html#loading-mathjax-from-the-cdn">specific versions</a> for stability.</p>
-<h2 id="installation">Installation</h2>
-<p>The <strong>basic setup</strong> is for authoring presentations only. The <strong>full setup</strong> gives you access to all reveal.js features and plugins such as speaker notes as well as the development tasks needed to make changes to the source.</p>
-<h3 id="basic-setup">Basic setup</h3>
-<p>The core of reveal.js is very easy to install. You'll simply need to download a copy of this repository and open the index.html file directly in your browser.</p>
-<ol>
-<li>Download the latest version of reveal.js from <a href="https://github.com/hakimel/reveal.js/releases">https://github.com/hakimel/reveal.js/releases</a></li>
-<li>Unzip and replace the example contents in index.html with your own</li>
-<li>Open index.html in a browser to view it</li>
-</ol>
-<h3 id="full-setup">Full setup</h3>
-<p>Some reveal.js features, like external Markdown and speaker notes, require that presentations run from a local web server. The following instructions will set up such a server as well as all of the development tasks needed to make edits to the reveal.js source code.</p>
-<ol>
-<li>
-<p>Install <a href="http://nodejs.org/">Node.js</a> (4.0.0 or later)</p>
-</li>
-<li>
-<p>Clone the reveal.js repository
-   <code>sh
-   $ git clone https://github.com/hakimel/reveal.js.git</code></p>
-</li>
-<li>
-<p>Navigate to the reveal.js folder
-   <code>sh
-   $ cd reveal.js</code></p>
-</li>
-<li>
-<p>Install dependencies
-   <code>sh
-   $ npm install</code></p>
-</li>
-<li>
-<p>Serve the presentation and monitor source files for changes
-   <code>sh
-   $ npm start</code></p>
-</li>
-<li>
-<p>Open <a href="http://localhost:8000">http://localhost:8000</a> to view your presentation</p>
-</li>
-</ol>
-<p>You can change the port by using <code>npm start -- --port=8001</code>.</p>
-<h3 id="folder-structure">Folder Structure</h3>
-<ul>
-<li><strong>css/</strong> Core styles without which the project does not function</li>
-<li><strong>js/</strong> Like above but for JavaScript</li>
-<li><strong>plugin/</strong> Components that have been developed as extensions to reveal.js</li>
-<li><strong>lib/</strong> All other third party assets (JavaScript, CSS, fonts)</li>
-</ul>
+<h4 id="mathjax-in-markdown">MathJax in Markdown</h4>
+<p>If you want to include math inside of a presentation written in Markdown you need to wrap the formula in backticks. This prevents syntax conflicts between LaTeX and Markdown. For example:</p>
+<pre><code>`$$ J(\theta_0,\theta_1) = \sum_{i=0} $$`
+</code></pre>
+
 <h2 id="license">License</h2>
 <p>MIT licensed</p>
-<p>Copyright (C) 2018 Hakim El Hattab, http://hakim.se</p>
+<p>Copyright (C) 2019 Hakim El Hattab, http://hakim.se</p>
                 
                   
                 
@@ -2044,7 +2179,7 @@ This will only display in the notes window.
       
     </div>
     
-      <script src="../../javascripts/application.245445c6.js"></script>
+      <script src="../../javascripts/application.c648116f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       

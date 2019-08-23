@@ -4,53 +4,73 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Machine Learning (CSCI 5525)">
+  <meta name="dcterms.date" content="2019-09-03">
   <title>Lecture 01</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="../../assets/custom-js/reveal.js//css/reveal.css">
-  <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="../../assets/custom-js/reveal.js//css/theme/solarized.css" id="theme">
+  <link rel="stylesheet" href="../../assets/custom-js/reveal.js-3.8.0//css/reset.css">
+  <link rel="stylesheet" href="../../assets/custom-js/reveal.js-3.8.0//css/reveal.css">
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="../../assets/custom-js/reveal.js-3.8.0//css/theme/solarized.css" id="theme">
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? '../../assets/custom-js/reveal.js//css/print/pdf.css' : '../../assets/custom-js/reveal.js//css/print/paper.css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '../../assets/custom-js/reveal.js-3.8.0//css/print/pdf.css' : '../../assets/custom-js/reveal.js-3.8.0//css/print/paper.css';
     document.getElementsByTagName( 'head' )[0].appendChild( link );
   </script>
   <!--[if lt IE 9]>
-  <script src="../../assets/custom-js/reveal.js//lib/js/html5shiv.js"></script>
+  <script src="../../assets/custom-js/reveal.js-3.8.0//lib/js/html5shiv.js"></script>
   <![endif]-->
-  <script src=""></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css" /><script type="text/javascript">window.onload = function(){var mathElements = document.getElementsByClassName("math");
-  for (var i=0; i < mathElements.length; i++)
-  {
-   var texText = mathElements[i].firstChild
-   katex.render(texText.data, mathElements[i])
-  }}
-  </script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
-<section>
+<section id="title-slide">
   <h1 class="title">Lecture 01</h1>
   <p class="author">Machine Learning (CSCI 5525)</p>
   <p class="date">September 3, 2019</p>
 </section>
 
-<section><section id="general-information" class="titleslide slide level1"><h1>General Information</h1></section><section id="logistics" class="slide level2">
+<section><section id="general-information" class="title-slide slide level1"><h1>General Information</h1></section><section id="logistics" class="slide level2">
 <h2>Logistics</h2>
 <ul>
 <li><strong>Course</strong>: CSCI 5525, Fall 2019</li>
 <li><strong>Location</strong>: Mechanical Engineering 108</li>
 <li><strong>Time</strong>: Tuesdays and Thursdays, 11:15 AM‑12:30 PM</li>
-<li>Instructor: Steven Wu</li>
-<li>Teaching Assistants:
+<li><strong>Course webpage</strong>: https://zstevenwu.com/courses/f19/csci5525/</li>
+</ul>
+</section><section id="instructor" class="slide level2">
+<h2>Instructor</h2>
 <ul>
-<li>Arun Kumar</li>
-<li>Xinyi Wang</li>
+<li>Steven Wu
+<ul>
+<li><strong>Webpage</strong>: https://zstevenwu.com</li>
+<li><strong>Email</strong>: zsw@umn.edu</li>
+<li><strong>Office hour</strong>: N/A</li>
+<li><strong>Locatoin</strong>: Keller Hall 6-225E</li>
+</ul></li>
+</ul>
+</section><section id="teaching-assistants" class="slide level2">
+<h2>Teaching Assistants:</h2>
+<ul>
+<li>Arun Kumar
+<ul>
+<li><strong>Email</strong>: kumar250@umn.edu</li>
+<li><strong>Office</strong> hour: N/A</li>
+</ul></li>
+<li>Xinyi Wang
+<ul>
+<li><strong>Email</strong>: wang4831@umn.edu</li>
+<li><strong>Office hour</strong>: N/A</li>
 </ul></li>
 </ul>
 </section><section id="pre-requisite" class="slide level2">
@@ -58,51 +78,56 @@
 <ul>
 <li>Ideally you will have completed
 <ul>
-<li>CSCI 5521 or</li>
-<li>equivalently other introduction to machine learning courses.</li>
-</ul></li>
-<li>You should also have
-<ul>
-<li>undergraduate level training or coursework in linear algebra, multivariate calculus, and basic probability and statistics, and</li>
-<li>programming skills with Python.</li>
+<li>CSCI 5521 or equivalently other introduction to machine learning courses</li>
+<li>undergraduate level training or coursework in linear algebra, multivariate calculus, and basic probability and statistics</li>
 </ul></li>
 </ul>
-</section><section id="office-hours" class="slide level2">
-<h2>Office Hours</h2>
+</section><section id="technical-background" class="slide level2">
+<h2>Technical background</h2>
 <ul>
-<li>Steven Wu: Keller Hall 6-225E</li>
-<li>Monday 9:00 - 10:00am</li>
+<li><p>You should also have</p>
+<ul>
+<li>programming skills with Python</li>
+</ul></li>
 </ul>
 </section><section id="homeworks" class="slide level2">
 <h2>Homeworks</h2>
 <ul>
-<li>There will be five homeworks, including written homeworks and programming homeworks.</li>
-<li>All submissions in pdf. Please type up your written homeworks using LaTeX.</li>
-</ul>
-</section></section>
-<section><section id="supervised-learning" class="titleslide slide level1"><h1>Supervised Learning</h1></section><section id="basic-setting" class="slide level2">
-<h2>Basic Setting</h2>
+<li><p>Five homeworks with both written and programming components.</p></li>
+<li><p>Submission guidelines:</p>
 <ul>
-<li>Observations <span class="math display">\displaystyle x, y</span></li>
+<li><strong>All submissions in pdf</strong> Please type up your written homeworks using LaTeX.</li>
+<li>We will set up OverLeaf templates.</li>
+</ul></li>
+</ul>
+</section><section id="programming-assignments" class="slide level2">
+<h2>Programming assignments</h2>
+<ul>
+<li>All programming in <strong>Python</strong>.
+<ul>
+<li><strong>Installation</strong>: We will set up a virtual environment for you.</li>
+</ul></li>
 </ul>
 </section></section>
+<section id="topics" class="title-slide slide level1"><h1>Topics</h1></section>
     </div>
   </div>
 
-  <script src="../../assets/custom-js/reveal.js//lib/js/head.min.js"></script>
-  <script src="../../assets/custom-js/reveal.js//js/reveal.js"></script>
+  <script src="../../assets/custom-js/reveal.js-3.8.0//js/reveal.js"></script>
 
   <script>
 
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
 
         // Optional reveal.js plugins
         dependencies: [
-          { src: '../../assets/custom-js/reveal.js//lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: '../../assets/custom-js/reveal.js//plugin/zoom-js/zoom.js', async: true },
-              { src: '../../assets/custom-js/reveal.js//plugin/notes/notes.js', async: true }
+          { src: '../../assets/custom-js/reveal.js-3.8.0//lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../../assets/custom-js/reveal.js-3.8.0//plugin/zoom-js/zoom.js', async: true },
+          { src: '../../assets/custom-js/reveal.js-3.8.0//plugin/notes/notes.js', async: true }
         ]
       });
     </script>

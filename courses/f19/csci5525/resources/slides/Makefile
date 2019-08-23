@@ -4,7 +4,7 @@ KATEX-ROOT=../../assets/custom-js/katex/
 SRC=$(wildcard *.md)
 OUT=$(patsubst %.md,%.html,$(SRC))
 PDF=$(patsubst %.md,%.pdf,$(SRC))
-PANDOC=pandoc -t revealjs -V revealjs-url=$(REVEALJS-ROOT) -V theme=$(THEME) --katex=$(KATEX-ROOT)
+PANDOC=/usr/local/Cellar/pandoc/2.7.3/bin/pandoc -t revealjs -V revealjs-url=$(REVEALJS-ROOT) -V theme=$(THEME) --katex=$(KATEX-ROOT)
 DECKTAPE=`npm bin`/decktape -s 2304x1440
 
 .PHONY: all clean
