@@ -114,6 +114,12 @@
 </ul></li>
 <li>Homework submissions via Canvas.</li>
 </ul>
+</section><section id="enrollment" class="slide level2">
+<h2>Enrollment</h2>
+<ul>
+<li><p>If you are not on the waitlist, put down your info at this Google form <a href="https://forms.gle/6PGVgatMfQZEARwE7" class="uri">https://forms.gle/6PGVgatMfQZEARwE7</a></p></li>
+<li><p>Link will be on the course webpage.</p></li>
+</ul>
 </section></section>
 <section><section id="organization" class="title-slide slide level1"><h1>Organization</h1></section><section id="midterm-and-final-exam" class="slide level2">
 <h2>Midterm and Final exam</h2>
@@ -221,7 +227,110 @@
 <li>Neural networks
 <ul>
 <li>Optimization: (Stochastic) gradient descent</li>
-<li><em>Note</em>: <em>we will not cover the cutting edge of deep learning. We plan to offer a new course dedicated to deep learning in Spring 2020.</em></li>
+</ul></li>
+</ul>
+</section><section id="probably-skipping" class="slide level2">
+<h2>Probably skipping</h2>
+<ul>
+<li>Decision trees</li>
+<li>Nearest neighbors</li>
+<li>Naive Bayes</li>
+<li>other stuff you might have seen in CSCI5521</li>
+<li><em>We will not cover the cutting edge of deep learning. We plan to offer a new course dedicated to deep learning in Spring 2020.</em></li>
+</ul>
+</section><section id="the-problem-of-over-fitting" class="slide level2">
+<h2>The problem of over-fitting</h2>
+<ul>
+<li>Suppose we observe data <span class="math inline">(x_1, y_1),\ldots , (x_n, y_n)</span> drawn from a distribution.</li>
+<li>Train the following predictor: <span class="math display">\hat f(X)= \begin{cases} y_i, &amp; \text{if}\ X=x_i \\ \text{&quot;Gopher!&quot;},
+  &amp; \text{otherwise} \end{cases}</span></li>
+</ul>
+</section><section id="over-fitting" class="slide level2">
+<h2>Over-fitting</h2>
+<ul>
+<li><span class="math inline">\hat f</span> has training error = 0, but errs on every example it hasn’t seen.
+<ul>
+<li>Well, except for Gopher.</li>
+</ul></li>
+<li>How do we formally study this phenomenon?</li>
+</ul>
+</section><section id="machine-learning-theory" class="slide level2">
+<h2>Machine learning theory</h2>
+<ul>
+<li>Formulation of learning
+<ul>
+<li>PAC learning model</li>
+<li>Empirical risk minimization</li>
+</ul></li>
+<li>Generalization
+<ul>
+<li>Complexity measures of function classes
+<ul>
+<li>VC dimension</li>
+<li>Rademacher complexity</li>
+</ul></li>
+<li>Maybe: stability of learning algorithms</li>
+</ul></li>
+<li>Tools: concentration of measure
+<ul>
+<li>Chernoff bounds</li>
+<li>Moment generating functions</li>
+</ul></li>
+</ul>
+</section><section id="ensemble-methods" class="slide level2">
+<h2>Ensemble methods</h2>
+<p>Turning <em>weak</em> learners into <em>strong</em> learners.</p>
+<ul>
+<li>Boosting method
+<ul>
+<li>Adaboost</li>
+</ul></li>
+<li>Bagging = Bootstrap aggregating
+<ul>
+<li>Random Forest</li>
+</ul></li>
+</ul>
+</section><section id="generative-models" class="slide level2">
+<h2>Generative models</h2>
+<ul>
+<li>Variational Autoencoders (VAE)</li>
+<li>Generative adversarial nets (GANs)</li>
+</ul>
+</section><section id="interactive-learning" class="slide level2">
+<h2>Interactive learning</h2>
+<ul>
+<li>Online learning
+<ul>
+<li>sequential decision-making (with full info)</li>
+<li>e.g. traffic routing, portfolio optimization</li>
+</ul></li>
+<li>Multi-armed bandit learning
+<ul>
+<li>one-sided feedback</li>
+<li>exploration versus exploitation</li>
+<li>e.g. clinical trials, online advertising, contents recommendation</li>
+</ul></li>
+<li>Reinforcement learning
+<ul>
+<li>learner interacts with the environment</li>
+<li>e.g. video games, educational software, healthcare decision making, robotics or people-facing applications</li>
+</ul></li>
+</ul>
+</section><section id="additional-topics-tentative" class="slide level2">
+<h2>Additional topics (tentative)</h2>
+<ul>
+<li><p>Privacy-preserving machine learning</p>
+<ul>
+<li>when the data has sensitive info</li>
+</ul></li>
+<li><p>Fairness in machine learning</p>
+<ul>
+<li>when algorithms inform or make decisions on people</li>
+</ul></li>
+<li><p>Machine learning and game theory</p></li>
+<li><p>Probabilistic programming</p>
+<ul>
+<li>design of programming language for ML</li>
 </ul></li>
 </ul>
 </section><section id="readings" class="slide level2">
@@ -252,7 +361,10 @@
 </ul>
 </section><section id="should-i-buy-the-books" class="slide level2">
 <h2>Should I buy the books?</h2>
-<p>You are welcome to buy physical copies if you wish—they’re good books!—but the online versions will suffice for this course.</p>
+<ul>
+<li>You are welcome to buy physical copies if you wish—they’re good books!</li>
+<li>But the online versions will suffice for this course.</li>
+</ul>
 </section></section>
     </div>
   </div>

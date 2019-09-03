@@ -408,6 +408,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#enrollment" title="Enrollment" class="md-nav__link">
+    Enrollment
+  </a>
+  
+</li>
+      
       
       
       
@@ -494,6 +501,16 @@ of sending emails.</p>
 <li><strong>Please do not download and distribute the videos!</strong></li>
 <li>Against UMN policies.</li>
 <li>Homework submissions via Canvas.</li>
+</ul>
+<h2 id="enrollment">Enrollment</h2>
+<ul>
+<li>
+<p>If you are not on the waitlist, put down your info at this Google form
+<a href="https://forms.gle/6PGVgatMfQZEARwE7">https://forms.gle/6PGVgatMfQZEARwE7</a></p>
+</li>
+<li>
+<p>Link will be on the course webpage.</p>
+</li>
 </ul>
 <h1 id="organization">Organization</h1>
 <h2 id="midterm-and-final-exam">Midterm and Final exam</h2>
@@ -621,9 +638,109 @@ instances.</p>
 <li>Non-linear methods: kernels</li>
 <li>Neural networks</li>
 <li>Optimization: (Stochastic) gradient descent</li>
-<li><em>Note</em>: <em>we will not cover the cutting edge of deep learning. We
-    plan to offer a new course dedicated to deep learning in Spring
-    2020.</em></li>
+</ul>
+<h2 id="probably-skipping">Probably skipping</h2>
+<ul>
+<li>Decision trees</li>
+<li>Nearest neighbors</li>
+<li>Naive Bayes</li>
+<li>other stuff you might have seen in CSCI5521</li>
+<li><em>We will not cover the cutting edge of deep learning. We plan to
+ offer a new course dedicated to deep learning in Spring 2020.</em></li>
+</ul>
+<h2 id="the-problem-of-over-fitting">The problem of over-fitting</h2>
+<ul>
+<li>Suppose we observe data $(x_1, y_1),\ldots , (x_n, y_n)$ drawn from a
+distribution. </li>
+<li>Train the following predictor:
+$$\hat f(X)= \begin{cases} y_i, &amp; \text{if}\ X=x_i \ \text{"Gopher!"},
+    &amp; \text{otherwise} \end{cases}$$</li>
+</ul>
+<h2 id="over-fitting">Over-fitting</h2>
+<ul>
+<li>$\hat f$ has training error = 0, but errs on every example it hasn't
+  seen.</li>
+<li>Well, except for Gopher.</li>
+<li>How do we formally study this phenomenon?</li>
+</ul>
+<h2 id="machine-learning-theory">Machine learning theory</h2>
+<ul>
+<li>Formulation of learning</li>
+<li>PAC learning model</li>
+<li>
+<p>Empirical risk minimization</p>
+</li>
+<li>
+<p>Generalization</p>
+</li>
+<li>Complexity measures of function classes<ul>
+<li>VC dimension</li>
+<li>Rademacher complexity</li>
+</ul>
+</li>
+<li>
+<p>Maybe: stability of learning algorithms</p>
+</li>
+<li>
+<p>Tools: concentration of measure</p>
+</li>
+<li>Chernoff bounds</li>
+<li>Moment generating functions</li>
+</ul>
+<h2 id="ensemble-methods">Ensemble methods</h2>
+<p>Turning <em>weak</em> learners into <em>strong</em> learners.</p>
+<ul>
+<li>Boosting method </li>
+<li>Adaboost</li>
+<li>Bagging = Bootstrap aggregating</li>
+<li>Random Forest</li>
+</ul>
+<h2 id="generative-models">Generative models</h2>
+<ul>
+<li>Variational Autoencoders (VAE)</li>
+<li>Generative adversarial nets (GANs)</li>
+</ul>
+<h2 id="interactive-learning">Interactive learning</h2>
+<ul>
+<li>Online learning</li>
+<li>sequential decision-making (with full info)</li>
+<li>
+<p>e.g. traffic routing, portfolio optimization</p>
+</li>
+<li>
+<p>Multi-armed bandit learning</p>
+</li>
+<li>one-sided feedback</li>
+<li>exploration versus exploitation</li>
+<li>
+<p>e.g. clinical trials, online advertising, contents recommendation</p>
+</li>
+<li>
+<p>Reinforcement learning</p>
+</li>
+<li>learner interacts with the environment</li>
+<li>e.g. video games, educational software, healthcare decision
+    making, robotics or people-facing applications</li>
+</ul>
+<h2 id="additional-topics-tentative">Additional topics (tentative)</h2>
+<ul>
+<li>Privacy-preserving machine learning</li>
+<li>
+<p>when the data has sensitive info</p>
+</li>
+<li>
+<p>Fairness in machine learning</p>
+</li>
+<li>
+<p>when algorithms inform or make decisions on people</p>
+</li>
+<li>
+<p>Machine learning and game theory</p>
+</li>
+<li>
+<p>Probabilistic programming</p>
+</li>
+<li>design of programming language for ML</li>
 </ul>
 <h2 id="readings">Readings</h2>
 <ul>
@@ -647,8 +764,11 @@ Learning:</a> <ul>
 </li>
 </ul>
 <h2 id="should-i-buy-the-books">Should I buy the books?</h2>
-<p>You are welcome to buy physical copies if you wish---they're good
-books!---but the online versions will suffice for this course.</p>
+<ul>
+<li>You are welcome to buy physical copies if you wish---they're good
+books!</li>
+<li>But the online versions will suffice for this course.</li>
+</ul>
                 
                   
                 
