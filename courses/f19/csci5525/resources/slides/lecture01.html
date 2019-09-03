@@ -29,6 +29,14 @@
   <!--[if lt IE 9]>
   <script src="../../assets/custom-js/reveal.js//lib/js/html5shiv.js"></script>
   <![endif]-->
+  <script src="../../assets/custom-js/katex/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+    var mathElements = document.getElementsByClassName("math");
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") { katex.render(texText.data, mathElements[i], { displayMode: mathElements[i].classList.contains("display"), throwOnError: false } );
+    }}});</script>
+  <link rel="stylesheet" href="../../assets/custom-js/katex/katex.min.css" />
 </head>
 <body>
   <div class="reveal">
@@ -47,6 +55,7 @@
 <li><strong>Location</strong>: Mechanical Engineering 108</li>
 <li><strong>Time</strong>: Tuesdays and Thursdays, 11:15 AM‑12:30 PM</li>
 <li><strong>Course webpage</strong>: https://zstevenwu.com/courses/f19/csci5525/</li>
+<li><strong>Canvas</strong>: you should be registered on it now</li>
 </ul>
 </section><section id="instructor" class="slide level2">
 <h2>Instructor</h2>
@@ -55,8 +64,11 @@
 <ul>
 <li><strong>Webpage</strong>: https://zstevenwu.com</li>
 <li><strong>Email</strong>: zsw@umn.edu</li>
-<li><strong>Office hour</strong>: N/A</li>
-<li><strong>Locatoin</strong>: Keller Hall 6-225E</li>
+<li><strong>Office hour</strong>: 4:00-5:00 pm on Tues
+<ul>
+<li>Might add one more office hour if needed</li>
+</ul></li>
+<li><strong>Location</strong>: Keller Hall 6-225E</li>
 </ul></li>
 </ul>
 </section><section id="teaching-assistants" class="slide level2">
@@ -85,31 +97,61 @@
 </section><section id="technical-background" class="slide level2">
 <h2>Technical background</h2>
 <ul>
-<li><p>You should also have</p>
+<li>You should know:
 <ul>
+<li>linear algebra</li>
+<li>probability</li>
+<li>calculus</li>
+<li>basic understandings of algorithms design (e.g. big-<span class="math inline">O</span>, <span class="math inline">\Omega</span> notation)</li>
+<li>how to prove mathematical claims formally</li>
 <li>programming skills with Python</li>
+<li>and so on…</li>
 </ul></li>
+</ul>
+</section><section id="grading-policy" class="slide level2">
+<h2>Grading policy</h2>
+<ul>
+<li>Homework 60% (15% for each homework)</li>
+<li>Midterm 15%</li>
+<li>Final 20%</li>
+<li>Class Participation 5%</li>
 </ul>
 </section><section id="homeworks" class="slide level2">
 <h2>Homeworks</h2>
 <ul>
-<li><p>Five homeworks with both written and programming components.</p></li>
+<li>Five homeworks with both written and programming components.</li>
+<li>Late homeworks will <strong>not</strong> accepted. <strong>No grace days!</strong></li>
+<li>Your <strong>lowest</strong> homework score will be dropped.</li>
+</ul>
+</section><section id="written-components" class="slide level2">
+<h2>Written components</h2>
+<ul>
+<li><p>Derivation and understanding of the algorithms</p></li>
 <li><p>Submission guidelines:</p>
 <ul>
 <li><strong>All submissions in pdf</strong> Please type up your written homeworks using LaTeX.</li>
-<li>We will set up OverLeaf templates.</li>
+<li>We will set up OverLeaf templates. (Very easy to use!)</li>
 </ul></li>
 </ul>
-</section><section id="programming-assignments" class="slide level2">
-<h2>Programming assignments</h2>
+</section><section id="programming-components" class="slide level2">
+<h2>Programming components</h2>
 <ul>
-<li>All programming in <strong>Python</strong>.
-<ul>
-<li><strong>Installation</strong>: We will set up a virtual environment for you.</li>
-</ul></li>
+<li>All programming in <strong>Python</strong>.</li>
+<li>Python3, Python Notebook (Jupyter)</li>
+<li><strong>Installation</strong>: We are currently exploring options, we will provide one of the following - a virtual environment with all of the packages installed (VirtualBox)</li>
 </ul>
 </section></section>
-<section id="topics" class="title-slide slide level1"><h1>Topics</h1></section>
+<section><section id="topics" class="title-slide slide level1"><h1>Topics</h1></section><section id="supervised-learning" class="slide level2">
+<h2>Supervised learning</h2>
+<ul>
+<li>Linear regression</li>
+<li>Logistic regression</li>
+<li>Support vector machines, constrained optimization, duality</li>
+<li>Non-linear methods: kernels</li>
+<li>Optimization: (Stochastic) gradient descent</li>
+<li>Neural networks</li>
+</ul>
+</section></section>
     </div>
   </div>
 
