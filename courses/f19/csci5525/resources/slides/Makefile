@@ -19,5 +19,9 @@ pdf: $(PDF)
 %.pdf: %.html
 	$(DECKTAPE) $< $@
 
+
+cp:
+	cp /Users/zsw/Dropbox/F19_CSCI_5525_Material/Lecture*/lecture*.pdf .
+
 clean:
 	rm -f *.html *.pdf
