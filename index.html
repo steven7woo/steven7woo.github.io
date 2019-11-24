@@ -34,10 +34,10 @@
 
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
-      <a href="index.html#" target="_self">
+      <!-- <a href="index.html#" target="_self">
        <img src="images/ZSW.jpg" class="rounded-circle" style="height:50px; margin:10px">
        </a>
-      <a class="navbar-brand" href="index.html#" target="_self">STEVEN WU</a>
+      <a class="navbar-brand" href="index.html#" target="_self"><b>STEVEN WU</b></a> -->
        <button id='btn1' class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon">
          <i class="fas fa-bars vertical center"></i>
@@ -46,7 +46,7 @@
        <div class="collapse navbar-collapse " id="navbarSupportedContent">
          <ul class="navbar-nav mr-4">
            <li class="nav-item">
-             <a class="nav-link " data-value="about" href="index.html#about" target="_self">About Me</a>
+             <a class="nav-link " data-value="about" href="index.html#about" target="_self">Home</a>
            </li>
            <li class="nav-item">
              <a class="nav-link " data-value="news" href="index.html#news" target="_self">News</a>
@@ -66,106 +66,90 @@
   <br>
 
 <body>
-  <div>
-  <div class="s-bg-image s-bg-light-text s-new-title-section s-section background-image lazyloaded"
-  data-react-style="{
-    "backgroundRepeat":"no-repeat",
-    "backgroundSize":"cover",
-    "backgroundColor":"transparent",
-    "backgroundPosition":"50% 50%"}"
-    style="
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-color: transparent;
-    background-position: 50% 50%;
-    background-image: url('css/finalCover.jpeg');
-    min-height: 0px;
-    padding-top: 196px;
-    padding-bottom: 196px;">
-
-
-      <div class="container description" style="text-align: center">
-            <img src="images/ZSW.jpg" class="rounded-circle">
-            <div style="text-align: center">
-            <h1>Steven Wu</h1>
-              <p> Assistant Professor<br>
-                  Computer Science & Engineering Department<br>
-                  University of Minnesota</p><br>
-              <h6>Email: zsw [at] umn.edu<br>
-                6-225E Keller Hall<br>
-                200 Union Street SE<br>
-                Minneapolis, MN 55455<br>
-              </h6>
-            </div>
-      </div>
-
-    </div>
-  </div>
+<!-- <img src="images/banner.jpg" class= "responsive"> -->
 
   <!--About-->
-    <div class="about wow zoomIn" id="about">
-       <h1 class="text-center">ABOUT ME</h1>
+  <div class="about">
+    <div class="row">
 
-      <div class="row">
-        <p>I received my PhD in Computer Science from
-        the <a href="http://www.upenn.edu/"
-        style="text-decoration:none" target="_blank">University of
-        Pennsylvania</a>, where I was extremely fortunate to have been
-        co-advised by <a href="http://www.cis.upenn.edu/~mkearns"
-        style="text-decoration:none" target="_blank"> Michael
-        Kearns </a> and <a href="http://www.cis.upenn.edu/~aaroth"
-        style="text-decoration:none" target="_blank"> Aaron
-        Roth</a>. My doctoral dissertation received Penn's Morris and
-        Dorothy Rubinoff Award for best thesis. Before joining
-        the <a href="https://twin-cities.umn.edu/" target="_blank"
-        onclick="_gaq.push(['_trackEvent', 'Download',
-        this.href])">UMN</a>, I spent a year as a post-doctoral
-        researcher
-        at <a href="http://research.microsoft.com/en-us/labs/newyork/"
-        target="_blank" onclick="_gaq.push(['_trackEvent', 'Download',
-        this.href])">Microsoft Research-New York City</a> in
-        the <a href='https://www.microsoft.com/en-us/research/group/machine-learning-nyc/'>Machine
-        Learning</a>
-        and <a href='https://www.microsoft.com/en-us/research/group/algorithmic-economics/'>Algorithmic
-        Economics</a> groups. <br><br>
+      <div class="col-md-4">
+        <div class="container description" style="text-align: center">
+              <img src="images/ZSW.jpg" class="rounded-circle">
+              <div style="text-align: center">
+              <h1>Steven Wu</h1>
+                <p> Assistant Professor<br>
+                    Computer Science & Engineering<br>
+                    University of Minnesota</p><br>
+                <h6>Email: zsw [at] umn.edu<br>
+                  6-225E Keller Hall<br>
+                  200 Union Street SE<br>
+                  Minneapolis, MN 55455<br>
+                </h6>
+              </div>
+        </div>
+      </div>
+
+      <div class="col-md-8" id="about">
+         <!-- <h1 class="text-center">Home</h1> -->
+          <p> I am an Assistant Professor of <a href="https://www.cs.umn.edu/" style="text-decoration:none" target="_blank">Computer Science & Engineering</a> at the <a href="https://twin-cities.umn.edu/University" style="text-decoration:none" target="_blank">University of Minnesota</a>. I received my PhD in Computer Science from
+          the <a href="http://www.upenn.edu/"
+          style="text-decoration:none" target="_blank">University of
+          Pennsylvania</a>, where I was extremely fortunate to have been
+          co-advised by <a href="http://www.cis.upenn.edu/~mkearns"
+          style="text-decoration:none" target="_blank"> Michael
+          Kearns </a> and <a href="http://www.cis.upenn.edu/~aaroth"
+          style="text-decoration:none" target="_blank"> Aaron
+          Roth</a>. My doctoral dissertation received Penn's Morris and
+          Dorothy Rubinoff Award for best thesis. Before joining
+          the <a href="https://twin-cities.umn.edu/" target="_blank"
+          onclick="_gaq.push(['_trackEvent', 'Download',
+          this.href])">UMN</a>, I spent a year as a post-doctoral
+          researcher
+          at <a href="http://research.microsoft.com/en-us/labs/newyork/"
+          target="_blank" onclick="_gaq.push(['_trackEvent', 'Download',
+          this.href])">Microsoft Research-New York City</a> in
+          the <a href='https://www.microsoft.com/en-us/research/group/machine-learning-nyc/'>Machine
+          Learning</a>
+          and <a href='https://www.microsoft.com/en-us/research/group/algorithmic-economics/'>Algorithmic
+          Economics</a> groups. <br><br>
 
 
-	  I work on algorithms and machine learning. My recent work
-	  focuses on (1) how to make machine learning better aligned
-	  with societal values, especially <b><i>privacy</i></b>
-	  and <b><i>fairness</i></b>, and (2) how social and economic
-	  interactions influence machine learning. I study these
-	  questions using methods and models from machine learning,
-	  statistics, optimization, differential privacy, game theory,
-	  and mechanism design.
+      	  I work on algorithms and machine learning. My recent work
+      	  focuses on (1) how to make machine learning better aligned
+      	  with societal values, especially <b><i>privacy</i></b>
+      	  and <b><i>fairness</i></b>, and (2) how social and economic
+      	  interactions influence machine learning. I study these
+      	  questions using methods and models from machine learning,
+      	  statistics, optimization, differential privacy, game theory,
+      	  and mechanism design.
 
-	  Please see my <a href="cv.pdf" target="_blank"
-	  onclick="_gaq.push(['_trackEvent', 'Download', 'PDF',
-	  this.href])">CV</a>
-	  and <a href="papers.html">publications</a> for more
-	  details.<br><br>
+      	  Please see my <a href="cv.pdf" target="_blank"
+      	  onclick="_gaq.push(['_trackEvent', 'Download', 'PDF',
+      	  this.href])">CV</a>
+      	  and <a href="papers.html">publications</a> for more
+      	  details.<br><br>
 
-	  My research has been generously supported by
-          the <a href="https://nsf.gov/" style="text-decoration:none"
-          target="_blank">National Science
-          Foundation</a>, <a href="https://ai.google/research/outreach/faculty-research-awards/recipients/"
-          style="text-decoration:none" target="_blank">a Google
-          Faculty Research
-          Award</a>, <a href="https://www.jpmorgan.com/global/technology/ai/awards/faculty-award-recipients"
-          style="text-decoration:none" target="_blank">a J.P. Morgan
-          Faculty
-          Award</a>, <a href="https://research.fb.com/announcing-the-winners-of-the-facebook-mechanism-design-for-social-good-research-awards/"
-          style="text-decoration:none" target="_blank">a Facebook
-          Research Award</a>,
-          and <a href="https://blog.mozilla.org/blog/2019/07/05/mozillas-latest-research-grants-prioritizing-research-for-the-internet/"
-          style="text-decoration:none" target="_blank">a Mozilla
-          Research Grant</a>. <br><br>
-	    <!-- <b>I am currently looking for self-motivated and -->
-            <!-- mathematically mature PhD students!</b></p> -->
-</p>
-</div>
-</div>
+      	  My research has been generously supported by
+                the <a href="https://nsf.gov/" style="text-decoration:none"
+                target="_blank">National Science
+                Foundation</a>, <a href="https://ai.google/research/outreach/faculty-research-awards/recipients/"
+                style="text-decoration:none" target="_blank">a Google
+                Faculty Research
+                Award</a>, <a href="https://www.jpmorgan.com/global/technology/ai/awards/faculty-award-recipients"
+                style="text-decoration:none" target="_blank">a J.P. Morgan
+                Faculty
+                Award</a>, <a href="https://research.fb.com/announcing-the-winners-of-the-facebook-mechanism-design-for-social-good-research-awards/"
+                style="text-decoration:none" target="_blank">a Facebook
+                Research Award</a>,
+                and <a href="https://blog.mozilla.org/blog/2019/07/05/mozillas-latest-research-grants-prioritizing-research-for-the-internet/"
+                style="text-decoration:none" target="_blank">a Mozilla
+                Research Grant</a>. <br><br>
+      	    <!-- <b>I am currently looking for self-motivated and -->
+                  <!-- mathematically mature PhD students!</b></p> -->
+        </p>
+      </div>
+    </div>
+  </div>
 
 <hr class="featurette-divider wow zoomIn">
 
@@ -175,97 +159,127 @@
      <h1 class="text-center">NEWS</h1>
 
     <div class="row">
+      <div class="col-md-1">
+      </div>
       <div class="col-md-2">
         <p><b>Oct, 2019</b></p>
       </div>
-      <div class="col-md-10">
+      <div class="col-md-8">
         <p>I gave a tutorial on "Differential Privacy Techniques
         Beyond Differential Privacy" at
         the <a href="http://focs2019.cs.jhu.edu/">FOCS</a> workshop
         <a href="http://www.cs.columbia.edu/~ccanonne/workshop-focs2019/">"A
         TCS Quiver"</a>.</p>
       </div>
-    </div>
-
-
-
-
-
-    <div class="row">
-      <div class="col-md-2">
-        <p><b>Sep, 2019</b></p>
-      </div>
-      <div class="col-md-10">
-        <p>Two NSF proposals awarded: NSF EAGER grant #1927166 (as UMN
-        PI) and NSF CHS grant #1908688 (as co-PI).</p>
+      <div class="col-md-1">
       </div>
     </div>
 
-
     <div class="row">
+      <div class="col-md-1">
+      </div>
       <div class="col-md-2">
         <p><b>Sep, 2019</b></p>
       </div>
-      <div class="col-md-10">
+      <div class="col-md-8">
+        <p>Two NSF proposals awarded: NSF EAGER grant (as UMN
+        PI) and NSF CHS grant (as co-PI).</p>
+      </div>
+      <div class="col-md-1">
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-2">
+        <p><b>Sep, 2019</b></p>
+      </div>
+      <div class="col-md-8">
         <p>Four papers accepted at NeurIPS'19.</p>
       </div>
-    </div>
-
-
-
-  <div class="row">
-    <div class="col-md-2">
-        <p><b>July, 2019</b></p>
-      </div>
-      <div class="col-md-10">
-        <p>I received a <a href="https://blog.mozilla.org/blog/2019/07/05/mozillas-latest-research-grants-prioritizing-research-for-the-internet/" style="text-decoration:none" target="_blank">Mozilla Research Grant.</a></p>
+      <div class="col-md-1">
       </div>
     </div>
 
-  <div class="row">
-    <div class="col-md-2">
-      <p><b>June, 2019</b></p>
-    </div>
-    <div class="col-md-10">
-     <p>One paper accepted at FOCS'19.</p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-2">
-      <p><b>April, 2019</b></p>
-    </div>
-    <div class="col-md-10">
-     <p>One paper accepted at EC'19.</p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-2">
-      <p><b>April, 2019</b></p>
-    </div>
-    <div class="col-md-10">
-      <p>Three papers accepted at ICML'19.</p>
+    <div class="row">
+      <div class="col-md-1">
       </div>
-  </div>
+      <div class="col-md-2">
+          <p><b>July, 2019</b></p>
+        </div>
+        <div class="col-md-8">
+          <p>I received a <a href="https://blog.mozilla.org/blog/2019/07/05/mozillas-latest-research-grants-prioritizing-research-for-the-internet/" style="text-decoration:none" target="_blank">Mozilla Research Grant.</a></p>
+        </div>
+        <div class="col-md-1">
+        </div>
+      </div>
 
-  <div class="row">
-    <div class="col-md-2">
-      <p><b>Feb, 2019</b></p>
+    <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-2">
+        <p><b>June, 2019</b></p>
+      </div>
+      <div class="col-md-8">
+       <p>One paper accepted at FOCS'19.</p>
+      </div>
+      <div class="col-md-1">
+      </div>
     </div>
-    <div class="col-md-10">
-     <p>I received a <a href="https://ai.google/research/outreach/faculty-research-awards/recipients/" style="text-decoration:none" target="_blank">Google Faculty Research Award</a>.</p>
-   </div>
-  </div>
 
-  <div class="row">
-    <div class="col-md-2">
-      <p><b>Feb, 2019</b></p>
+    <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-2">
+        <p><b>April, 2019</b></p>
+      </div>
+      <div class="col-md-8">
+       <p>One paper accepted at EC'19.</p>
+      </div>
+      <div class="col-md-1">
+      </div>
     </div>
-    <div class="col-md-10">
-     <p>I received a <a href="https://www.jpmorgan.com/global/technology/ai/awards/faculty-award-recipients" style="text-decoration:none" target="_blank">J.P. Morgan Faculty Award</a>.</p>
-   </div>
-</div>
+
+    <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-2">
+        <p><b>April, 2019</b></p>
+      </div>
+      <div class="col-md-8">
+        <p>Three papers accepted at ICML'19.</p>
+        </div>
+        <div class="col-md-1">
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-2">
+        <p><b>Feb, 2019</b></p>
+      </div>
+      <div class="col-md-8">
+       <p>I received a <a href="https://ai.google/research/outreach/faculty-research-awards/recipients/" style="text-decoration:none" target="_blank">Google Faculty Research Award</a>.</p>
+     </div>
+     <div class="col-md-1">
+     </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-2">
+        <p><b>Feb, 2019</b></p>
+      </div>
+      <div class="col-md-8">
+       <p>I received a <a href="https://www.jpmorgan.com/global/technology/ai/awards/faculty-award-recipients" style="text-decoration:none" target="_blank">J.P. Morgan Faculty Award</a>.</p>
+     </div>
+     <div class="col-md-1">
+     </div>
+    </div>
 
 <!-- <div class="row"> -->
 <!--   <div class="col-md-2"> -->
@@ -276,15 +290,19 @@
 <!--  </div> -->
 <!-- </div> -->
 
-<div class="row">
-  <div class="col-md-2">
-    <p><b>Jan, 2019</b></p>
+    <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-2">
+        <p><b>Jan, 2019</b></p>
+      </div>
+      <div class="col-md-8">
+         <p>With Haiyi Zhu, we received the <a href="https://research.fb.com/announcing-the-winners-of-the-facebook-mechanism-design-for-social-good-research-awards/" style="text-decoration:none" target="_blank">Facebook Mechanism Design for Social Good research award</a>.</p>
+      </div>
+      <div class="col-md-1">
+      </div>
+    </div>
   </div>
-  <div class="col-md-10">
-     <p>With Haiyi Zhu, we received the <a href="https://research.fb.com/announcing-the-winners-of-the-facebook-mechanism-design-for-social-good-research-awards/" style="text-decoration:none" target="_blank">Facebook Mechanism Design for Social Good research award</a>.</p>
-  </div>
-  </div>
-</div>
 
 
 <hr class="featurette-divider wow zoomIn">
@@ -294,45 +312,60 @@
     <h1 class="text-center">TEACHING</h1>
 
     <div class="row">
-      <div class="col-md-2">
-    <p><b>Spring 2020</b></p>
+      <div class="col-md-1">
       </div>
-      <div class="col-md-10">
+      <div class="col-md-2">
+        <p><b>Spring 2020</b></p>
+      </div>
+      <div class="col-md-8">
         <p><a>CSCI 5525: Machine Learning</a></p>
       </div>
+      <div class="col-md-1">
+      </div>
     </div>
 
 
     <div class="row">
-      <div class="col-md-2">
-    <p><b>Fall 2019</b></p>
+      <div class="col-md-1">
       </div>
-      <div class="col-md-10">
+      <div class="col-md-2">
+        <p><b>Fall 2019</b></p>
+      </div>
+      <div class="col-md-8">
         <p><a href="courses/f19/csci5525" style="text-decoration:none" target="_blank">CSCI 5525: Machine Learning</a></p>
       </div>
+      <div class="col-md-1">
+      </div>
     </div>
 
     <div class="row">
-      <div class="col-md-2">
-	<p><b>Fall 2018</b></p>
+      <div class="col-md-1">
       </div>
-      <div class="col-md-10">
+      <div class="col-md-2">
+	       <p><b>Fall 2018</b></p>
+      </div>
+      <div class="col-md-8">
         <p><a href="courses/f18/csci8980_dp" style="text-decoration:none" target="_blank">CSCI 8980: The Algorithmic Foundations of Data Privacy</a></p>
+      </div>
+      <div class="col-md-1">
       </div>
     </div>
  </div>
 
 
  <hr class="featurette-divider wow zoomIn">
+
  <!--Service-->
    <div class="news wow zoomIn" id="service">
 
       <h1 class="text-center">SERVICE</h1>
       <div class="row">
+        <div class="col-md-1">
+        </div>
         <div class="col-md-2">
           <p><b>Program Committee Member</b></p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
            <p>
              ICML 2020 (area chair)<br>
              ICLR 2020 (area chair)<br>
@@ -350,24 +383,30 @@
           <div class="col-md-2">
             <p><b>Other</b></p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
            <p>
              During my undergraduate, I was involved in the <a href="https://bpi.bard.edu/">Bard Prison Initiative</a> and serving as a math tutor in New York Eastern Correctional Facility.
            </p>
+           <div class="col-md-1">
+           </div>
         </div>
     </div>
 
 
       <div class="row">
+        <div class="col-md-1">
+        </div>
         <div class="col-md-2">
           <p><b>Workshop Organizer</b></p>
         </div>
-        <div class="col-md-10">
+        <div class="col-md-8">
            <p>
 	     <a href="https://simons.berkeley.edu/workshops/fairness-workshop-2">Recent
 	     Developments in Research on Fairness</a>. The Simons
 	     Institute for the Theory of Computing, Berkeley, CA. July 8-10, 2019.
            </p>
+        </div>
+        <div class="col-md-1">
         </div>
     </div>
   </div>
@@ -379,6 +418,7 @@
     <div class="flex-container">
       <span class="flex-item text-muted">© 2019 STEVEN WU. Designed by
       VXG. </span>
+      <div class="flex-item" style="width:20%"></div>
       <div class="flex-item"><a class="footer_link" href="#" target="_self">Back to Top</a></div>
     </div>
   </footer>

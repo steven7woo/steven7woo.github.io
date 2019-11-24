@@ -11,7 +11,7 @@ h1 {
 }
 
 h1.text-center {
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 700;
 }
 
@@ -22,6 +22,10 @@ a:link, a:visited {
 /* define navbar appearance */
 .navbar{
   background:white;
+}
+
+.navbar .navbar-collapse{
+  margin:0px 7%;
 }
 
 .nav-link,.navbar-brand{
@@ -74,42 +78,30 @@ a:link, a:visited {
 } */
 
 
-/* .description{
-    position: relative;
-    top: 0%;
-    left:2%;
-    margin: auto;
-    padding: 10em;
-} */
-
-/* .description.row{
-  padding: 20% 0;
-} */
 
 .description img {
-  width:200px;
+  width:180px;
   height: auto;
+  margin-top: 40px;
 }
 
-
-.description h1{
+.about .description h1{
  color:#414042;
  font-weight: bold;
-
- font-size:300%;
- margin: 20px 0;
+ font-size:150%;
+ margin-top: 20px;
 }
 
-.description p{
+.about .description p{
  color:#1c1c1c;
- font-size: 20px;
-
- line-height: 1.5;
+ font-size: 16px;
+ /* line-height: 1.5; */
+ margin: 5px 0;
 }
 
 .description h6{
  color:#1c1c1c;
-
+ font-size: 14px;
 }
 
 .arrow{
@@ -137,28 +129,15 @@ a:link, a:visited {
 
 /*styling the About section*/
 .about{
- margin: 10px 15%;
- position: relative;
+ margin: 30px 10%;
+ /* position: relative; */
 }
 .about h1{
   margin: 2em 0 1em;
 }
 
-.about .desc{
- padding: 0 2em;
- border-left:2px solid #414042;
-}
-.about .desc h3{
- color: #414042;
- transition: color 1s;
-}
-
-.about .desc h3:hover{
- color: #AC3B61;
-}
-.about .desc p{
- line-height:2;
- color:#888;
+.about p{
+  margin-top: 10%;
 }
 
 .about a{
@@ -193,7 +172,6 @@ a:link, a:visited {
 
 .papers h1{
   margin: 2em 0 1em;
-  font-size: 220%;
 }
 
 .papers h4{
