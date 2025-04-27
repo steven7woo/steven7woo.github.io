@@ -28,6 +28,17 @@ a:link, a:visited {
   margin:0px 7%;
 }
 
+.navbar-nav .nav-item {
+  width: auto; /* Don't stretch the full width */
+}
+
+.navbar-nav .nav-link {
+  display: inline-block; /* Make links fit their text */
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+
 .nav-link,.navbar-brand{
   color: grey;
   cursor: pointer;
