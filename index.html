@@ -1262,25 +1262,47 @@
 	     <a href="https://kenziyuliu.github.io/">Ken Ziyu Liu</a> (MS), now a PhD student at Stanford <br>
 	     <a href="https://www.konwoo.kim/">Konwoo Kim</a> (undergrad, winner of the Allen Newell Award), now a PhD student at Stanford<br>
 	     <a href="#group">Ally Du</a> (undergrad), now a PhD student at Univ. of Washington<br>
+	     <a href="https://renkevin9.github.io/">Kevin Ren</a> (undergrad), now a PhD student at Cornell Tech<br>
 	     <br>
 
-	    <a href="https://www.joonhyukko.com/">Joonhyuk Ko</a> (visiting undergrad from UVA)<br>
-	    <a href="https://xyzhu123.com/">Xiaoyuan Zhu</a> (visiting undergrad from USC)<br>
-	    <a href="https://github.com/ilboglions">Matteo Boglioni</a> (visiting master's student ETH-Zurich)<br>
-             <a href="#group">Yuanchen Tang</a> (visiting undergrad from Peking U.), now a PhD student at UIUC<br>
-	     <a href="#group">Henry Jin</a> (visiting undergrad from Tsinghua), now a PhD student at UCLA<br>
-	     <a href='#group'>Xiaoyu Wu</a> (visiting master's student from Shanghai Jiaotong U.), now a PhD student at Rice Univ.<br>
-             <a href="https://scholar.google.com/citations?user=Kg3H9PsAAAAJ">Yuqi Pan</a> (visiting undergrad from Peking U.), now a PhD student at Harvard <br>
-             <a href="#group">Huiying Zhong</a> (visiting undergrad from Peking U.), now a PhD student at MIT<br>
-             <a href="https://sites.google.com/view/xinyanhu/">Xinyan Hu</a> (visiting undergrad from Peking U.), now a PhD student at UC Berkeley<br>
-             <a href="https://homes.cs.washington.edu/~leijiew/">Leijie Wang</a> (visiting undergrad from Tsinghua), now a PhD student at Univ. of Washington<br>
+	    <a href="#" onclick="toggleVisitors(); return false;" style="color: #0066cc; text-decoration: none; cursor: pointer;">
+	      <span id="visitorsArrow" style="display: inline-block; transition: transform 0.6s ease; transform: rotate(0deg);">▶</span> Past visiting and REU students
+	    </a>
+	    <div id="visitorsSection" style="max-height: 0; overflow: hidden; transition: max-height 0.8s ease-out, opacity 0.8s ease-out; opacity: 0;">
+	      <br>
+	      <a href="https://www.joonhyukko.com/">Joonhyuk Ko</a> (visiting undergrad from UVA)<br>
+	      <a href="https://xyzhu123.com/">Xiaoyuan Zhu</a> (visiting undergrad from USC)<br>
+	      <a href="https://github.com/ilboglions">Matteo Boglioni</a> (visiting master's student ETH-Zurich)<br>
+              <a href="#group">Yuanchen Tang</a> (visiting undergrad from Peking U.), now a PhD student at UIUC<br>
+	      <a href="#group">Henry Jin</a> (visiting undergrad from Tsinghua), now a PhD student at UCLA<br>
+	      <a href='#group'>Xiaoyu Wu</a> (visiting master's student from Shanghai Jiaotong U.), now a PhD student at Rice Univ.<br>
+              <a href="https://scholar.google.com/citations?user=Kg3H9PsAAAAJ">Yuqi Pan</a> (visiting undergrad from Peking U.), now a PhD student at Harvard <br>
+              <a href="#group">Huiying Zhong</a> (visiting undergrad from Peking U.), now a PhD student at MIT<br>
+              <a href="https://sites.google.com/view/xinyanhu/">Xinyan Hu</a> (visiting undergrad from Peking U.), now a PhD student at UC Berkeley<br>
+              <a href="https://homes.cs.washington.edu/~leijiew/">Leijie Wang</a> (visiting undergrad from Tsinghua), now a PhD student at Univ. of Washington<br>
 
-	     <br>
-	     <a href="https://www.linkedin.com/in/jocelyn-chou-9a1632176">Jocelyn Chou</a> (REU student from Rutgers)<br>
-	     <a href="https://www.linkedin.com/in/dianaqing/">Diana Qing</a> (REU student from Berkeley), now an MS student at Stanford<br> 
-	     <a href="https://harry-tian.github.io/">Harry Tian</a> (REU student from Carleton), now a PhD student at Purdue<br> 
-	     <a href="https://www.linkedin.com/in/grace-tian-119438151/">Grace Tian</a> (REU student from Harvard), now an ML engineer at Hive<br>
-	     <a href="https://www.linkedin.com/in/ngc-allen/">Allen Marquez</a> (REU student from Cal State LA), now a software engineer at Northrop Grumman
+	      <br>
+	      <a href="https://www.linkedin.com/in/jocelyn-chou-9a1632176">Jocelyn Chou</a> (REU student from Rutgers)<br>
+	      <a href="https://www.linkedin.com/in/dianaqing/">Diana Qing</a> (REU student from Berkeley), now an MS student at Stanford<br> 
+	      <a href="https://harry-tian.github.io/">Harry Tian</a> (REU student from Carleton), now a PhD student at Purdue<br> 
+	      <a href="https://www.linkedin.com/in/grace-tian-119438151/">Grace Tian</a> (REU student from Harvard), now an ML engineer at Hive<br>
+	      <a href="https://www.linkedin.com/in/ngc-allen/">Allen Marquez</a> (REU student from Cal State LA), now a software engineer at Northrop Grumman
+	    </div>
+	    <script>
+	      function toggleVisitors() {
+	        var section = document.getElementById('visitorsSection');
+	        var arrow = document.getElementById('visitorsArrow');
+	        if (section.style.maxHeight === '0px' || section.style.maxHeight === '') {
+	          section.style.maxHeight = section.scrollHeight + 'px';
+	          section.style.opacity = '1';
+	          arrow.style.transform = 'rotate(90deg)';
+	        } else {
+	          section.style.maxHeight = '0';
+	          section.style.opacity = '0';
+	          arrow.style.transform = 'rotate(0deg)';
+	        }
+	      }
+	    </script>
 	   </p>
         </div>
       </div>
@@ -1371,6 +1393,23 @@
 
 
 
+    <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-8">
+        <p>
+          <a href="#" onclick="toggleOlderCourses(); return false;" style="color: #0066cc; text-decoration: none; cursor: pointer;">
+            <span id="coursesArrow" style="display: inline-block; transition: transform 0.8s ease; transform: rotate(0deg);">▶</span> Courses before 2024
+          </a>
+        </p>
+      </div>
+      <div class="col-md-1">
+      </div>
+    </div>
+
+    <div id="olderCoursesSection" style="max-height: 0; overflow: hidden; transition: max-height 1.2s ease-out, opacity 1.2s ease-out; opacity: 0;">
 
     <div class="row">
       <div class="col-md-1">
@@ -1403,7 +1442,6 @@
       <div class="col-md-1">
       </div>
     </div>
-
 
 
 
@@ -1491,6 +1529,24 @@
       <div class="col-md-1">
       </div>
     </div>
+
+    </div>
+
+    <script>
+      function toggleOlderCourses() {
+        var section = document.getElementById('olderCoursesSection');
+        var arrow = document.getElementById('coursesArrow');
+        if (section.style.maxHeight === '0px' || section.style.maxHeight === '') {
+          section.style.maxHeight = section.scrollHeight + 'px';
+          section.style.opacity = '1';
+          arrow.style.transform = 'rotate(90deg)';
+        } else {
+          section.style.maxHeight = '0';
+          section.style.opacity = '0';
+          arrow.style.transform = 'rotate(0deg)';
+        }
+      }
+    </script>
  </div>
 
 
