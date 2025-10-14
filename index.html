@@ -1258,15 +1258,20 @@
 	     <a href="https://sites.google.com/view/shuran-zheng">Shuran Zheng</a> (Post-doc), now on the IIIS faculty at Tsinghua University<br> 
 	     <br>
 
-	     <a href="https://xinguu.github.io/">Xin Gu</a> (MS), now a PhD student at Penn State <br>
-	     <a href="https://kenziyuliu.github.io/">Ken Ziyu Liu</a> (MS), now a PhD student at Stanford <br>
-	     <a href="https://www.konwoo.kim/">Konwoo Kim</a> (undergrad, winner of the Allen Newell Award), now a PhD student at Stanford<br>
-	     <a href="#group">Ally Du</a> (undergrad), now a PhD student at Univ. of Washington<br>
-	     <a href="https://renkevin9.github.io/">Kevin Ren</a> (undergrad), now a PhD student at Cornell Tech<br>
-	     <br>
+	    <a href="#" onclick="toggleCMUStudents(); return false;" style="text-decoration: none; cursor: pointer;">
+	      <span id="cmuStudentsArrow" style="display: inline-block; transition: transform 0.6s ease; transform: rotate(0deg); width: 0; height: 0; border-left: 10px solid currentColor; border-top: 7px solid transparent; border-bottom: 7px solid transparent; margin-right: 8px;"></span>Past CMU master's and undergrads
+	    </a>
+	    <div id="cmuStudentsSection" style="max-height: 0; overflow: hidden; transition: max-height 0.8s ease-out, opacity 0.8s ease-out; opacity: 0;">
+	      <a href="https://xinguu.github.io/">Xin Gu</a> (MS), now a PhD student at Penn State <br>
+	      <a href="https://kenziyuliu.github.io/">Ken Ziyu Liu</a> (MS), now a PhD student at Stanford <br>
+	      <a href="https://www.konwoo.kim/">Konwoo Kim</a> (undergrad, winner of the Allen Newell Award), now a PhD student at Stanford<br>
+	      <a href="#group">Ally Du</a> (undergrad), now a PhD student at Univ. of Washington<br>
+	      <a href="https://renkevin9.github.io/">Kevin Ren</a> (undergrad), now a PhD student at Cornell Tech<br>
+	    </div>
+	    <br>
 
 	    <a href="#" onclick="toggleVisitors(); return false;" style="text-decoration: none; cursor: pointer;">
-	      <span id="visitorsArrow" style="display: inline-block; transition: transform 0.6s ease; transform: rotate(0deg);">▶</span> Past visiting and REU students
+	      <span id="visitorsArrow" style="display: inline-block; transition: transform 0.6s ease; transform: rotate(0deg); width: 0; height: 0; border-left: 10px solid currentColor; border-top: 7px solid transparent; border-bottom: 7px solid transparent; margin-right: 8px;"></span>Past visiting and REU students
 	    </a>
 	    <div id="visitorsSection" style="max-height: 0; overflow: hidden; transition: max-height 0.8s ease-out, opacity 0.8s ease-out; opacity: 0;">
 	      <br>
@@ -1289,6 +1294,20 @@
 	      <a href="https://www.linkedin.com/in/ngc-allen/">Allen Marquez</a> (REU student from Cal State LA), now a software engineer at Northrop Grumman
 	    </div>
 	    <script>
+	      function toggleCMUStudents() {
+	        var section = document.getElementById('cmuStudentsSection');
+	        var arrow = document.getElementById('cmuStudentsArrow');
+	        if (section.style.maxHeight === '0px' || section.style.maxHeight === '') {
+	          section.style.maxHeight = section.scrollHeight + 'px';
+	          section.style.opacity = '1';
+	          arrow.style.transform = 'rotate(90deg)';
+	        } else {
+	          section.style.maxHeight = '0';
+	          section.style.opacity = '0';
+	          arrow.style.transform = 'rotate(0deg)';
+	        }
+	      }
+
 	      function toggleVisitors() {
 	        var section = document.getElementById('visitorsSection');
 	        var arrow = document.getElementById('visitorsArrow');
@@ -1401,7 +1420,7 @@
       <div class="col-md-8">
         <p>
           <a href="#" onclick="toggleOlderCourses(); return false;" style="text-decoration: none; cursor: pointer;">
-            <span id="coursesArrow" style="display: inline-block; transition: transform 0.8s ease; transform: rotate(0deg);">▶</span> Courses before 2024
+            <span id="coursesArrow" style="display: inline-block; transition: transform 0.8s ease; transform: rotate(0deg); width: 0; height: 0; border-left: 10px solid currentColor; border-top: 7px solid transparent; border-bottom: 7px solid transparent; margin-right: 8px;"></span>Courses before 2024
           </a>
         </p>
       </div>
