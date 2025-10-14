@@ -44,18 +44,11 @@
        <img src="images/ZSW.jpg" class="rounded-circle" style="height:50px; margin:10px">
        </a>
       <a class="navbar-brand" href="index.html#" target="_self"><b>STEVEN WU</b></a> -->
-
-<button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-  <svg class="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 100 80" fill="currentColor">
-    <rect width="100" height="8" rx="4"></rect>
-    <rect y="30" width="100" height="8" rx="4"></rect>
-    <rect y="60" width="100" height="8" rx="4"></rect>
-  </svg>
-</button>
-
-
-
+       <button id='btn1' class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon">
+         <i class="fas fa-bars vertical center"></i>
+       </span>
+       </button>
        <div class="collapse navbar-collapse " id="navbarSupportedContent">
          <ul class="navbar-nav mr-4">
            <li class="nav-item">
@@ -98,7 +91,7 @@
               <img src="images/ZSW.jpg" class="rounded-circle">
               <div style="text-align: center">
               <h1>Steven Wu</h1>
-                <p> Associate Professor<br>
+                <p> Assistant Professor<br>
                     School of Computer Science<br>
                     Carnegie Mellon University</p><br>
                 <h6>Email: zstevenwu [at] cmu.edu<br>
@@ -109,7 +102,7 @@
       </div>
 
       <div class="col-md-8" id="about">
-          <br><br>I am an Associate Professor in
+          <p>I am an Assistant Professor in
 	    the <a href="https://www.cs.cmu.edu/">School of Computer
 	    Science</a> at <a href="https://www.cmu.edu/">Carnegie
 	    Mellon University</a>, with my primary appointment in the
@@ -128,15 +121,16 @@
 
       My broad research interests are in algorithms and machine learning. These days I am excited about:
       <ul>
-        <li>Foundations of responsible AI, with emphasis on privacy, bias, and uncertainty considerations.</li>
-        <li>Interactive learning, including imitation and reinforcement learning, and its interactions with causal inference, game theory, econometrics, and language modeling.</li>
+        <li>Algorithmic foundations of responsible AI, with emphasis on privacy and fairness considerations.</li>
+        <li>Interactive learning, including contextual bandits and reinforcement learning, and its interactions with causal inference and econometrics.</li>
+        <li>Economic aspects of machine learning, with a focus on learning in the presence of strategic agents.</li>
     </ul>
+      	For more details, please see my <a href="papers.html">publications</a>.<br><br>
 
       	  My research has been generously supported by
                 the 
-	    <a href="https://nsf.gov/">National Science Foundation (NSF)</a> (including an NSF CAREER Award),
+	    <a href="https://nsf.gov/">National Science Foundation (NSF)</a>,
 	    <a href="http://www.okawa-foundation.or.jp/en/activities/research_grant/">the Okawa Foundation</a>, 
-        <a href="https://www.openphilanthropy.org/" style="text-decoration:none" target="_blank">Open Philanthropy</a>,
 	    <a href="https://www.cmu.edu/block-center/">CMU’s Block Center for Technology and Society</a>,
 	    <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=505651">an Amazon Research Award</a>,
 	    <a href="https://ai.google/research/outreach/faculty-research-awards/recipients/"
@@ -147,10 +141,12 @@
                 style="text-decoration:none" target="_blank"> Meta Research awards</a>,
 	    <a href="https://blog.mozilla.org/blog/2019/07/05/mozillas-latest-research-grants-prioritizing-research-for-the-internet/"
                 style="text-decoration:none" target="_blank">a Mozilla
-              Research Grant</a>, <a href="https://machinelearning.apple.com/">Apple</a>, and
+              Research Grant</a>, Apple, and
 	    <a href="https://research.cisco.com/"
                style="text-decoration:none" target="_blank">Cisco
-              Research</a>.<br><br>
+              Research</a>.
+	    <br><br>
+
 	 
  <!-- Previously, I received a Ph.D. in Computer Science in 2017 -->
  <!--          from the <a href="http://www.upenn.edu/" -->
@@ -182,28 +178,12 @@
  <!--          target="_blank">Algorithmic Economics</a> groups. -->
 
 
-	    <h4 style="font-size:100%">Quick Links:</h4>
+	  Please see
+          my <a href="cv.pdf" target="_blank"
+          onclick="_gaq.push(['_trackEvent', 'Download', 'PDF',
+          this.href])">CV</a> for more details. <br><br>
 
-
-		For more details of my work, please see
-		<br>
-	    <a href="papers.html" class='btn btn-outline-primary
-					 github'>Papers</a>
-	    <a href="https://scholar.google.com/citations?hl=en&user=MbF6rTEAAAAJ"
-						 class='btn
-						 btn-outline-primary
-						 '>Google Scholar</a>
-           <a href="cv.pdf" target="_blank" class='btn
-          btn-outline-primary circ' onclick="_gaq.push(['_trackEvent',
-					     'Download', 'PDF', this.href])">CV</a>
-	   <br>
-
-	   If you are interested in working in my research group, please read
-	   <br>
-	       <a href="prospective.html" class="btn
-	       btn-outline-primary">For Prospective Students</a>
-
-  
+        </p>
       </div>
     </div>
   </div>
@@ -216,316 +196,129 @@
      <h1 class="text-center">NEWS</h1>
 
 
-    <!-- Featured Papers Section -->
-    <div class="row" style="margin: 30px 0;">
-      <div class="col-md-1"></div>
-      <div class="col-md-2">
-        <p><b>Recent<br>Interests</b></p>
-      </div>
-      <div class="col-md-8">
-        <p style="margin-bottom: 10px;">Selected recent papers:</p>
-        <ul style="line-height: 2;">
-          <li>
-            <a href="https://arxiv.org/abs/2509.22957">Doubly-Robust LLM-as-a-Judge: Externally Valid Estimation with Imperfect Personas</a>
-            <br>
-            <span style="color: #666;">L. Guerdan, J. Whitehouse, K. Truong, K. Holstein, Z. S. Wu</span>
-          </li>
-          <li>
-            <a href="https://arxiv.org/abs/2503.01067">All Roads Lead to Likelihood: The Value of Reinforcement Learning in Fine-Tuning</a>
-            <br>
-            <span style="color: #666;">G. Swamy, S. Choudhury, W. Sun, Z. S. Wu, J. A. Bagnell</span>
-          </li>
-          <li>
-            <a href="https://arxiv.org/abs/2504.21199">Generate-then-Verify: Reconstructing Data from Limited Published Statistics</a>
-            <br>
-            <span style="color: #666;">T. Liu, E. Xiao, A. Smith, P. Thaker, Z. S. Wu. S&P 2026.</span>
-          </li>
-          <li>
-            <a href="https://arxiv.org/abs/2406.01933">Orthogonal Causal Calibration</a>
-            <br>
-            <span style="color: #666;">J. Whitehouse, C. Jung, V. Syrgkanis, B. Wilder, Z. S. Wu. COLT 2025.</span>
-          </li>
-          <li>
-            <a href="https://arxiv.org/abs/2502.17264">Kandinsky Conformal Prediction: Beyond Class- and Covariate-Conditional Coverage</a>
-            <br>
-            <span style="color: #666;">K. Bairaktari, J. Wu, Z. S. Wu. ICML 2025.</span>
-          </li>
-          <li>
-            <a href="https://arxiv.org/abs/2401.04056">A Minimaximalist Approach to Reinforcement Learning from Human Feedback</a>
-            <br>
-            <span style="color: #666;">G. Swamy, C. Dann, R. Kidambi, Z. S. Wu, A. Agarwal. ICML 2024.</span>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-1"></div>
-    </div>
 
 
 
 
-    <!--    <div class="row"> -->
-    <!--   <div class="col-md-1"> -->
-    <!--   </div> -->
-    <!--   <div class="col-md-2"> -->
-    <!--     <p><b>Dec 2024</b></p> -->
-    <!--   </div> -->
-    <!--   <div class="col-md-8"><p>Three PhD students defended their theses! -->
-    <!-- 	  <ul> -->
-    <!-- 	    <li>Justin Whitehouse &#8594; Post-doc at Stanford -->
-    <!-- 	    <li>Logan Stapleton &#8594; Assistant Professor at Vassar College -->
-    <!-- 	    <li>Daniel Ngo  &#8594; Researcher at J.P. Morgan AI Research -->
-    <!-- 	  </ul> -->
-    <!-- 	</p> -->
-    <!--   </div> -->
-    <!--   <div class="col-md-1"> -->
-    <!--   </div> -->
-    <!-- </div> -->
-
-
-
-       <div class="row">
+     
+	  
+     <div class="row">
       <div class="col-md-1">
       </div>
       <div class="col-md-2">
-        <p><b>April 2025</b></p>
+        <p><b>June 2023</b></p>
       </div>
-      <div class="col-md-8"><p>Our team <a href="https://athletics.cmu.edu/athletics/tartanfacts">Tartan</a> <a href="https://www.tiktok.com/@patrickmouratoglou/video/7327637765066116384">Federer</a> won <i>all four</i>
-      tracks of The Vector Institute <a href="https://vectorinstitute.github.io/MIDST/"> MIDST challenge</a> (Membership
-      Inference over Diffusion-models-based Synthetic Tabular data) at
-      <a href="https://satml.org/">SaTML 2025</a> <a class="btn btn-outline-primary circ" role="button" href="https://s3d.cmu.edu/news/2025/0501-midst.html">CMU Press</a>.<br> Our solution is released: <a class="btn btn-outline-primary arxiv" href="https://arxiv.org/abs/2503.12008">arXiv</a> <a class="btn btn-outline-primary github" href="https://github.com/Nicholas0228/Tartan_Federer_MIDST/tree/main">GitHub</a>. </p> 
+      <div class="col-md-8"><p>Our paper <a href="https://arxiv.org/abs/2302.11121">Counterfactual Prediction Under Outcome Measurement Error
+</a> received a Best Paper Award at <a href="https://facctconference.org/2023/index.html">FAccT 2023</a>!</p>
+      </div>
+      <div class="col-md-1">
+      </div>
+    </div>
+	  
+
+     
+     
+	  
+     <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-2">
+        <p><b>April 2023</b></p>
+      </div>
+      <div class="col-md-8"><p>Four papers accepted at ICML 2023.</p>
+      </div>
+      <div class="col-md-1">
+      </div>
+    </div>
+	  
+
+	  
+     <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-2">
+        <p><b>April 2023</b></p>
+      </div>
+      <div class="col-md-8"><p>Two papers accepted at FAccT 2023.</p>
+      </div>
+      <div class="col-md-1">
+      </div>
+    </div>
+	  
+
+     
+	  
+     <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-2">
+        <p><b>March 2023</b></p>
+      </div>
+      <div class="col-md-8"><p> 
+
+Our <a href="https://drivendata.co/blog/federated-learning-pets-prize-winners-phases-2-3#puffle">CMU team ("puffle")</a> led by <a href="https://kenziyuliu.github.io/">Ken Liu</a> won the 1st place at the <a href="https://petsprizechallenges.com/">U.S. Privacy-Enhancing Technologies (PETs) Prize Challenge</a>, Pandemic Forecasting Track (USD $100,000). See coverage by the <a href="https://www.whitehouse.gov/ostp/news-updates/2023/03/31/us-uk-annouce-winners-innovation-pets-democratic-values/">White House</a>, <a href="https://www.gov.uk/government/news/at-summit-for-democracy-the-united-kingdom-and-the-united-states-announce-winners-of-challenge-to-drive-innovation-in-privacy-enhancing-technologies">UK Government</a>, <a href="https://www.youtube.com/watch?v=8nRs3VArnco&amp;t=12544s">Summit for Democracy</a>, <a href="https://drivendata.co/blog/federated-learning-pets-prize-winners-phases-2-3">DrivenData</a>, <a href="https://beta.nsf.gov/news/us-uk-winners-prize-challenge-in-privacy-enhancing-tech">NSF</a>, and <a href="https://www.cs.cmu.edu/news/2023/pets-prize">CMU news</a>.</p>
       </div>
       <div class="col-md-1">
       </div>
     </div>
 
-
-
-
-<!-- 
-       <div class="row">
+	  
+     <div class="row">
       <div class="col-md-1">
       </div>
       <div class="col-md-2">
-        <p><b>Jan 2025</b></p>
+        <p><b>March 2023</b></p>
       </div>
-      <div class="col-md-8"><p>Together with Drew Bagnell and our student Gokul Swamy, we are teaching a new course this spring semester: <a href="https://interactive-learning-algos.github.io/">17-740: Algorithmic Foundations of Interactive Learning</a>.</p>
+      <div class="col-md-8"><p>Our paper <a href="https://www.pnas.org/doi/10.1073/pnas.2218605120">Confidence-ranked reconstruction of census microdata from published statistics
+</a> is now published in <i>PNAS</i>.</p>
       </div>
       <div class="col-md-1">
       </div>
     </div>
- -->
-
-
-
-    <!--    <div class="row"> -->
-    <!--   <div class="col-md-1"> -->
-    <!--   </div> -->
-    <!--   <div class="col-md-2"> -->
-    <!--     <p><b>Sept 2024</b></p> -->
-    <!--   </div> -->
-    <!--   <div class="col-md-8"><p>Six papers accepted at NeurIPS 2024 and one paper at WINE 2024: -->
-    <!-- 	  <ul> -->
-    <!-- 	    <li><a href="https://arxiv.org/abs/2406.00661">Bridging Multicalibration and Out-of-distribution Generalization Beyond Covariate Shift</a></li> -->
-    <!-- 	    <li><a href="https://arxiv.org/abs/2402.08576">Regret Minimization in Stackelberg Games with Side Information</a></li> -->
-    <!-- 	    <li><a href="https://arxiv.org/abs/2406.04219">Multi-Agent Imitation Learning: Value is Easy, Regret is Hard</a></li> -->
-    <!-- 	    <li><a href="https://arxiv.org/abs/2402.09483">Oracle-Efficient Differentially Private Learning with Public Data</a></li> -->
-    <!-- 	    <li><a href="https://arxiv.org/abs/2405.20272">Reconstruction Attacks on Machine Unlearning: Simple Models are Vulnerable</a></li> -->
-    <!-- 	    <li><a href="https://arxiv.org/abs/2312.15551">On the Benefits of Public Representations for Private Transfer Learning under Distribution Shift</a></li> -->
-    <!-- 	    <li><a href="https://arxiv.org/abs/2312.04973">Ex-post Individually Rational Bayesian Persuasion</a></li> -->
-    <!-- 	  </ul> -->
-    <!-- 	</p> -->
-    <!--   </div> -->
-    <!--   <div class="col-md-1"> -->
-    <!--   </div> -->
-    <!-- </div> -->
-
-
-    <!--    <div class="row"> -->
-    <!--   <div class="col-md-1"> -->
-    <!--   </div> -->
-    <!--   <div class="col-md-2"> -->
-    <!--     <p><b>May 2024</b></p> -->
-    <!--   </div> -->
-    <!--   <div class="col-md-8"><p>Four papers accepted at ICML 2024: -->
-    <!-- 	  <ul> -->
-    <!-- 	    <li><a href="https://arxiv.org/abs/2401.04056">A Minimaximalist Approach to Reinforcement Learning from Human Feedback</a></li> -->
-    <!-- 	    <li><a href="https://arxiv.org/abs/2404.00848">Predictive Performance Comparison of Decision Policies Under Confounding</a></li> -->
-    <!-- 	    <li><a href="https://arxiv.org/abs/2402.08848">Hybrid Inverse Reinforcement Learning</a></li> -->
-    <!-- 	    <li><a href="https://arxiv.org/abs/2312.05140">Membership Inference Attacks on Diffusion Models via Quantile Regression</a></li> -->
-    <!-- 	  </ul> -->
-    <!-- 	</p> -->
-    <!--   </div> -->
-    <!--   <div class="col-md-1"> -->
-    <!--   </div> -->
-    <!-- </div> -->
-
-
-
-
-
-    <!--    <div class="row"> -->
-    <!--   <div class="col-md-1"> -->
-    <!--   </div> -->
-    <!--   <div class="col-md-2"> -->
-    <!--     <p><b>Dec 2023</b></p> -->
-    <!--   </div> -->
-    <!--   <div class="col-md-8"><p>One paper accepted at SIGMETRICS 2024, one paper accepted at ICLR 2024, and two papers accepted at SaTML 2024: -->
-    <!-- 	  <ul> -->
-    <!--         <li><a href="https://arxiv.org/abs/2211.14236">Strategyproof Decision-Making in Panel Data Settings and Beyond</a></li> -->
-    <!-- 	    <li><a href="https://arxiv.org/abs/2311.14632">Differentially Private SGD Without Clipping Bias: An Error-Feedback Approach</a></li> -->
-    <!-- 	    <li><a href="https://arxiv.org/abs/2303.03451">Improved Differentially Private Regression via Gradient Boosting</a></li> -->
-    <!-- 	    <li><a href="https://arxiv.org/abs/2203.10190">Fair Federated Learning via Bounded Group Loss</a></li> -->
-    <!-- 	  </ul> -->
-    <!-- 	</p> -->
-    <!--   </div> -->
-    <!--   <div class="col-md-1"> -->
-    <!--   </div> -->
-    <!-- </div> -->
-
-       
-	  
-<!--   <div class="row"> -->
-<!--       <div class="col-md-1"> -->
-<!--       </div> -->
-<!--       <div class="col-md-2"> -->
-<!--         <p><b>Sep 2023</b></p> -->
-<!--       </div> -->
-<!--       <div class="col-md-8"><p>Seven papers accepted at NeurIPS 2023: -->
-<!-- 	  <ul> -->
-<!--             <li><a href="https://arxiv.org/abs/2306.06250">Strategic apple tasting</a></li> -->
-<!--             <li><a href="https://arxiv.org/abs/2307.02295">Meta-Learning for adversarial bandits</a></li> -->
-<!--             <li><a href="https://arxiv.org/abs/2307.01357">Adaptive principal component regression</a></li> -->
-<!-- 	    <li><a href="https://arxiv.org/abs/2307.07539">On the sublinear regret of GP-UCB</a></li> -->
-<!-- 	    <li><a href="https://arxiv.org/abs/2306.13824">Adaptive privacy composition for accuracy-first mechanisms</a></li> -->
-<!-- 	    <li><a href="https://arxiv.org/abs/2307.03694">Scalable membership inference attacks via quantile regression</a></li> -->
-<!-- 	    <li><a href="https://arxiv.org/abs/2309.00711">Learning shared safety constraints from multi-task demonstrations</a></li> -->
-<!-- 	  </ul> -->
-<!-- 	</p> -->
-<!--       </div> -->
-<!--       <div class="col-md-1"> -->
-<!--       </div> -->
-<!--     </div> -->
-	  
-
-     
-	  
-<!--      <div class="row"> -->
-<!--       <div class="col-md-1"> -->
-<!--       </div> -->
-<!--       <div class="col-md-2"> -->
-<!--         <p><b>June 2023</b></p> -->
-<!--       </div> -->
-<!--       <div class="col-md-8"><p>Our paper <a href="https://arxiv.org/abs/2302.11121">Counterfactual Prediction Under Outcome Measurement Error -->
-<!-- </a> received a Best Paper Award at <a href="https://facctconference.org/2023/index.html">FAccT 2023</a>!</p> -->
-<!--       </div> -->
-<!--       <div class="col-md-1"> -->
-<!--       </div> -->
-<!--     </div> -->
-	  
-
-     
-     
-	  
-    <!--  <div class="row"> -->
-    <!--   <div class="col-md-1"> -->
-    <!--   </div> -->
-    <!--   <div class="col-md-2"> -->
-    <!--     <p><b>April 2023</b></p> -->
-    <!--   </div> -->
-    <!--   <div class="col-md-8"><p>Four papers accepted at ICML 2023, and two papers accepted at FAccT 2023.</p> -->
-    <!--   </div> -->
-    <!--   <div class="col-md-1"> -->
-    <!--   </div> -->
-    <!-- </div> -->
-	  
-
-	  
-    <!--  <div class="row"> -->
-    <!--   <div class="col-md-1"> -->
-    <!--   </div> -->
-    <!--   <div class="col-md-2"> -->
-    <!--     <p><b>April 2023</b></p> -->
-    <!--   </div> -->
-    <!--   <div class="col-md-8"><p>Two papers accepted at FAccT 2023.</p> -->
-    <!--   </div> -->
-    <!--   <div class="col-md-1"> -->
-    <!--   </div> -->
-    <!-- </div> -->
-	  
-
-     
-	  
-<!--      <div class="row"> -->
-<!--       <div class="col-md-1"> -->
-<!--       </div> -->
-<!--       <div class="col-md-2"> -->
-<!--         <p><b>March 2023</b></p> -->
-<!--       </div> -->
-<!--       <div class="col-md-8"><p>  -->
-
-<!-- Our <a href="https://drivendata.co/blog/federated-learning-pets-prize-winners-phases-2-3#puffle">CMU team ("puffle")</a> led by <a href="https://kenziyuliu.github.io/">Ken Liu</a> won the 1st place at the <a href="https://petsprizechallenges.com/">U.S. Privacy-Enhancing Technologies (PETs) Prize Challenge</a>, Pandemic Forecasting Track (USD $100,000). See coverage by the <a href="https://www.whitehouse.gov/ostp/news-updates/2023/03/31/us-uk-annouce-winners-innovation-pets-democratic-values/">White House</a>, <a href="https://www.gov.uk/government/news/at-summit-for-democracy-the-united-kingdom-and-the-united-states-announce-winners-of-challenge-to-drive-innovation-in-privacy-enhancing-technologies">UK Government</a>, <a href="https://www.youtube.com/watch?v=8nRs3VArnco&amp;t=12544s">Summit for Democracy</a>, <a href="https://drivendata.co/blog/federated-learning-pets-prize-winners-phases-2-3">DrivenData</a>, <a href="https://beta.nsf.gov/news/us-uk-winners-prize-challenge-in-privacy-enhancing-tech">NSF</a>, and <a href="https://www.cs.cmu.edu/news/2023/pets-prize">CMU news</a>.</p> -->
-<!--       </div> -->
-<!--       <div class="col-md-1"> -->
-<!--       </div> -->
-<!--     </div> -->
-
-	  
-<!--      <div class="row"> -->
-<!--       <div class="col-md-1"> -->
-<!--       </div> -->
-<!--       <div class="col-md-2"> -->
-<!--         <p><b>March 2023</b></p> -->
-<!--       </div> -->
-<!--       <div class="col-md-8"><p>Our paper <a href="https://www.pnas.org/doi/10.1073/pnas.2218605120">Confidence-ranked reconstruction of census microdata from published statistics -->
-<!-- </a> is now published in <i>PNAS</i>.</p> -->
-<!--       </div> -->
-<!--       <div class="col-md-1"> -->
-<!--       </div> -->
-<!--     </div> -->
 
 	  
 	  
-<!--      <div class="row"> -->
-<!--       <div class="col-md-1"> -->
-<!--       </div> -->
-<!--       <div class="col-md-2"> -->
-<!--         <p><b>Jan 2023</b></p> -->
-<!--       </div> -->
-<!--       <div class="col-md-8"><p>One paper accepted at AIStats 2023 and one paper accepted at ICLR 2023.</p> -->
-<!--       </div> -->
-<!--       <div class="col-md-1"> -->
-<!--       </div> -->
-<!--     </div> -->
+     <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-2">
+        <p><b>Jan 2023</b></p>
+      </div>
+      <div class="col-md-8"><p>One paper accepted at AIStats 2023 and one paper accepted at ICLR 2023.</p>
+      </div>
+      <div class="col-md-1">
+      </div>
+    </div>
 	  
 
-<!--      <div class="row"> -->
-<!--       <div class="col-md-1"> -->
-<!--       </div> -->
-<!--       <div class="col-md-2"> -->
-<!--         <p><b>Sept 2022</b></p> -->
-<!--       </div> -->
-<!--       <div class="col-md-8"><p>Seven papers accepted at NeurIPS 2022.</p> -->
-<!--       </div> -->
-<!--       <div class="col-md-1"> -->
-<!--       </div> -->
-<!--     </div> -->
+     <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-2">
+        <p><b>Sept 2022</b></p>
+      </div>
+      <div class="col-md-8"><p>Seven papers accepted at NeurIPS 2022.</p>
+      </div>
+      <div class="col-md-1">
+      </div>
+    </div>
 
 
 
 
 
-<!--      <div class="row"> -->
-<!--       <div class="col-md-1"> -->
-<!--       </div> -->
-<!--       <div class="col-md-2"> -->
-<!--         <p><b>Aug 2022</b></p> -->
-<!--       </div> -->
-<!--       <div class="col-md-8"><p>Our paper <a href="https://www.science.org/doi/10.1126/science.abq4481">Policy impacts of statistical uncertainty and privacy -->
-<!-- </a> is now published in <i>Science</i>.</p> -->
-<!--       </div> -->
-<!--       <div class="col-md-1"> -->
-<!--       </div> -->
-<!--     </div> -->
+     <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-2">
+        <p><b>Aug 2022</b></p>
+      </div>
+      <div class="col-md-8"><p>Our paper <a href="https://www.science.org/doi/10.1126/science.abq4481">Policy impacts of statistical uncertainty and privacy
+</a> is now published in <i>Science</i>.</p>
+      </div>
+      <div class="col-md-1">
+      </div>
+    </div>
 
 
 
@@ -1173,6 +966,38 @@
 
 <hr class="featurette-divider wow zoomIn">
 
+
+
+<!--Group-->
+  <div class="news wow zoomIn" id="group">
+    <h1 class="text-center">Representative Work</h1>
+    <div class="row"></div>
+
+      <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-2">
+          <p><b>(Differential) Privacy</b></p>
+        </div>
+        <div class="col-md-8">
+           <p>
+	     <a href="https://www.pnas.org/doi/10.1073/pnas.2218605120">Confidence-ranked reconstruction of census microdata from published statistics</a> <br>
+
+           </p>
+        </div>
+      </div>
+  </div>
+
+
+<hr class="featurette-divider wow zoomIn">
+
+
+
+
+
+
+
+
 <!--Group-->
   <div class="news wow zoomIn" id="group">
     <h1 class="text-center">GROUP</h1>
@@ -1181,7 +1006,7 @@
         </div>
         <div class="col-md-9">
 	  I am extremely fortunate to be able to work with several
-	   excellent students and postdocs.<br>
+	   excellent students.<br>
 	</div>
     </div>
 
@@ -1195,17 +1020,14 @@
         </div>
         <div class="col-md-8">
            <p>
-
+             <a href="https://www.giuseppevietri.com/">Giuseppe Vietri</a> (co-advised by Maria Gini)<br>
+	     <a href="https://dtngo.com/">Daniel Ngo</a> (co-advised by Maria Gini)<br>
+	     <a href="https://loganstapleton.com/">Logan Stapleton</a> (co-advised by Haiyi Zhu)<br>
+	     <a href="http://www.cs.cmu.edu/~jwhiteho/">Justin Whitehouse</a> (co-advised by Aaditya Ramdas)<br>
+	     <a href="https://keeganharris.github.io/">Keegan Harris</a> (co-advised by Nina Balcan)<br>
 	     <a href="https://gokul.dev/">Gokul Swamy</a> (co-advised by Drew Bagnell)<br>
 	     <a href="https://lukeguerdan.com/">Luke Guerdan</a> (co-advised by Ken Holstein)<br>
              <a href="https://terranceliu.github.io/">Terrance Liu</a><br>
-	     <a href="http://tangjingwu.com/">Jingwu Tang</a> (co-advised by Fei Fang) <br>
-	     <a href="https://sc.cs.cmu.edu/people/students/sinha-anusha.html">Anusha Sinha</a> (co-advised by Hoda Heidari) <br>
-	     <a href="https://kimberlytruong.github.io/">Kimberly Truong</a> (co-advised by Hoda Heidari) <br>
-	     <a href="https://zjh2333-hh.github.io/">Jiahao Zhang</a> <br>
-	     <a href="https://scholar.google.com/citations?user=AqU9SdgAAAAJ">Keltin Grimes</a> <br>
-	     <a href="https://scholar.google.com/citations?user=ZbzpkEoAAAAJ">Rui Melo</a> <br>
-             <a href="https://scholar.google.com/citations?user=sjkLXR4AAAAJ&hl">Jiayun Wu</a> (co-advised by Andrew Ilyas) <br>
            </p>
         </div>
       </div>
@@ -1218,7 +1040,8 @@
         </div>
         <div class="col-md-8">
            <p>
-             <a href="https://cs.stanford.edu/~prthaker/">Pratiksha Thaker</a>, CBI Fellow, (co-advised by Virginia Smith)<br>
+             <a href="https://cs.stanford.edu/~prthaker/">Pratiksha Thaker</a> (co-advised by Virginia Smith)<br>
+	     <a href="https://www.shuranzheng.com/">Shuran Zheng</a> 
            </p>
         </div>
       </div>
@@ -1230,12 +1053,15 @@
         <div class="col-md-1">
         </div>
         <div class="col-md-2">
-          <p><b>Undergrad &<br>Master's Students</b></p>
+          <p><b>BS/MS Students</b></p>
         </div>
         <div class="col-md-8">
           <p>
-	    <a href="https://2020pyfcrawl.github.io/">Yifei Pang</a> (MS)<br>
-	  </p>
+	    <a href="https://kenziyuliu.github.io/">Ken Ziyu Liu</a> <br>
+	    <a href="https://konwook.github.io/">Konwoo Kim</a><br>
+	     Xin Gu <br>
+	     Diana Qing (UC Berkeley)<br> 
+	     <a href="http://tangjingwu.com/">Jingwu Tang</a> (Peking U.)
         </div>
       </div>
 
@@ -1248,40 +1074,9 @@
         </div>
         <div class="col-md-8">
            <p>
-	     <a href="https://keeganharris.github.io/">Keegan Harris</a> (PhD student), joining UC Berkeley as a post-doc<br>
-	     <a href="https://dtngo.com/">Daniel Ngo</a> (PhD student), now at J.P. Morgan AI Research<br>
-	     <a href="http://www.cs.cmu.edu/~jwhiteho/">Justin Whitehouse</a> (PhD student), now a post-doc at Stanford<br>
-
-	     <a href="https://loganstapleton.com/">Logan Stapleton</a> (PhD student), now on the Vassar College CS Faculty<br>
-             <a href="https://www.giuseppevietri.com/">Giuseppe Vietri</a> (PhD student), now at Amazon<br>
              <a href="https://www-users.cs.umn.edu/~cheng635/">Hao-Fei Cheng</a> (PhD student), now at Amazon <br>
-	     <a href="https://sites.google.com/view/shuran-zheng">Shuran Zheng</a> (Post-doc), now on the IIIS faculty at Tsinghua University<br> 
-	     <br>
-
-	     <a href="https://xinguu.github.io/">Xin Gu</a> (MS), now a PhD student at Penn State <br>
-	     <a href="https://kenziyuliu.github.io/">Ken Ziyu Liu</a> (MS), now a PhD student at Stanford <br>
-	     <a href="https://www.konwoo.kim/">Konwoo Kim</a> (undergrad, winner of the Allen Newell Award), now a PhD student at Stanford<br>
-	     <a href="#group">Ally Du</a> (undergrad), now a PhD student at Univ. of Washington<br>
-	     <br>
-
-	    <a href="https://www.joonhyukko.com/">Joonhyuk Ko</a> (visiting undergrad from UVA)<br>
-	    <a href="https://xyzhu123.com/">Xiaoyuan Zhu</a> (visiting undergrad from USC)<br>
-	    <a href="https://github.com/ilboglions">Matteo Boglioni</a> (visiting master's student ETH-Zurich)<br>
-             <a href="#group">Yuanchen Tang</a> (visiting undergrad from Peking U.), now a PhD student at UIUC<br>
-	     <a href="#group">Henry Jin</a> (visiting undergrad from Tsinghua), now a PhD student at UCLA<br>
-	     <a href='#group'>Xiaoyu Wu</a> (visiting master's student from Shanghai Jiaotong U.), now a PhD student at Rice Univ.<br>
-             <a href="https://scholar.google.com/citations?user=Kg3H9PsAAAAJ">Yuqi Pan</a> (visiting undergrad from Peking U.), now a PhD student at Harvard <br>
-             <a href="#group">Huiying Zhong</a> (visiting undergrad from Peking U.), now a PhD student at MIT<br>
-             <a href="https://sites.google.com/view/xinyanhu/">Xinyan Hu</a> (visiting undergrad from Peking U.), now a PhD student at UC Berkeley<br>
-             <a href="https://homes.cs.washington.edu/~leijiew/">Leijie Wang</a> (visiting undergrad from Tsinghua), now a PhD student at Univ. of Washington<br>
-
-	     <br>
-	     <a href="https://www.linkedin.com/in/jocelyn-chou-9a1632176">Jocelyn Chou</a> (REU student from Rutgers)<br>
-	     <a href="https://www.linkedin.com/in/dianaqing/">Diana Qing</a> (REU student from Berkeley), now an MS student at Stanford<br> 
-	     <a href="https://harry-tian.github.io/">Harry Tian</a> (REU student from Carleton), now a PhD student at Purdue<br> 
-	     <a href="https://www.linkedin.com/in/grace-tian-119438151/">Grace Tian</a> (REU student from Harvard), now an ML engineer at Hive<br>
-	     <a href="https://www.linkedin.com/in/ngc-allen/">Allen Marquez</a> (REU student from Cal State LA), now a software engineer at Northrop Grumman
-	   </p>
+             <a href="https://sites.google.com/view/xinyanhu/">Xinyan Hu</a> (visiting undergrad), now a PhD student at UC Berkeley<br>
+             <a href="https://homes.cs.washington.edu/~leijiew/">Leijie Wang</a> (visiting undergrad), now a PhD student at Univ. of Washington
         </div>
       </div>
 
@@ -1301,94 +1096,6 @@
     <h1 class="text-center">TEACHING</h1>
 
 
-
- 
-
-
-
- 
-    <div class="row">
-      <div class="col-md-1">
-      </div>
-      <div class="col-md-2">
-        <p><b>Fall 2025</b></p>
-      </div>
-      <div class="col-md-8">
-        <p><a href="https://foundprivacy.github.io/"
-        style="text-decoration:none" target="_blank">18734 / 17731:
-        Foundations of Privacy</a></p>
-      </div>
-      <div class="col-md-1">
-      </div>
-    </div>
-
-
-    <div class="row">
-      <div class="col-md-1">
-      </div>
-      <div class="col-md-2">
-        <p><b>Spring 2025</b></p>
-      </div>
-      <div class="col-md-8">
-        <p><a href="https://interactive-learning-algos.github.io/">17-740: Algorithmic Foundations of Interactive Learning</a></p>
-      </div>
-      <div class="col-md-1">
-      </div>
-    </div>
-
-
-    <div class="row">
-      <div class="col-md-1">
-      </div>
-      <div class="col-md-2">
-        <p><b>Fall 2024</b></p>
-      </div>
-      <div class="col-md-8">
-        <p><a href="https://foundprivacy.github.io/"
-        style="text-decoration:none" target="_blank">18734 / 17731:
-        Foundations of Privacy</a></p>
-      </div>
-      <div class="col-md-1">
-      </div>
-    </div>
-
-
-
-    <div class="row">
-      <div class="col-md-1">
-      </div>
-      <div class="col-md-2">
-        <p><b>Spring 2024</b></p>
-      </div>
-      <div class="col-md-8">
-        <p><a href="https://canvas.cmu.edu/courses/39002"
-        style="text-decoration:none" target="_blank">17757: Modern Techniques in Uncertainty Quantification</a></p>
-      </div>
-      <div class="col-md-1">
-      </div>
-    </div>
-
-
-
-
-
-    <div class="row">
-      <div class="col-md-1">
-      </div>
-      <div class="col-md-2">
-        <p><b>Fall 2023</b></p>
-      </div>
-      <div class="col-md-8">
-        <p><a href="https://foundprivacy.github.io/"
-        style="text-decoration:none" target="_blank">18734 / 17731:
-        Foundations of Privacy</a></p>
-      </div>
-      <div class="col-md-1">
-      </div>
-    </div>
-
-
-    
     <div class="row">
       <div class="col-md-1">
       </div>
@@ -1508,19 +1215,18 @@
         </div>
         <div class="col-md-8">
            <p>
-	     NeurIPS 2025, 2022, 2021, 2020 (area chair)<br>
+	     NeurIPS 2022, 2021, 2020 (area chair)<br>
              ICML 2022, 2020 (area chair)<br>
-             ICLR 2024, 2022, 2021, 2020 (area chair)<br>
+             ICLR 2022, 2021, 2020 (area chair)<br>
 	     AISTATS 2021 (area chair)<br>
-	     COLT 2025, 2024, 2023 (SPC) <br>
-             EC 2025 (SPC) <br>
+	     COLT 2023 (SPC) <br>
 	     ITCS 2022 <br>
 	     SODA 2022 <br>
              ALT 2021 <br>
-	     FORC 2020, 2024 <br>
+	     FORC 2020 <br>
              FAccT 2019, 2021, 2023 (area chair)<br>
 	     TheWebConf 2020, 2018<br>
-             <!-- EC 2020, 2019, 2018<br> -->
+             EC 2020, 2019, 2018<br>
              <!-- ICML 2018, 2017<br> -->
              <!-- AAAI 2019<br> -->
            </p>
@@ -1868,11 +1574,13 @@
 
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-      <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha384-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM9=" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <!-- add in custom jquery code -->
+      <script type="text/javascript" src='js/jquery-3.4.1.min.js'></script>
+      <script type="text/javascript" src='js/effects.js'></script>
       <script type="text/javascript" src='js/main.js'></script>
       <script>
       </script>
