@@ -1,0 +1,251 @@
+<!-- ============================================================
+     C6 — OUTPUT COMPRESSION ON 8 DATASETS (animated)
+     3 stages:
+       Stage 0: Grid appears with dataset labels + explorer trajectory (diamonds + line)
+       Stage 1: 64-token reproducers appear (filled gray circles)
+       Stage 2: 32-token reproducers appear (open circles) + final caption
+     Data: compression-figures/trajectory_data.json
+     ============================================================ -->
+<div class="slide-page"><section class="slide traj-slide" data-title="C6 — Output Compression Results" data-stage="0" data-stages="2">
+  <h2 class="frametitle reveal d-1">Output Compression: Eight Datasets</h2>
+
+  <style>
+    /* ===== Trajectory grid slide ===== */
+    .traj-grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 0.8cqi;
+      min-height: 0;
+      padding: 0.5cqh 0;
+    }
+    .traj-panel {
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: 0.5cqi;
+      padding: 0.8cqh 0.6cqi 0.4cqh;
+      display: flex; flex-direction: column;
+      min-height: 0;
+    }
+    .traj-panel .panel-title {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 2cqi;
+      text-align: center;
+      margin-bottom: 0.3cqh;
+      line-height: 1.1;
+    }
+    .traj-panel svg {
+      flex: 1;
+      width: 100%;
+      min-height: 0;
+    }
+
+    /* Stage gating */
+    .traj-panel .rep-64 { opacity: 0; transition: opacity 0.6s var(--ease, ease-out); }
+    .traj-panel .rep-32 { opacity: 0; transition: opacity 0.6s var(--ease, ease-out); }
+    .traj-slide[data-stage="1"] .rep-64,
+    .traj-slide[data-stage="2"] .rep-64 { opacity: 1; }
+    .traj-slide[data-stage="2"] .rep-32 { opacity: 1; }
+
+    /* Captions */
+    .traj-cap { opacity: 0; transition: opacity 0.5s var(--ease, ease-out); text-align: center; }
+    .traj-cap.cap-0 { font-style: italic; color: var(--ink-soft); font-size: 2.2cqi; }
+    .traj-cap.cap-1 { font-style: italic; color: var(--ink); font-size: 2.2cqi; }
+    .traj-cap.cap-2 { font-style: normal; color: var(--ink); font-size: 2.4cqi; font-weight: 500; }
+    .traj-slide[data-stage="0"] .cap-0 { opacity: 1; }
+    .traj-slide[data-stage="1"] .cap-1 { opacity: 1; }
+    .traj-slide[data-stage="2"] .cap-2 { opacity: 1; }
+  </style>
+
+  <div class="traj-grid reveal d-2" id="traj-grid">
+    <!-- Panels populated by JS below -->
+  </div>
+
+  <p class="traj-cap cap-0">Explorer iteratively improves each metric. Can a fresh agent match it from a short prompt?</p>
+  <p class="traj-cap cap-1" style="position:absolute; bottom:3.5cqh; left:0; right:0;">
+    <b style="color:var(--ink);">64-token</b> reproducers (filled circles) closely track the explorer at every checkpoint.
+  </p>
+  <p class="traj-cap cap-2" style="position:absolute; bottom:3.5cqh; left:0; right:0;">
+    Even at <b style="color:var(--crimson);">32 tokens</b>, the gap is tiny. The strategy compresses &mdash; therefore it generalizes.
+  </p>
+
+  <script>
+  (function buildTrajectorySlide() {
+    const grid = document.getElementById('traj-grid');
+    if (!grid) return;
+
+    // Dataset config — order matches the paper figure grid
+    const datasets = [
+      { id:'gene-expr', label:'Gene Expr', color:'#1f77b4', dir:'higher' },
+      { id:'folktables', label:'Folktables', color:'#ff7f0e', dir:'higher' },
+      { id:'sst2', label:'SST-2', color:'#2ca02c', dir:'higher' },
+      { id:'reward-logloss', label:'Reward Model', color:'#d62728', dir:'lower' },
+      { id:'wikitext', label:'WikiText LM', color:'#9467bd', dir:'lower' },
+      { id:'cifar100-diffusion', label:'CIFAR-100 Diff', color:'#8c564b', dir:'lower' },
+      { id:'imagenet-1k', label:'ImageNet-1K', color:'#e377c2', dir:'higher' },
+      { id:'cifar-cnn', label:'CIFAR-10', color:'#17becf', dir:'higher' },
+    ];
+
+    // Inline data (from trajectory_data.json — embedded for self-contained slide)
+    const DATA = {
+      "gene-expr": [
+        {ev:0.5733, r64:0.57325, r32:0.57325},
+        {ev:0.6802, r64:0.6802, r32:0.68025},
+        {ev:0.7379, r64:0.73785, r32:0.73785},
+        {ev:0.7470, r64:0.74705, r32:0.74705}
+      ],
+      "folktables": [
+        {ev:0.7839, r64:0.78386, r32:0.78386},
+        {ev:0.8159, r64:0.81592, r32:0.81592},
+        {ev:0.8184, r64:0.81838, r32:0.81838},
+        {ev:0.8185, r64:0.81838, r32:0.8182}
+      ],
+      "sst2": [
+        {ev:0.9047, r64:0.90135, r32:0.90745},
+        {ev:0.9175, r64:0.91535, r32:0.922},
+        {ev:0.9365, r64:0.94075, r32:0.9355},
+        {ev:0.9430, r64:0.9405, r32:0.9362}
+      ],
+      "reward-logloss": [
+        {ev:0.659744, r64:0.648751, r32:0.652525},
+        {ev:0.615546, r64:0.62023, r32:0.622966},
+        {ev:0.608956, r64:0.59407, r32:0.5926},
+        {ev:0.603737, r64:0.589953, r32:0.588033}
+      ],
+      "wikitext": [
+        {ev:1.159558, r64:1.161202, r32:1.160024},
+        {ev:1.063959, r64:1.073613, r32:1.060455},
+        {ev:1.006152, r64:1.0013, r32:1.003356},
+        {ev:1.000209, r64:0.998809, r32:0.994244},
+        {ev:0.998529, r64:0.997467, r32:0.998111}
+      ],
+      "cifar100-diffusion": [
+        {ev:98.031956, r64:97.380182, r32:96.357701},
+        {ev:96.287497, r64:97.653051, r32:96.038198},
+        {ev:95.258804, r64:95.554472, r32:96.267512},
+        {ev:94.28182, r64:94.646933, r32:96.160062},
+        {ev:93.543567, r64:93.80635, r32:93.659503}
+      ],
+      "imagenet-1k": [
+        {ev:0.3348, r64:0.35744, r32:0.39628},
+        {ev:0.7985, r64:0.79912, r32:0.79916},
+        {ev:0.8054, r64:0.8054, r32:0.8054},
+        {ev:0.8228, r64:0.8228, r32:0.8228},
+        {ev:0.8391, r64:0.83912, r32:0.83912},
+        {ev:0.8419, r64:0.84192, r32:0.84192},
+        {ev:0.8500, r64:0.85004, r32:0.85004},
+        {ev:0.8554, r64:0.8554, r32:0.8554},
+        {ev:0.8603, r64:0.86024, r32:0.86024}
+      ],
+      "cifar-cnn": [
+        {ev:0.7116, r64:0.728, r32:0.6838},
+        {ev:0.8466, r64:0.8164, r32:0.8144},
+        {ev:0.8594, r64:0.8666, r32:0.8744},
+        {ev:0.8712, r64:0.883, r32:0.8752},
+        {ev:0.8812, r64:0.885, r32:0.8802},
+        {ev:0.9094, r64:0.9142, r32:0.9104},
+        {ev:0.9296, r64:0.9292, r32:0.9334},
+        {ev:0.9362, r64:0.9378, r32:0.9376}
+      ]
+    };
+
+    datasets.forEach(ds => {
+      const panel = document.createElement('div');
+      panel.className = 'traj-panel';
+
+      const title = document.createElement('div');
+      title.className = 'panel-title';
+      title.style.color = ds.color;
+      title.textContent = ds.label;
+      panel.appendChild(title);
+
+      const points = DATA[ds.id];
+      if (!points || points.length === 0) { grid.appendChild(panel); return; }
+
+      // Sort by explorer_val in metric direction
+      const sorted = [...points].sort((a, b) =>
+        ds.dir === 'higher' ? a.ev - b.ev : b.ev - a.ev
+      );
+
+      // Compute y range
+      const allVals = sorted.flatMap(p => [p.ev, p.r64, p.r32].filter(v => v !== null));
+      let yMin = Math.min(...allVals);
+      let yMax = Math.max(...allVals);
+      const margin = (yMax - yMin) * 0.15 || Math.abs(yMin) * 0.05;
+      yMin -= margin; yMax += margin;
+
+      // SVG dimensions
+      const W = 200, H = 120;
+      const padL = 8, padR = 8, padT = 8, padB = 16;
+      const plotW = W - padL - padR;
+      const plotH = H - padT - padB;
+
+      const xScale = (i) => padL + (i / Math.max(sorted.length - 1, 1)) * plotW;
+      const yScale = (v) => {
+        let frac = (v - yMin) / (yMax - yMin);
+        if (ds.dir === 'lower') frac = 1 - frac;
+        return padT + (1 - frac) * plotH;
+      };
+
+      let svg = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">`;
+
+      // Explorer line
+      const linePoints = sorted.map((p, i) => `${xScale(i)},${yScale(p.ev)}`).join(' ');
+      svg += `<polyline points="${linePoints}" fill="none" stroke="${ds.color}" stroke-width="2.5" opacity="0.6"/>`;
+
+      // Explorer diamonds
+      sorted.forEach((p, i) => {
+        const x = xScale(i), y = yScale(p.ev);
+        svg += `<polygon points="${x},${y-5} ${x+4},${y} ${x},${y+5} ${x-4},${y}" fill="${ds.color}" stroke="white" stroke-width="0.8"/>`;
+      });
+
+      // 64-token reproducers (filled gray circles)
+      sorted.forEach((p, i) => {
+        if (p.r64 === null) return;
+        const x = xScale(i) + 3, y = yScale(p.r64);
+        // gap line
+        svg += `<line class="rep-64" x1="${x}" y1="${yScale(p.ev)}" x2="${x}" y2="${y}" stroke="#999" stroke-width="0.8" opacity="0.5"/>`;
+        svg += `<circle class="rep-64" cx="${x}" cy="${y}" r="3.5" fill="#737373" stroke="#404040" stroke-width="0.6"/>`;
+      });
+
+      // 32-token reproducers (open circles)
+      sorted.forEach((p, i) => {
+        if (p.r32 === null) return;
+        const x = xScale(i) + 6, y = yScale(p.r32);
+        svg += `<line class="rep-32" x1="${x}" y1="${yScale(p.ev)}" x2="${x}" y2="${y}" stroke="#999" stroke-width="0.8" opacity="0.5"/>`;
+        svg += `<circle class="rep-32" cx="${x}" cy="${y}" r="3.5" fill="none" stroke="#404040" stroke-width="1.2"/>`;
+      });
+
+      // X-axis labels
+      sorted.forEach((p, i) => {
+        svg += `<text x="${xScale(i)}" y="${H - 2}" text-anchor="middle" font-size="8" fill="var(--ink-faint)">C${i+1}</text>`;
+      });
+
+      svg += '</svg>';
+      panel.innerHTML += svg;
+      grid.appendChild(panel);
+    });
+
+    // Legend row below grid (placed as a small bar)
+    const legend = document.createElement('div');
+    legend.style.cssText = 'display:flex; justify-content:center; gap:2.5cqi; font-family:var(--display); font-size:1.8cqi; color:var(--ink-soft); padding-top:0.5cqh;';
+    legend.innerHTML = `
+      <span style="display:flex;align-items:center;gap:0.4cqi;">
+        <svg width="14" height="14"><polygon points="7,2 12,7 7,12 2,7" fill="#888" stroke="white" stroke-width="1"/></svg>
+        Explorer
+      </span>
+      <span class="rep-64" style="display:flex;align-items:center;gap:0.4cqi;">
+        <svg width="14" height="14"><circle cx="7" cy="7" r="5" fill="#737373" stroke="#404040" stroke-width="1"/></svg>
+        Reproducer (64-tok)
+      </span>
+      <span class="rep-32" style="display:flex;align-items:center;gap:0.4cqi;">
+        <svg width="14" height="14"><circle cx="7" cy="7" r="5" fill="none" stroke="#404040" stroke-width="1.5"/></svg>
+        Reproducer (32-tok)
+      </span>
+    `;
+    grid.parentNode.insertBefore(legend, grid.nextSibling);
+  })();
+  </script>
+</section></div>

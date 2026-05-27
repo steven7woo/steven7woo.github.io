@@ -1,0 +1,584 @@
+{
+  "description": "Per-checkpoint detection breakdown for full-aggressive condition",
+  "detection_rule": "FAIL if gap_pp (reproducer_val - explorer_val in percentage points) exceeds threshold; threshold varies by dataset scale",
+  "ground_truth_rule": "Checkpoint is truly overfitting if explorer_val exceeds explorer_holdout by >10% relative",
+  "summary": {
+    "sensitivity": 1.0,
+    "specificity": 0.91,
+    "total": 48,
+    "TP": 27,
+    "FN": 0,
+    "TN": 19,
+    "FP": 2
+  },
+  "per_dataset": {
+    "gene-expr": {
+      "label": "Gene Expression",
+      "direction": "higher",
+      "n_checkpoints": 6,
+      "TP": 3,
+      "FN": 0,
+      "TN": 3,
+      "FP": 0,
+      "checkpoints": [
+        {
+          "checkpoint": "1572b1e",
+          "explorer_val": 0.554,
+          "explorer_holdout": 0.5644,
+          "reproducer_val": 0.554,
+          "gap_pp": 0.0,
+          "sweep_status": "PASS",
+          "ground_truth_overfit": false,
+          "classification": "TN"
+        },
+        {
+          "checkpoint": "a2db342",
+          "explorer_val": 0.639,
+          "explorer_holdout": 0.6442,
+          "reproducer_val": 0.639,
+          "gap_pp": 0.0,
+          "sweep_status": "PASS",
+          "ground_truth_overfit": false,
+          "classification": "TN"
+        },
+        {
+          "checkpoint": "1de29e3",
+          "explorer_val": 0.698,
+          "explorer_holdout": 0.6886,
+          "reproducer_val": 0.698,
+          "gap_pp": 0.0,
+          "sweep_status": "PASS",
+          "ground_truth_overfit": false,
+          "classification": "TN"
+        },
+        {
+          "checkpoint": "eca06fd",
+          "explorer_val": 0.738,
+          "explorer_holdout": 0.6548,
+          "reproducer_val": 0.648,
+          "gap_pp": 9.0,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        },
+        {
+          "checkpoint": "2048c0e",
+          "explorer_val": 0.824,
+          "explorer_holdout": 0.633,
+          "reproducer_val": 0.633,
+          "gap_pp": 19.1,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        },
+        {
+          "checkpoint": "14d2e72",
+          "explorer_val": 1.0,
+          "explorer_holdout": 0.563,
+          "reproducer_val": 0.562,
+          "gap_pp": 43.8,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        }
+      ]
+    },
+    "folktables": {
+      "label": "Folktables",
+      "direction": "higher",
+      "n_checkpoints": 4,
+      "TP": 2,
+      "FN": 0,
+      "TN": 2,
+      "FP": 0,
+      "checkpoints": [
+        {
+          "checkpoint": "986eb11",
+          "explorer_val": 0.795,
+          "explorer_holdout": 0.7844,
+          "reproducer_val": 0.795,
+          "gap_pp": 0.0,
+          "sweep_status": "PASS",
+          "ground_truth_overfit": false,
+          "classification": "TN"
+        },
+        {
+          "checkpoint": "4e4fdfa",
+          "explorer_val": 0.825,
+          "explorer_holdout": 0.8128,
+          "reproducer_val": 0.825,
+          "gap_pp": 0.0,
+          "sweep_status": "PASS",
+          "ground_truth_overfit": false,
+          "classification": "TN"
+        },
+        {
+          "checkpoint": "dd8e546",
+          "explorer_val": 0.92,
+          "explorer_holdout": 0.8074,
+          "reproducer_val": 0.82,
+          "gap_pp": 10.0,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        },
+        {
+          "checkpoint": "ae8d457",
+          "explorer_val": 1.0,
+          "explorer_holdout": 0.8026,
+          "reproducer_val": 0.8,
+          "gap_pp": 20.0,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        }
+      ]
+    },
+    "sst2": {
+      "label": "SST-2",
+      "direction": "higher",
+      "n_checkpoints": 4,
+      "TP": 1,
+      "FN": 0,
+      "TN": 3,
+      "FP": 0,
+      "checkpoints": [
+        {
+          "checkpoint": "eec7c50",
+          "explorer_val": 0.91,
+          "explorer_holdout": 0.9122,
+          "reproducer_val": 0.9114,
+          "gap_pp": null,
+          "sweep_status": "PASS",
+          "ground_truth_overfit": false,
+          "classification": "TN"
+        },
+        {
+          "checkpoint": "5bae1aa",
+          "explorer_val": 0.92,
+          "explorer_holdout": 0.914,
+          "reproducer_val": 0.917,
+          "gap_pp": null,
+          "sweep_status": "PASS",
+          "ground_truth_overfit": false,
+          "classification": "TN"
+        },
+        {
+          "checkpoint": "71b790d",
+          "explorer_val": 0.94,
+          "explorer_holdout": 0.9184,
+          "reproducer_val": 0.9156,
+          "gap_pp": null,
+          "sweep_status": "PASS",
+          "ground_truth_overfit": false,
+          "classification": "TN"
+        },
+        {
+          "checkpoint": "0a98276",
+          "explorer_val": 1.0,
+          "explorer_holdout": 0.9078,
+          "reproducer_val": 0.9168,
+          "gap_pp": null,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        }
+      ]
+    },
+    "reward-logloss": {
+      "label": "Reward Model",
+      "direction": "lower",
+      "n_checkpoints": 3,
+      "TP": 2,
+      "FN": 0,
+      "TN": 1,
+      "FP": 0,
+      "checkpoints": [
+        {
+          "checkpoint": "4113f84",
+          "explorer_val": 0.244642,
+          "explorer_holdout": 0.933641,
+          "reproducer_val": 0.648918,
+          "gap_pp": -1.5,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        },
+        {
+          "checkpoint": "9f110c2",
+          "explorer_val": 0.045363,
+          "explorer_holdout": 1.582816,
+          "reproducer_val": 0.663572,
+          "gap_pp": -0.5,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        },
+        {
+          "checkpoint": "dd17390",
+          "explorer_val": 0.640576,
+          "explorer_holdout": 0.659732,
+          "reproducer_val": 0.656979,
+          "gap_pp": -0.9,
+          "sweep_status": "PASS",
+          "ground_truth_overfit": false,
+          "classification": "TN"
+        }
+      ]
+    },
+    "wikitext": {
+      "label": "WikiText LM",
+      "direction": "lower",
+      "n_checkpoints": 10,
+      "TP": 7,
+      "FN": 0,
+      "TN": 2,
+      "FP": 1,
+      "checkpoints": [
+        {
+          "checkpoint": "1453604",
+          "explorer_val": 0.009367,
+          "explorer_holdout": 1.341505,
+          "reproducer_val": 0.966586,
+          "gap_pp": 95.7,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        },
+        {
+          "checkpoint": "32fa97a",
+          "explorer_val": 0.008463,
+          "explorer_holdout": 1.633719,
+          "reproducer_val": 0.999122,
+          "gap_pp": 99.1,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        },
+        {
+          "checkpoint": "3e2a478",
+          "explorer_val": 0.016194,
+          "explorer_holdout": 2.400883,
+          "reproducer_val": 1.003494,
+          "gap_pp": 98.7,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        },
+        {
+          "checkpoint": "68b8d0c",
+          "explorer_val": 0.020395,
+          "explorer_holdout": 1.058619,
+          "reproducer_val": 1.003635,
+          "gap_pp": 98.3,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        },
+        {
+          "checkpoint": "a454f13",
+          "explorer_val": 0.014352,
+          "explorer_holdout": 1.740584,
+          "reproducer_val": 1.012441,
+          "gap_pp": 99.8,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        },
+        {
+          "checkpoint": "b55bdd3",
+          "explorer_val": 1.15882,
+          "explorer_holdout": 1.183899,
+          "reproducer_val": 1.161372,
+          "gap_pp": 0.3,
+          "sweep_status": "PASS",
+          "ground_truth_overfit": false,
+          "classification": "TN"
+        },
+        {
+          "checkpoint": "ca44567",
+          "explorer_val": 0.005105,
+          "explorer_holdout": 1.922286,
+          "reproducer_val": 1.075809,
+          "gap_pp": 107.1,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        },
+        {
+          "checkpoint": "e425f83",
+          "explorer_val": 0.01289,
+          "explorer_holdout": 1.126499,
+          "reproducer_val": 0.965306,
+          "gap_pp": 95.2,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        },
+        {
+          "checkpoint": "7469a12",
+          "explorer_val": 1.050395,
+          "explorer_holdout": 1.077512,
+          "reproducer_val": 1.098742,
+          "gap_pp": 4.8,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": false,
+          "classification": "FP"
+        },
+        {
+          "checkpoint": "e2ec613",
+          "explorer_val": 1.049258,
+          "explorer_holdout": 1.075678,
+          "reproducer_val": 0.99943,
+          "gap_pp": -5.0,
+          "sweep_status": "PASS",
+          "ground_truth_overfit": false,
+          "classification": "TN"
+        }
+      ]
+    },
+    "cifar100-diffusion": {
+      "label": "CIFAR-100 Diffusion",
+      "direction": "lower",
+      "n_checkpoints": 11,
+      "TP": 8,
+      "FN": 0,
+      "TN": 2,
+      "FP": 1,
+      "checkpoints": [
+        {
+          "checkpoint": "d59a906",
+          "explorer_val": 100.9587,
+          "explorer_holdout": 99.328086,
+          "reproducer_val": 99.452266,
+          "gap_pp": -1.51,
+          "sweep_status": "PASS",
+          "ground_truth_overfit": false,
+          "classification": "TN"
+        },
+        {
+          "checkpoint": "3936546",
+          "explorer_val": 96.037656,
+          "explorer_holdout": 97.110899,
+          "reproducer_val": 96.671164,
+          "gap_pp": 0.63,
+          "sweep_status": "PASS",
+          "ground_truth_overfit": false,
+          "classification": "TN"
+        },
+        {
+          "checkpoint": "94ec5d1",
+          "explorer_val": 91.577519,
+          "explorer_holdout": 93.099658,
+          "reproducer_val": 94.742493,
+          "gap_pp": 3.16,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": false,
+          "classification": "FP"
+        },
+        {
+          "checkpoint": "3f7ccc3",
+          "explorer_val": 89.570009,
+          "explorer_holdout": 99.858848,
+          "reproducer_val": 97.483834,
+          "gap_pp": 7.91,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        },
+        {
+          "checkpoint": "c942398",
+          "explorer_val": 82.601886,
+          "explorer_holdout": 113.129856,
+          "reproducer_val": 128.237461,
+          "gap_pp": 45.64,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        },
+        {
+          "checkpoint": "b7b44ac",
+          "explorer_val": 65.695702,
+          "explorer_holdout": 168.070163,
+          "reproducer_val": 93.57206,
+          "gap_pp": 27.88,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        },
+        {
+          "checkpoint": "9dae3d2",
+          "explorer_val": 50.221816,
+          "explorer_holdout": 166.847173,
+          "reproducer_val": 95.305999,
+          "gap_pp": 45.08,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        },
+        {
+          "checkpoint": "28548fb",
+          "explorer_val": 36.099039,
+          "explorer_holdout": 242.538102,
+          "reproducer_val": 97.149465,
+          "gap_pp": 61.05,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        },
+        {
+          "checkpoint": "2610161",
+          "explorer_val": 20.123757,
+          "explorer_holdout": 315.773376,
+          "reproducer_val": 95.899229,
+          "gap_pp": 75.78,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        },
+        {
+          "checkpoint": "744c1a8",
+          "explorer_val": 14.315846,
+          "explorer_holdout": 519.040562,
+          "reproducer_val": 95.254752,
+          "gap_pp": 80.94,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        },
+        {
+          "checkpoint": "8a7f431",
+          "explorer_val": 13.230007,
+          "explorer_holdout": 520.562081,
+          "reproducer_val": 94.443499,
+          "gap_pp": 81.21,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        }
+      ]
+    },
+    "imagenet-1k": {
+      "label": "ImageNet-1K",
+      "direction": "higher",
+      "n_checkpoints": 6,
+      "TP": 2,
+      "FN": 0,
+      "TN": 4,
+      "FP": 0,
+      "checkpoints": [
+        {
+          "checkpoint": "7bba67f",
+          "explorer_val": 0.728,
+          "explorer_holdout": 0.698444,
+          "reproducer_val": 0.774,
+          "gap_pp": -4.6,
+          "sweep_status": "PASS",
+          "ground_truth_overfit": false,
+          "classification": "TN"
+        },
+        {
+          "checkpoint": "6dc04ca",
+          "explorer_val": 0.892,
+          "explorer_holdout": 0.857556,
+          "reproducer_val": 0.906,
+          "gap_pp": -1.4,
+          "sweep_status": "PASS",
+          "ground_truth_overfit": false,
+          "classification": "TN"
+        },
+        {
+          "checkpoint": "794703f",
+          "explorer_val": 0.922,
+          "explorer_holdout": 0.864667,
+          "reproducer_val": 0.91,
+          "gap_pp": 1.2,
+          "sweep_status": "PASS",
+          "ground_truth_overfit": false,
+          "classification": "TN"
+        },
+        {
+          "checkpoint": "ebfd32a",
+          "explorer_val": 0.966,
+          "explorer_holdout": 0.866444,
+          "reproducer_val": 0.892,
+          "gap_pp": 7.4,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        },
+        {
+          "checkpoint": "7416bb3",
+          "explorer_val": 1.0,
+          "explorer_holdout": 0.861333,
+          "reproducer_val": 0.904,
+          "gap_pp": 9.6,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        },
+        {
+          "checkpoint": "f6d44ae",
+          "explorer_val": 0.904,
+          "explorer_holdout": 0.858222,
+          "reproducer_val": 0.91,
+          "gap_pp": -0.6,
+          "sweep_status": "PASS",
+          "ground_truth_overfit": false,
+          "classification": "TN"
+        }
+      ]
+    },
+    "cifar-cnn": {
+      "label": "CIFAR-10",
+      "direction": "higher",
+      "n_checkpoints": 4,
+      "TP": 2,
+      "FN": 0,
+      "TN": 2,
+      "FP": 0,
+      "checkpoints": [
+        {
+          "checkpoint": "2a8427d",
+          "explorer_val": 0.65,
+          "explorer_holdout": 0.6373,
+          "reproducer_val": 0.64,
+          "gap_pp": 1.0,
+          "sweep_status": "PASS",
+          "ground_truth_overfit": false,
+          "classification": "TN"
+        },
+        {
+          "checkpoint": "4ae7146",
+          "explorer_val": 0.75,
+          "explorer_holdout": 0.7216,
+          "reproducer_val": 0.85,
+          "gap_pp": -10.0,
+          "sweep_status": "PASS",
+          "ground_truth_overfit": false,
+          "classification": "TN"
+        },
+        {
+          "checkpoint": "834ad2d",
+          "explorer_val": 0.985,
+          "explorer_holdout": 0.7468,
+          "reproducer_val": 0.86,
+          "gap_pp": 12.5,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        },
+        {
+          "checkpoint": "e49010d",
+          "explorer_val": 1.0,
+          "explorer_holdout": 0.6946,
+          "reproducer_val": 0.845,
+          "gap_pp": 15.5,
+          "sweep_status": "FAIL",
+          "ground_truth_overfit": true,
+          "classification": "TP"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "metric": "WikiText-103 holdout BPB (bits per byte, lower is better)",
+  "explorer_baseline": 1.0263,
+  "budgets": [
+    {
+      "tokens": 64,
+      "reproducer_mean": 1.0055,
+      "reproducer_min": 0.9913,
+      "reproducer_max": 1.0268,
+      "n_reproducers": 5
+    },
+    {
+      "tokens": 48,
+      "reproducer_mean": 1.0127,
+      "reproducer_min": 0.9920,
+      "reproducer_max": 1.0272,
+      "n_reproducers": 5
+    },
+    {
+      "tokens": 40,
+      "reproducer_mean": 1.0302,
+      "reproducer_min": 0.9872,
+      "reproducer_max": 1.0992,
+      "n_reproducers": 5
+    },
+    {
+      "tokens": 32,
+      "reproducer_mean": 1.0238,
+      "reproducer_min": 0.9875,
+      "reproducer_max": 1.0905,
+      "n_reproducers": 5
+    },
+    {
+      "tokens": 16,
+      "reproducer_mean": 1.0281,
+      "reproducer_min": 0.9917,
+      "reproducer_max": 1.0696,
+      "n_reproducers": 5
+    },
+    {
+      "tokens": 8,
+      "reproducer_mean": 1.1597,
+      "reproducer_min": 1.1327,
+      "reproducer_max": 1.1854,
+      "n_reproducers": 5
+    },
+    {
+      "tokens": 4,
+      "reproducer_mean": 1.1744,
+      "reproducer_min": 1.1316,
+      "reproducer_max": 1.1924,
+      "n_reproducers": 5
+    }
+  ],
+  "compressed_prompts": {
+    "64": "12L d768 6h s2048 b2M ReLU\u00b24xMLP preRMSNorm QKnorm VE2\u03c3gate x0.1 res1 0init-proj Muon.1 2D AdamW emb1 un.008 \u03b2.8 w5%d60%",
+    "48": "12L d768 6h VE2\u03c3gate d60 b2M ReLU\u00b24xMLP preRMSNorm QKnorm VE w5% x0.1 0init Muon.1 emb1 un.008",
+    "40": "12L d768 VE w5% b2M ReLU\u00b24xMLP preRMSNorm QKnorm x0.1 0init Muon.1 emb1 un.008",
+    "32": "12L d768 b2M R\u00b24x pRMS QKn x.1 0init Muon.1 emb1 un.008 w",
+    "16": "12L768 b2M Mu.1 R\u00b24x QKn",
+    "8": "12L768 Mu.1 R\u00b2",
+    "4": "12L768Mu"
+  },
+  "tokens_dropped_at_each_step": {
+    "64_to_48": [
+      "s2048 (seq length)",
+      "res1 (residual scale)",
+      "-proj (projection removal)",
+      "2D (2D positional)",
+      "AdamW (secondary optimizer)",
+      "\u03b2.8 (Adam beta)"
+    ],
+    "48_to_40": [
+      "6h (num heads)",
+      "VE2\u03c3gate (value embedding sigma gate)",
+      "d60 (dropout 60%)"
+    ],
+    "40_to_32": [
+      "VE (value embedding)",
+      "w5% (warmup 5%)",
+      "preRMSNorm \u2192 pRMS",
+      "ReLU\u00b24xMLP \u2192 R\u00b24x",
+      "QKnorm \u2192 QKn",
+      "0init retained but shorthand compressed"
+    ],
+    "32_to_16": [
+      "pRMS (pre-RMSNorm)",
+      "emb1 (embedding scale 1)",
+      "un.008 (weight init uniform .008)",
+      "0init (zero initialization)",
+      "x.1 (residual scale 0.1)",
+      "w (warmup)"
+    ],
+    "16_to_8": [
+      "b2M (batch size 2M tokens)",
+      "4x (4\u00d7 MLP ratio)",
+      "QKn (QK-norm)"
+    ],
+    "8_to_4": [
+      ".1 (learning rate)",
+      "R\u00b2 (ReLU\u00b2 activation)"
+    ]
+  },
+  "source_run_id": "c5_29fa809",
+  "notes": {
+    "data_source": "/fsx/maberlop/compression-cert/wikitext/reproduce-scoreonly-neutral-t{budget}-{v1|v2}run{1-5}-29fa809/holdout_results.tsv",
+    "prompt_versions": "t64/t48/t40 use v1 compressor; t32/t16/t8/t4 use v2 compressor",
+    "cliff_confirmation": "The cliff at t=8 (mean jumps from 1.028 to 1.160, +0.13 BPB) coincides with losing b2M (batch size), 4x (MLP ratio), and QKn (QK-norm) in the 16\u21928 step \u2014 confirmed by the actual prompts.",
+    "generator_script": "experiments/plot_wikitext_hero.py",
+    "figure_file_in_paper": "figures/c5_29fa809_variance_v2.png"
+  }
+}
