@@ -1389,14 +1389,21 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
 <!-- ============================================================
      C2 — THE COMPRESSIBILITY HYPOTHESIS
      ============================================================ -->
-<div class="slide-page"><section class="slide c2-slide" data-title="C2 — Compressibility Hypothesis" data-stage="0" data-stages="2">
+<div class="slide-page"><section class="slide c2-slide" data-title="C2 — Compressibility Hypothesis" data-stage="0" data-stages="3">
   <style>
-    /* Stage-gated reveals: lede sentence (stage 1), then theorem (stage 2). */
+    /* Stage-gated reveals:
+         stage 1 = lede sentence
+         stage 2 = informal theorem block
+         stage 3 = follow-up question ("How to get the short messages?") */
     .c2-slide .c2-lede,
-    .c2-slide .c2-theorem { opacity: 0; transition: opacity 0.6s var(--ease, ease-out); }
+    .c2-slide .c2-theorem,
+    .c2-slide .c2-question { opacity: 0; transition: opacity 0.6s var(--ease, ease-out); }
     .c2-slide[data-stage="1"] .c2-lede,
     .c2-slide[data-stage="2"] .c2-lede,
-    .c2-slide[data-stage="2"] .c2-theorem { opacity: 1; }
+    .c2-slide[data-stage="3"] .c2-lede,
+    .c2-slide[data-stage="2"] .c2-theorem,
+    .c2-slide[data-stage="3"] .c2-theorem,
+    .c2-slide[data-stage="3"] .c2-question { opacity: 1; }
   </style>
   <h2 class="frametitle reveal d-1">A Natural Hypothesis: ML Strategies Are <em style="color: #2e5b9a;">Compressible</em>.</h2>
   <div style="flex:1; display:flex; flex-direction:column; justify-content:center; gap: 2.4cqh;">
@@ -1413,6 +1420,9 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
         $\bigl|\,\text{Population loss} - \text{Reused dataset loss}\,\bigr| \;\le\; O\!\left(\sqrt{\tfrac{k}{n}}\right)$
       </p>
     </div>
+    <p class="c2-question" style="font-family: var(--display); font-style: italic; font-size: 3.0cqi; line-height: 1.4; color: var(--crimson); text-align: center; margin: 0;">
+      How do we get the short messages?
+    </p>
   </div>
 </section></div>
 
