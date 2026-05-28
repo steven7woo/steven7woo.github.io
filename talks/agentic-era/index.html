@@ -6457,14 +6457,16 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
      XXVII — RETHINKING DATA SCIENCE WITH AGENTS
      Closing synthesis as a tight bullet stack.
      ============================================================ -->
-<div class="slide-page"><section class="slide close-slide" data-title="XXVII — Rethinking Data Science" data-section="Close" data-stage="0" data-stages="3">
+<div class="slide-page"><section class="slide close-slide" data-title="XXVII — Rethinking Data Science" data-section="Close" data-stage="0" data-stages="4">
   <h2 class="frametitle reveal d-1">Rethinking Data Science with Agents</h2>
 
   <style>
-    /* Per-bullet staged reveal. The top-level bullets and their
-       sub-bullets fade in together: stage 1 = first bullet block,
-       stage 2 = sub-bullets of first block, stage 3 = second block
-       with its sub-bullets. */
+    /* Per-bullet staged reveal. Stages mirror the bullet groups:
+         stage 1 = first block (s-1) + its sub-bullets (s-2)
+         stage 2 = "Risk" block (s-3) + its sub-bullets
+         stage 3 = forward-looking "What's next" block (s-4)
+       Earlier stages are left in for compatibility — bullets simply
+       cumulate as the user advances. */
     .close-slide .stage-li {
       opacity: 0;
       transform: translateY(0.6cqh);
@@ -6475,9 +6477,16 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
     .close-slide[data-stage="1"] .stage-li.s-1,
     .close-slide[data-stage="2"] .stage-li.s-1,
     .close-slide[data-stage="3"] .stage-li.s-1,
+    .close-slide[data-stage="4"] .stage-li.s-1,
+    .close-slide[data-stage="1"] .stage-li.s-2,
     .close-slide[data-stage="2"] .stage-li.s-2,
     .close-slide[data-stage="3"] .stage-li.s-2,
-    .close-slide[data-stage="3"] .stage-li.s-3 {
+    .close-slide[data-stage="4"] .stage-li.s-2,
+    .close-slide[data-stage="2"] .stage-li.s-3,
+    .close-slide[data-stage="3"] .stage-li.s-3,
+    .close-slide[data-stage="4"] .stage-li.s-3,
+    .close-slide[data-stage="3"] .stage-li.s-4,
+    .close-slide[data-stage="4"] .stage-li.s-4 {
       opacity: 1;
       transform: translateY(0);
     }
@@ -6497,6 +6506,7 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
           <li class="stage-li s-3">Data science agents can be steered to support a hypothesis while looking compliant, <b>automating selective reporting</b></li>
         </ul>
       </li>
+      <li class="stage-li s-4"><b>What&rsquo;s next:</b> new tools, theory, and audits for an agent-driven data science &mdash; <b>accountability mechanisms</b>, compression-style guarantees, and multiverse standards <i>before</i> agents become the default workflow.</li>
     </ul>
   </div>
 </section></div>
