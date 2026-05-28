@@ -3367,7 +3367,26 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
 <!-- ============================================================
      C9 — FALSIFIABILITY: INDUCED OVERFITTING
      ============================================================ -->
-<div class="slide-page"><section class="slide" data-title="C9 — Falsifiability">
+<div class="slide-page"><section class="slide falsify-slide" data-title="C9 — Falsifiability" data-stage="0" data-stages="3">
+  <style>
+    .falsify-slide .bullets > li {
+      opacity: 0;
+      transform: translateX(0.8cqi);
+      transition: opacity 0.45s var(--ease, ease-out), transform 0.45s var(--ease, ease-out);
+    }
+    .falsify-slide[data-stage="1"] .bullets > li:nth-child(1),
+    .falsify-slide[data-stage="2"] .bullets > li:nth-child(1),
+    .falsify-slide[data-stage="3"] .bullets > li:nth-child(1) {
+      opacity: 1; transform: translateX(0); transition-delay: 0.05s;
+    }
+    .falsify-slide[data-stage="2"] .bullets > li:nth-child(2),
+    .falsify-slide[data-stage="3"] .bullets > li:nth-child(2) {
+      opacity: 1; transform: translateX(0); transition-delay: 0.05s;
+    }
+    .falsify-slide[data-stage="3"] .bullets > li:nth-child(3) {
+      opacity: 1; transform: translateX(0); transition-delay: 0.05s;
+    }
+  </style>
   <h2 class="frametitle reveal d-1">A <em>Falsifiable</em> Prediction</h2>
   <div style="flex:1; display:flex; flex-direction:column; justify-content:center; gap: 3cqh;">
     <ul class="bullets reveal d-2">
