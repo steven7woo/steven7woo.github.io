@@ -2199,7 +2199,7 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
      The cliff at 16→8 is the dramatic moment.
      Data: compression-figures/hero_data.json
      ============================================================ -->
-<div class="slide-page"><section class="slide hero-slide" data-title="C4 — Hero Figure" data-stage="0" data-stages="7">
+<div class="slide-page"><section class="slide hero-slide" data-title="C4 — Hero Figure" data-stage="0" data-stages="8">
   <h2 class="frametitle reveal d-1">A GPT Strategy in <em>16 Tokens</em></h2>
 
   <style>
@@ -2347,27 +2347,31 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
     .chart-card .point-label{ opacity: 0; transition: opacity 0.5s var(--ease, ease-out); }
     .chart-card .cliff-callout { opacity: 0; transition: opacity 0.6s var(--ease, ease-out); }
 
-    /* Stage 0: empty chart only. The prompt card (chips + budget number)
-       and the Explorer baseline are both hidden until the first click. */
+    /* Stage 0: empty chart only.
+       Stage 1: Explorer baseline appears (still no prompt card).
+       Stage 2+: prompt card reveals + per-budget points start dropping.
+       The prompt card and baseline are independent so the audience can
+       absorb the baseline before the compressed-prompt machinery shows up. */
     .prompt-card { transition: opacity 0.5s var(--ease, ease-out); }
-    .slide[data-stage="0"] .prompt-card { opacity: 0; pointer-events: none; }
+    .slide[data-stage="0"] .prompt-card,
+    .slide[data-stage="1"] .prompt-card { opacity: 0; pointer-events: none; }
     .chart-card .baseline { transition: opacity 0.6s var(--ease, ease-out); }
     .slide[data-stage="0"] .chart-card .baseline { opacity: 0; }
 
-    /* Stage gating: each stage reveals one more point */
-    .slide[data-stage="1"] .point.p-64,
-    .slide[data-stage="2"] .point.p-64, .slide[data-stage="2"] .point.p-48,
-    .slide[data-stage="3"] .point.p-64, .slide[data-stage="3"] .point.p-48, .slide[data-stage="3"] .point.p-40,
-    .slide[data-stage="4"] .point.p-64, .slide[data-stage="4"] .point.p-48, .slide[data-stage="4"] .point.p-40, .slide[data-stage="4"] .point.p-32,
-    .slide[data-stage="5"] .point.p-64, .slide[data-stage="5"] .point.p-48, .slide[data-stage="5"] .point.p-40, .slide[data-stage="5"] .point.p-32, .slide[data-stage="5"] .point.p-16,
-    .slide[data-stage="6"] .point.p-64, .slide[data-stage="6"] .point.p-48, .slide[data-stage="6"] .point.p-40, .slide[data-stage="6"] .point.p-32, .slide[data-stage="6"] .point.p-16, .slide[data-stage="6"] .point.p-8,
-    .slide[data-stage="7"] .point  { opacity: 1; }
+    /* Stage gating: starting at stage 2, each stage reveals one more point */
+    .slide[data-stage="2"] .point.p-64,
+    .slide[data-stage="3"] .point.p-64, .slide[data-stage="3"] .point.p-48,
+    .slide[data-stage="4"] .point.p-64, .slide[data-stage="4"] .point.p-48, .slide[data-stage="4"] .point.p-40,
+    .slide[data-stage="5"] .point.p-64, .slide[data-stage="5"] .point.p-48, .slide[data-stage="5"] .point.p-40, .slide[data-stage="5"] .point.p-32,
+    .slide[data-stage="6"] .point.p-64, .slide[data-stage="6"] .point.p-48, .slide[data-stage="6"] .point.p-40, .slide[data-stage="6"] .point.p-32, .slide[data-stage="6"] .point.p-16,
+    .slide[data-stage="7"] .point.p-64, .slide[data-stage="7"] .point.p-48, .slide[data-stage="7"] .point.p-40, .slide[data-stage="7"] .point.p-32, .slide[data-stage="7"] .point.p-16, .slide[data-stage="7"] .point.p-8,
+    .slide[data-stage="8"] .point  { opacity: 1; }
 
-    /* Cliff callout appears once stage 6 (the t=8 point) lands */
-    .slide[data-stage="6"] .cliff-callout,
-    .slide[data-stage="7"] .cliff-callout { opacity: 1; }
+    /* Cliff callout appears once stage 7 (the t=8 point) lands */
+    .slide[data-stage="7"] .cliff-callout,
+    .slide[data-stage="8"] .cliff-callout { opacity: 1; }
 
-    /* Caption swap: shows during run, final punchline at stage 7 */
+    /* Caption swap: shows during run, final punchline at stage 8 */
     .hero-caption       { opacity: 0; transition: opacity 0.5s var(--ease, ease-out); }
     .hero-caption.cap-1 { font-style: italic; color: var(--ink-soft); }
     .hero-caption.cap-2 { font-style: italic; color: var(--ink); font-weight: 500; }
@@ -2377,8 +2381,9 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
     .slide[data-stage="3"] .cap-1,
     .slide[data-stage="4"] .cap-1,
     .slide[data-stage="5"] .cap-1,
-    .slide[data-stage="6"] .cap-1 { opacity: 1; }
-    .slide[data-stage="7"] .cap-2 { opacity: 1; }
+    .slide[data-stage="6"] .cap-1,
+    .slide[data-stage="7"] .cap-1 { opacity: 1; }
+    .slide[data-stage="8"] .cap-2 { opacity: 1; }
   </style>
 
   <div class="hero-grid reveal d-2">
@@ -2717,8 +2722,10 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
         }
       });
 
-      // Stage → budget mapping
-      const stageToBudget = { 0: 64, 1: 64, 2: 48, 3: 40, 4: 32, 5: 16, 6: 8, 7: 4 };
+      // Stage → budget mapping. Stage 0 (empty chart) and stage 1
+       // (baseline only) both show the 64-token prompt as the
+       // about-to-appear default; the prompt card itself stays hidden.
+      const stageToBudget = { 0: 64, 1: 64, 2: 64, 3: 48, 4: 40, 5: 32, 6: 16, 7: 8, 8: 4 };
       const budgetNum = document.getElementById('budget-num');
       const budgetLbl = document.getElementById('budget-lbl');
       const slide = document.querySelector('.hero-slide');
