@@ -1407,10 +1407,10 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
     <div class="block c2-theorem">
       <div class="block-title">Informal theorem <span class="small">(Dwork et al., 2015; Arora &amp; Zhang, 2021)</span></div>
       <p style="font-style: italic; line-height: 1.5; margin: 0;">
-        If the agent's output model depends on the validation set only through a $k$-bit message, then with high probability the model satisfies
+        If the agent's output model depends on the reused dataset only through a $k$-bit message, then with high probability the model satisfies
       </p>
       <p style="text-align:center; font-size: 3.0cqi; margin-top: 1.2cqh; color: var(--ink);">
-        $\bigl|\,\text{Population loss} - \text{Validation loss}\,\bigr| \;\le\; O\!\left(\sqrt{\tfrac{k}{n}}\right)$
+        $\bigl|\,\text{Population loss} - \text{Reused dataset loss}\,\bigr| \;\le\; O\!\left(\sqrt{\tfrac{k}{n}}\right)$
       </p>
     </div>
   </div>
@@ -6496,14 +6496,14 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
     <ul class="bullets reveal d-2" style="max-width: min(96%, 1100px); font-size: 3.0cqi; line-height: 1.45;">
       <li class="stage-li s-1"><b>Use agents to do what was previously infeasible:</b>
         <ul>
-          <li class="stage-li s-2" style="white-space: nowrap;">Quantify the <b>compressibility</b> of ML strategies under benchmark reuse (<i>Act I</i>)</li>
-          <li class="stage-li s-2">Map out the <b>data science multiverse</b> at a much larger scale (<i>Act II</i>)</li>
+          <li class="stage-li s-2" style="white-space: nowrap;">Quantify the <b>compressibility</b> of ML strategies under benchmark reuse </li>
+          <li class="stage-li s-2">Map out the <b>data science multiverse</b> at a much larger scale</li>
         </ul>
       </li>
-      <li class="stage-li s-3"><b>Risk:</b> these agents are highly <b>steerable</b>:
+      <li class="stage-li s-3"><b>Risk:</b> agents are highly <b>steerable</b>:
         <ul>
-          <li class="stage-li s-3">Under simple prompting, ML research agents can easily <b>overfit</b> and even memorize the validation data</li>
-          <li class="stage-li s-3">Data science agents can be steered to support a hypothesis while looking compliant, <b>automating selective reporting</b></li>
+          <li class="stage-li s-3">ML agents &rarr; <b>overfit</b> and memorize</li>
+          <li class="stage-li s-3">Data science agents &rarr; <b>automate selective reporting</b></li>
         </ul>
       </li>
       <li class="stage-li s-4"><b>What&rsquo;s next:</b> new tools, theory, and audits for an agent-driven data science &mdash; <b>accountability mechanisms</b>, compression-style guarantees, and multiverse standards <i>before</i> agents become the default workflow.</li>
