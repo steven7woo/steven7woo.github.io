@@ -5011,15 +5011,32 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
      apply (the slide navigator clears data-stage on entry, which would
      otherwise hide everything).
      ============================================================ -->
-<div class="slide-page"><section class="slide act2-garden" data-title="Act II — Garden Figure">
+<div class="slide-page"><section class="slide act2-garden" data-title="Act II — Garden Figure" data-stage="0" data-stages="4">
   <style>
-    .act2-garden .multi-stage { opacity: 1; }
-    .act2-garden .multi-edge { stroke: var(--c-unpub); stroke-width: 1.8; }
-    .act2-garden .multi-node { fill: var(--c-unpub); }
-    .act2-garden .multi-leaf { fill: var(--ink-soft); }
-    .act2-garden .multi-edge.pub { stroke: var(--crimson); stroke-width: 2.8; }
-    .act2-garden .multi-node.pub { fill: var(--crimson); stroke: #6e1411; }
-    .act2-garden .multi-leaf.pub { fill: var(--crimson); font-weight: 700; }
+    /* Layer-by-layer reveal:
+         stage 0: root only
+         stage 1: + Preprocessing layer
+         stage 2: + Model spec layer
+         stage 3: + Inference + leaves
+         stage 4: published path lights up in crimson
+       Self-contained selectors (.act2-garden ...) so the global
+       .multi-slide rules don't collide. */
+    .act2-garden .multi-stage { opacity: 0; transition: opacity 0.7s var(--ease, ease-out); }
+    .act2-garden[data-stage="1"] .multi-stage.m-l1,
+    .act2-garden[data-stage="2"] .multi-stage.m-l1, .act2-garden[data-stage="2"] .multi-stage.m-l2,
+    .act2-garden[data-stage="3"] .multi-stage.m-l1, .act2-garden[data-stage="3"] .multi-stage.m-l2, .act2-garden[data-stage="3"] .multi-stage.m-l3,
+    .act2-garden[data-stage="4"] .multi-stage.m-l1, .act2-garden[data-stage="4"] .multi-stage.m-l2, .act2-garden[data-stage="4"] .multi-stage.m-l3
+      { opacity: 1; }
+
+    /* Default tree styling (muted gray) */
+    .act2-garden .multi-edge { stroke: var(--c-unpub); stroke-width: 1.8; transition: stroke 0.6s var(--ease, ease-out), stroke-width 0.6s var(--ease, ease-out); }
+    .act2-garden .multi-node { fill: var(--c-unpub); transition: fill 0.6s var(--ease, ease-out), stroke 0.6s var(--ease, ease-out); }
+    .act2-garden .multi-leaf { fill: var(--ink-soft); transition: fill 0.6s var(--ease, ease-out), font-weight 0.6s var(--ease, ease-out); }
+
+    /* Published path lights up at the final stage */
+    .act2-garden[data-stage="4"] .multi-edge.pub { stroke: var(--crimson); stroke-width: 2.8; }
+    .act2-garden[data-stage="4"] .multi-node.pub { fill: var(--crimson); stroke: #6e1411; }
+    .act2-garden[data-stage="4"] .multi-leaf.pub { fill: var(--crimson); font-weight: 700; }
   </style>
   <div class="diagram reveal d-2" style="flex:1; display:flex; align-items:center; justify-content:center; min-height:0;">
     <svg viewBox="-130 0 1130 480" xmlns="http://www.w3.org/2000/svg" role="img"
