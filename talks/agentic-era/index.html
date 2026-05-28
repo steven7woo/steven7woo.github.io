@@ -1407,7 +1407,7 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
     <div class="block c2-theorem">
       <div class="block-title">Informal theorem <span class="small">(Dwork et al., 2015; Arora &amp; Zhang, 2021)</span></div>
       <p style="font-style: italic; line-height: 1.5; margin: 0;">
-        If the agent's model depends on the validation set only through a $k$-bit message, then with high probability the model satisfies
+        If the agent's output model depends on the validation set only through a $k$-bit message, then with high probability the model satisfies
       </p>
       <p style="text-align:center; font-size: 3.0cqi; margin-top: 1.2cqh; color: var(--ink);">
         $\bigl|\,\text{Population loss} - \text{Validation loss}\,\bigr| \;\le\; O\!\left(\sqrt{\tfrac{k}{n}}\right)$
@@ -1670,7 +1670,7 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
         <path d="M -45 60 Q -45 18, 0 18 Q 45 18, 45 60 L 45 66 L -45 66 Z"
               fill="var(--paper)" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"/>
         <text x="0" y="98"  text-anchor="middle" font-size="22" font-style="italic" font-weight="600" fill="var(--c-published)">Explorer</text>
-        <text x="0" y="120" text-anchor="middle" font-size="14" font-style="italic" fill="var(--c-published)">autonomous ML research agent</text>
+        <text x="0" y="120" text-anchor="middle" font-size="20" font-style="italic" fill="var(--c-published)">autonomous ML research agent</text>
       </g>
 
       <!-- TRAINING SET (top-left). Label moved ABOVE the cylinder to clear
@@ -1974,14 +1974,14 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
         <!-- Compressor description — sits well below the "Compressor"
              label (y=458 in the agent's local frame ≡ 458+378=458; we use
              absolute y so it's clear). Two lines, 17pt italic. -->
-        <text x="720" y="486" text-anchor="middle"
+        <text x="720" y="488" text-anchor="middle"
               font-family="'Cormorant Garamond', serif"
-              font-size="17" font-style="italic" fill="var(--warm)">
+              font-size="20" font-style="italic" fill="var(--warm)">
           distill the ML strategy at each
         </text>
-        <text x="720" y="507" text-anchor="middle"
+        <text x="720" y="509" text-anchor="middle"
               font-family="'Cormorant Garamond', serif"
-              font-size="17" font-style="italic" fill="var(--warm)">
+              font-size="20" font-style="italic" fill="var(--warm)">
           improvement checkpoint
         </text>
       </g>
@@ -2020,14 +2020,14 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
           <text x="0" y="92" text-anchor="middle" font-size="22" font-style="italic" font-weight="600" fill="#4a8b85">Reproducer</text>
         </g>
         <!-- Reproducer description (same vertical positions as Compressor's). -->
-        <text x="400" y="486" text-anchor="middle"
+        <text x="400" y="488" text-anchor="middle"
               font-family="'Cormorant Garamond', serif"
-              font-size="17" font-style="italic" fill="#4a8b85">
+              font-size="20" font-style="italic" fill="#4a8b85">
           reproduce the trained model from the prompt;
         </text>
-        <text x="400" y="507" text-anchor="middle"
+        <text x="400" y="509" text-anchor="middle"
               font-family="'Cormorant Garamond', serif"
-              font-size="17" font-style="italic" fill="#4a8b85">
+              font-size="20" font-style="italic" fill="#4a8b85">
           no memory of the explorer's interaction
         </text>
       </g>
@@ -2104,7 +2104,7 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
               stroke="var(--c-published)" stroke-width="2.5"
               marker-end="url(#arr-blue)"/>
         <!-- "adaptive search" sits BELOW the Explorer label. -->
-        <text x="120" y="424" text-anchor="middle" font-size="22" font-style="italic" fill="var(--c-published)">adaptive search</text>
+        <text x="120" y="424" text-anchor="middle" font-size="23.5" font-style="italic" fill="var(--c-published)">adaptive search</text>
       </g>
 
       <!-- BOTTLENECK (center) — "Information Bottleneck".
@@ -2154,8 +2154,8 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
               stroke="#4a8b85" stroke-width="2.5"
               marker-end="url(#arr-teal)"/>
         <!-- "no validation set, no transcript" sits BELOW the Reproducer label. -->
-        <text x="870" y="424" text-anchor="middle" font-size="22" font-style="italic" fill="#4a8b85">no validation set,</text>
-        <text x="870" y="448" text-anchor="middle" font-size="22" font-style="italic" fill="#4a8b85">no transcript</text>
+        <text x="870" y="424" text-anchor="middle" font-size="23.5" font-style="italic" fill="#4a8b85">no validation set,</text>
+        <text x="870" y="448" text-anchor="middle" font-size="23.5" font-style="italic" fill="#4a8b85">no transcript</text>
 
         <!-- arrow bottleneck -> reproducer (still warm — the prompt itself
              is the compressor's output, "delivered" to the reproducer) -->
@@ -2337,11 +2337,12 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
     .chart-card .point-label{ opacity: 0; transition: opacity 0.5s var(--ease, ease-out); }
     .chart-card .cliff-callout { opacity: 0; transition: opacity 0.6s var(--ease, ease-out); }
 
-    /* Stage 0: only the Explorer baseline shows. Prompt card (chips +
-       budget number) is hidden until the first click reveals the
-       64-token compressed prompt. */
+    /* Stage 0: empty chart only. The prompt card (chips + budget number)
+       and the Explorer baseline are both hidden until the first click. */
     .prompt-card { transition: opacity 0.5s var(--ease, ease-out); }
     .slide[data-stage="0"] .prompt-card { opacity: 0; pointer-events: none; }
+    .chart-card .baseline { transition: opacity 0.6s var(--ease, ease-out); }
+    .slide[data-stage="0"] .chart-card .baseline { opacity: 0; }
 
     /* Stage gating: each stage reveals one more point */
     .slide[data-stage="1"] .point.p-64,
@@ -2444,10 +2445,11 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
             Holdout loss
           </text>
 
-          <!-- Explorer baseline: BPB = 1.0263 → y = 30 + (1.0263-0.95)/0.27*290 = 30 + 81.95 = 111.95 -->
-          <line x1="70" y1="111.95" x2="670" y2="111.95"
+          <!-- Explorer baseline: BPB = 1.0263 → y = 30 + (1.0263-0.95)/0.27*290 = 30 + 81.95 = 111.95
+               Hidden at stage 0; fades in with the first click. -->
+          <line class="baseline" x1="70" y1="111.95" x2="670" y2="111.95"
                 stroke="var(--c-published)" stroke-width="2" stroke-dasharray="6 5" opacity="0.7"/>
-          <text x="660" y="102" text-anchor="end"
+          <text class="baseline" x="660" y="102" text-anchor="end"
                 font-family="var(--display)" font-size="20" font-style="italic" fill="var(--c-published)">
             agent performance without compression
           </text>
