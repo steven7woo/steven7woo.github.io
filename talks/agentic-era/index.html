@@ -5249,8 +5249,17 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
      .multi-leaf rules defined on the earlier slide so we do not need
      to redefine the styling.
      ============================================================ -->
-<div class="slide-page"><section class="slide multi-slide" data-title="III — Garden of Forking Paths" data-stage="0" data-stages="6">
+<div class="slide-page"><section class="slide multi-slide gop-final" data-title="III — Garden of Forking Paths" data-stage="0" data-stages="2">
   <h2 class="frametitle reveal d-1">The Garden of Forking Paths</h2>
+  <style>
+    /* Skip the layer-by-layer animation here (it was already shown on
+       the Act II opener). Tree is fully revealed from stage 0; only the
+       bullets remain staged. */
+    .gop-final .multi-stage { opacity: 1 !important; }
+    .gop-final .multi-edge.pub { stroke: var(--crimson) !important; stroke-width: 2.8 !important; }
+    .gop-final .multi-node.pub { fill: var(--crimson) !important; stroke: #6e1411 !important; }
+    .gop-final .multi-leaf.pub { fill: var(--crimson) !important; font-weight: 700 !important; }
+  </style>
 
   <div class="diagram reveal d-2">
     <svg viewBox="-130 0 1130 480" xmlns="http://www.w3.org/2000/svg" role="img"
@@ -5341,12 +5350,13 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
     <li style="font-size: 0.78em; color: var(--ink-soft); font-style: italic;"><b style="font-style: normal;">Concurrent work:</b> Cui &amp; Alexander, 2026; Gao &amp; Xiao, 2026; Allen &amp; Peterson, 2026; Rabanser et al., 2026; etc.</li>
   </ul>
   <style>
-    /* Bullets staged at stages 5 / 6, mirroring the earlier slide. */
+    /* Bullets staged at stages 1 / 2 (tree is shown immediately; the
+       animation was already played on the Act II opener slide). */
     #multi-bullets-2 > li { opacity: 0; transition: opacity 0.6s var(--ease, ease-out); }
-    .slide[data-stage="5"] #multi-bullets-2 > li:nth-child(1),
-    .slide[data-stage="6"] #multi-bullets-2 > li:nth-child(1) { opacity: 1; }
-    .slide[data-stage="6"] #multi-bullets-2 > li:nth-child(2),
-    .slide[data-stage="6"] #multi-bullets-2 > li:nth-child(3) { opacity: 1; }
+    .gop-final[data-stage="1"] #multi-bullets-2 > li:nth-child(1),
+    .gop-final[data-stage="2"] #multi-bullets-2 > li:nth-child(1) { opacity: 1; }
+    .gop-final[data-stage="2"] #multi-bullets-2 > li:nth-child(2),
+    .gop-final[data-stage="2"] #multi-bullets-2 > li:nth-child(3) { opacity: 1; }
   </style>
 </section></div>
 
