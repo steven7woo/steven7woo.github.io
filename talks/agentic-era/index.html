@@ -603,8 +603,16 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
   word-break: break-all;
 }
 .thanks .links .label { font-family: var(--display); font-style: italic; color: var(--ink-soft); margin-right: 0.4em; }
+.thanks .pnas-note {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.7cqi;
+  color: var(--accent, var(--ink-soft));
+  margin: 0.2em 0 0.6em;
+}
 .thanks .qr {
-  display: flex; align-items: center; justify-content: center;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.8cqh;
 }
 .thanks .qr img {
   max-width: 70%;
@@ -612,6 +620,13 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
   padding: 1cqi;
   border: 1px solid var(--rule);
   border-radius: 0.4cqi;
+}
+.thanks .qr .qr-caption {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.5cqi;
+  color: var(--ink-soft);
+  text-align: center;
 }
 
 /* ===========================================
@@ -725,6 +740,9 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
       </p>
       <p style="font-family: var(--display); font-size: 2.8cqi; color: var(--ink-soft); margin-top: 1.2cqh;">
         Martin Bertran, Riccardo Fogliato, Z. S. Wu
+      </p>
+      <p style="font-family: var(--display); font-style: italic; font-size: 3cqi; color: var(--accent, var(--ink-soft)); margin-top: 0.8cqh;">
+        To appear in PNAS
       </p>
     </div>
   </div>
@@ -6592,7 +6610,7 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
             Martin Bertran, Aaron Roth, Z. S. Wu
           </p>
           <div class="links">
-            <div><span class="label">arXiv:</span><i>coming soon</i></div>
+            <div><span class="label">arXiv:</span>https://arxiv.org/abs/2606.11045</div>
           </div>
         </div>
         <div class="thanks-paper multi reveal d-2">
@@ -6603,6 +6621,7 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
           <p class="authors">
             Martin Bertran, Riccardo Fogliato, Z. S. Wu
           </p>
+          <p class="pnas-note">To appear in PNAS</p>
           <div class="links">
             <div><span class="label">arXiv:</span>https://arxiv.org/abs/2602.18710</div>
             <div><span class="label">Code:</span>https://github.com/amazon-science/agentic-forking-path</div>
@@ -6611,7 +6630,8 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
       </div>
     </div>
     <div class="qr reveal d-4">
-      <img src="qr_github.png" alt="QR code for the GitHub repository" />
+      <img src="qr_slides.png" alt="QR code linking to the slide deck" />
+      <p class="qr-caption">These slides: zstevenwu.com/talks/agentic-era</p>
     </div>
   </div>
 </section></div>
