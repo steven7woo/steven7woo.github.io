@@ -714,7 +714,7 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
       The Agentic Garden of <span class="em">Forking Paths</span>
     </h1>
     <div class="author reveal d-2">Steven Wu</div>
-    <div class="affil reveal d-2">Carnegie Mellon University &amp; AWS</div>
+    <div class="affil reveal d-2">Carnegie Mellon University</div>
   </div>
   <div class="plate reveal d-3">
     <img src="agentic-garden.png" alt="An agent surveying a garden of forking analytical paths." />
@@ -1432,7 +1432,7 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
     <div class="block c2-theorem">
       <div class="block-title">Informal theorem <span class="small">(Dwork et al., 2015; Arora &amp; Zhang, 2021)</span></div>
       <p style="font-style: italic; line-height: 1.5; margin: 0;">
-        If the agent's output model depends on the reused dataset only through a $k$-bit message, then with high probability the model satisfies
+        If the agent's output model depends on the reused dataset of $n$ samples only through a $k$-bit message, then with high probability the model satisfies
       </p>
       <p style="text-align:center; font-size: 3.0cqi; margin-top: 1.2cqh; color: var(--ink);">
         $\bigl|\,\text{Population loss} - \text{Reused dataset loss}\,\bigr| \;\le\; O\!\left(\sqrt{\tfrac{k}{n}}\right)$
@@ -4652,7 +4652,7 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
        3. Input-compression bottleneck (1 bit) pulses; second
           bullet fades in
      ============================================================ -->
-<div class="slide-page"><section class="slide takeaway-slide" data-title="C11 — Takeaways" data-stage="0" data-stages="4">
+<div class="slide-page"><section class="slide takeaway-slide" data-title="C11 — Takeaways" data-stage="0" data-stages="3">
   <h2 class="frametitle reveal d-1">Summary <em>and</em> Takeaways</h2>
 
   <style>
@@ -4678,22 +4678,6 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
       max-height: 70cqh;
       height: auto;
     }
-    /* Caption beneath the figure — appears at the final stage. */
-    .takeaway-slide .tk-fig-cap {
-      font-family: var(--display);
-      font-style: italic;
-      font-size: 2.2cqi;
-      line-height: 1.4;
-      color: var(--ink);
-      text-align: center;
-      padding: 0 2cqi;
-      margin: 0;
-      max-width: 96%;
-      opacity: 0;
-      transition: opacity 0.5s var(--ease, ease-out) 0.20s;
-    }
-    .takeaway-slide[data-stage="4"] .tk-fig-cap { opacity: 1; }
-    .takeaway-slide .tk-fig-cap b { color: var(--crimson); font-weight: 600; }
     .takeaway-slide .tk-bullets {
       min-width: 0;
       min-height: 0;
@@ -4723,17 +4707,14 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
     .takeaway-slide .tk-bullets > ul.bullets > li::before { display: none !important; content: none !important; }
     .takeaway-slide[data-stage="1"] .tk-bullets > ul.bullets > li:nth-child(1),
     .takeaway-slide[data-stage="2"] .tk-bullets > ul.bullets > li:nth-child(1),
-    .takeaway-slide[data-stage="3"] .tk-bullets > ul.bullets > li:nth-child(1),
-    .takeaway-slide[data-stage="4"] .tk-bullets > ul.bullets > li:nth-child(1) {
+    .takeaway-slide[data-stage="3"] .tk-bullets > ul.bullets > li:nth-child(1) {
       opacity: 1; transform: translateX(0); transition-delay: 0.25s;
     }
     .takeaway-slide[data-stage="2"] .tk-bullets > ul.bullets > li:nth-child(2),
-    .takeaway-slide[data-stage="3"] .tk-bullets > ul.bullets > li:nth-child(2),
-    .takeaway-slide[data-stage="4"] .tk-bullets > ul.bullets > li:nth-child(2) {
+    .takeaway-slide[data-stage="3"] .tk-bullets > ul.bullets > li:nth-child(2) {
       opacity: 1; transform: translateX(0); transition-delay: 0.25s;
     }
-    .takeaway-slide[data-stage="3"] .tk-bullets > ul.bullets > li:nth-child(3),
-    .takeaway-slide[data-stage="4"] .tk-bullets > ul.bullets > li:nth-child(3) {
+    .takeaway-slide[data-stage="3"] .tk-bullets > ul.bullets > li:nth-child(3) {
       opacity: 1; transform: translateX(0); transition-delay: 0.25s;
     }
 
@@ -4742,11 +4723,23 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
        Selector specificity must beat the generic `> ul.bullets > li`
        rule above (which sets padding-left:0), so we match the same
        depth and add the .tk-* class. */
-    .takeaway-slide .tk-bullets > ul.bullets > li.tk-out-li { border-left: 0.4cqi solid var(--warm);         padding: 0.4em 0 0.4em 4cqi; }
-    .takeaway-slide .tk-bullets > ul.bullets > li.tk-in-li  { border-left: 0.4cqi solid var(--c-published);  padding: 0.4em 0 0.4em 4cqi; }
-    .takeaway-slide .tk-bullets > ul.bullets > li.tk-det-li { border-left: 0.4cqi solid var(--crimson);      padding: 0.4em 0 0.4em 4cqi; }
+    /* Bullet 1 covers both channels, so its band runs warm (the k-token
+       prompt) into blue (the 1-bit feedback), mirroring the two pills in
+       the figure. Bullet 2 is the finding, not a channel, so it stays neutral. */
+    .takeaway-slide .tk-bullets > ul.bullets > li.tk-out-li {
+      border-left: 0.4cqi solid transparent;
+      border-image: linear-gradient(180deg, var(--warm) 0%, var(--warm) 42%, var(--c-published) 58%, var(--c-published) 100%) 1;
+      padding: 0.4em 0 0.4em 4cqi;
+    }
+    .takeaway-slide .tk-bullets > ul.bullets > li.tk-in-li  { border-left: 0.4cqi solid var(--crimson);      padding: 0.4em 0 0.4em 4cqi; }
+    .takeaway-slide .tk-bullets > ul.bullets > li.tk-det-li { border-left: 0.4cqi solid var(--c-unpub);      padding: 0.4em 0 0.4em 4cqi; }
     .takeaway-slide .tk-bullets b.tk-out-label { color: var(--warm); }
     .takeaway-slide .tk-bullets b.tk-in-label  { color: var(--c-published); }
+    /* Lead-ins stay ink so the colour is spent only on the terms that
+       point at something in the figure. */
+    .takeaway-slide .tk-bullets b.tk-lead { color: var(--ink); }
+    .takeaway-slide .tk-bullets b.tk-fail { color: var(--crimson); }
+    .takeaway-slide .tk-bullets b.tk-key  { color: var(--c-start); }
 
     /* Channel + pill stage gating: each compression channel appears
        in sequence, one per click. */
@@ -4758,10 +4751,9 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
     .takeaway-slide[data-stage="1"] .tk-out-channel,
     .takeaway-slide[data-stage="2"] .tk-out-channel,
     .takeaway-slide[data-stage="3"] .tk-out-channel,
-    .takeaway-slide[data-stage="4"] .tk-out-channel { opacity: 1; }
+    .takeaway-slide[data-stage="1"] .tk-in-channel,
     .takeaway-slide[data-stage="2"] .tk-in-channel,
-    .takeaway-slide[data-stage="3"] .tk-in-channel,
-    .takeaway-slide[data-stage="4"] .tk-in-channel { opacity: 1; }
+    .takeaway-slide[data-stage="3"] .tk-in-channel { opacity: 1; }
 
     /* Flowing dashes — same channel feel as C2b. */
     .tk-flow { stroke-dasharray: 9 7; }
@@ -4769,10 +4761,9 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
     .takeaway-slide[data-stage="1"] .tk-out-channel .tk-flow,
     .takeaway-slide[data-stage="2"] .tk-out-channel .tk-flow,
     .takeaway-slide[data-stage="3"] .tk-out-channel .tk-flow,
-    .takeaway-slide[data-stage="4"] .tk-out-channel .tk-flow { animation: tk-flow-fwd 1.7s linear infinite; }
+    .takeaway-slide[data-stage="1"] .tk-in-channel .tk-flow,
     .takeaway-slide[data-stage="2"] .tk-in-channel .tk-flow,
-    .takeaway-slide[data-stage="3"] .tk-in-channel .tk-flow,
-    .takeaway-slide[data-stage="4"] .tk-in-channel .tk-flow { animation: tk-flow-fwd 1.7s linear infinite; }
+    .takeaway-slide[data-stage="3"] .tk-in-channel .tk-flow { animation: tk-flow-fwd 1.7s linear infinite; }
 
     @media (prefers-reduced-motion: reduce) {
       .takeaway-slide .tk-flow { animation: none !important; }
@@ -4892,24 +4883,23 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
           </text>
         </g>
       </svg>
-      <p class="tk-fig-cap">
-        When the explorer is steered to overfit, the pipeline <b>fails to reproduce</b>.
-      </p>
     </div>
 
     <!-- Bullets — appear in lock-step with the figure stages. -->
     <div class="tk-bullets">
       <ul class="bullets">
         <li class="tk-out-li">
-          <b class="tk-out-label">Output compression:</b>
-          the explorer&rsquo;s strategy is squeezed into a short prompt for a fresh reproducer.
+          <b class="tk-lead">Natural prompting:</b> agents reuse the validation set and
+          <b>don&rsquo;t overfit</b>, echoing ML practice. Their strategies survive
+          <b class="tk-in-label">input</b> and <b class="tk-out-label">output</b> compression.
         </li>
         <li class="tk-in-li">
-          <b class="tk-in-label">Input compression:</b>
-          the explorer&rsquo;s view of the validation set is squeezed to 1-bit binary feedback.
+          <b class="tk-lead">Aggressive prompting:</b> the same agent can be steered to
+          overfit, and <b class="tk-fail">reproduction breaks</b>.
         </li>
         <li class="tk-det-li">
-          ML autoresearch agents tend to produce strategies that are <b>compressible</b> and <b>don&rsquo;t overfit</b>.
+          A theoretical explanation becomes
+          <b class="tk-key">testable</b> with agents that can be reset.
         </li>
       </ul>
     </div>
@@ -5206,20 +5196,27 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
       position: absolute;
       left: 0; right: 0;
       bottom: 0;
-      /* Reserve enough vertical space below the title for the bullets;
-         the paper grid sits behind, faded. */
-      height: 55%;
-      display: flex;
+      /* Reserve space below the title for the bullets; the paper grid sits
+         behind, faded. min-height (not height) so an unusually tall render
+         grows upward rather than being cut off at the bottom. */
+      min-height: 55%;
+      display: grid;
+      grid-template-columns: 1fr;
       align-items: center;
-      justify-content: center;
+      justify-items: center;
       pointer-events: none;
       padding: 0 4cqi 3cqh;
     }
     .many-slide .many-lessons,
     .many-slide .many-challenge {
-      position: absolute;
-      left: 0; right: 0;
-      max-width: min(82%, 760px);
+      /* Stacked in one grid cell so the two overlays cross-fade in place
+         while the container is still sized by the taller of them. Width
+         is in container units, NOT px: the type scales with the slide, so
+         a fixed px cap would squeeze the text into a tall column on big
+         screens and it would be clipped by .slide's overflow:hidden. */
+      grid-area: 1 / 1;
+      width: 100%;
+      max-width: 82cqi;
       margin: 0 auto;
       opacity: 0;
       transition: opacity 0.5s var(--ease, ease-out);
@@ -6475,14 +6472,41 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
 <!-- ============================================================
      XXIII — SUMMARY AND IMPLICATIONS
      ============================================================ -->
-<div class="slide-page"><section class="slide" data-title="XXIII — Summary">
+<div class="slide-page"><section class="slide sum-slide" data-title="XXIII — Summary" data-stage="0" data-stages="5">
   <h2 class="frametitle reveal d-1">Summary and Implications</h2>
-  <div style="flex:1; display:flex; align-items:center;">
-    <ul class="bullets reveal d-2" style="max-width: min(90%, 880px);">
-      <li><b>Dispersion:</b> conclusions vary even with shared hypothesis, data, and estimand.</li>
-      <li><b>Steerability:</b> persona and model shift outcomes, persisting after auditor filtering.</li>
-      <li><b>Risk:</b> trivial <b>selective reporting</b>; LLM auditors are imperfect.</li>
+
+  <style>
+    /* One finding per click, then the open questions. */
+    .sum-slide .sm {
+      opacity: 0;
+      transform: translateY(0.5cqh);
+      transition: opacity 0.5s var(--ease, ease-out), transform 0.5s var(--ease, ease-out);
+    }
+    .sum-slide[data-stage="1"] .sm.s1,
+    .sum-slide[data-stage="2"] .sm.s1, .sum-slide[data-stage="2"] .sm.s2,
+    .sum-slide[data-stage="3"] .sm.s1, .sum-slide[data-stage="3"] .sm.s2, .sum-slide[data-stage="3"] .sm.s3,
+    .sum-slide[data-stage="4"] .sm.s1, .sum-slide[data-stage="4"] .sm.s2, .sum-slide[data-stage="4"] .sm.s3, .sum-slide[data-stage="4"] .sm.s4,
+    .sum-slide[data-stage="5"] .sm.s1, .sum-slide[data-stage="5"] .sm.s2, .sum-slide[data-stage="5"] .sm.s3, .sum-slide[data-stage="5"] .sm.s4, .sum-slide[data-stage="5"] .sm.s5
+      { opacity: 1; transform: translateY(0); }
+  </style>
+
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center; gap: 3cqh; min-height:0;">
+    <!-- Wide column in container units so each line stays one line at any
+         screen size; a narrow column here left one-word widows on 4K. -->
+    <ul class="bullets" style="max-width: 92cqi; margin: 0; font-size: 2.85cqi;">
+      <li class="sm s1"><b>Scale:</b> far more of the multiverse than <b>human analysts</b> can map.</li>
+      <li class="sm s2"><b>Dispersion:</b> same data, same hypothesis, different conclusions.</li>
+      <li class="sm s3"><b>Steerability:</b> persona and model shift outcomes, and survive audits.</li>
+      <li class="sm s4"><b>Risk:</b> the same reach <b>automates selective reporting</b>.</li>
     </ul>
+    <div class="block tight sm s5" style="max-width: 92cqi;">
+      <div class="block-title">It opens more questions than it answers</div>
+      <p style="font-style: italic; margin: 0; line-height: 1.5;">
+        Should reporting the multiverse become a <em style="font-style: normal; color: #2e5b9a;">norm</em>
+        in social and empirical data science?<br/>
+        Can the dispersion itself sharpen and refine the research question?
+      </p>
+    </div>
   </div>
 </section></div>
 
@@ -6491,65 +6515,630 @@ h1.deck-title .em { font-style: italic; color: var(--crimson); font-weight: 500;
 
 <!-- ============================================================
      XXVII — RETHINKING DATA SCIENCE WITH AGENTS
-     Closing synthesis as a tight bullet stack.
+     The conceptual point of the whole talk, as one cycle rather
+     than a bullet list: statistical foundations tell us how to
+     build the harness, and the harness lets us test the theory.
+     Deliberately answers the "we no longer need foundations"
+     narrative with a two-way arrow instead of an assertion.
+     Stages:
+       1. The two nodes
+       2. Foundations shape the harness (top arc)
+       3. Agents make the theory testable (bottom arc)
+       4. The closing line
      ============================================================ -->
-<div class="slide-page"><section class="slide close-slide" data-title="XXVII — Rethinking Data Science" data-section="Close" data-stage="0" data-stages="4">
-  <h2 class="frametitle reveal d-1">Rethinking Data Science with Agents</h2>
+<div class="slide-page"><section class="slide cycle-slide" data-title="XXVII — Rethinking Data Science" data-section="Close" data-stage="0" data-stages="3">
+  <h2 class="frametitle reveal d-1">Rethinking ML/Data Science with Agents</h2>
 
   <style>
-    /* Per-bullet staged reveal. Stages mirror the bullet groups:
-         stage 1 = first block (s-1) + its sub-bullets (s-2)
-         stage 2 = "Risk" block (s-3) + its sub-bullets
-         stage 3 = forward-looking "What's next" block (s-4)
-       Earlier stages are left in for compatibility — bullets simply
-       cumulate as the user advances. */
-    .close-slide .stage-li {
-      opacity: 0;
-      transform: translateY(0.6cqh);
-      transition:
-        opacity 0.5s var(--ease, ease-out),
-        transform 0.5s var(--ease, ease-out);
+    .cycle-slide .cy { opacity: 0; transition: opacity 0.7s var(--ease, ease-out); }
+    .cycle-slide[data-stage="1"] .cy.c-1,
+    .cycle-slide[data-stage="2"] .cy.c-1, .cycle-slide[data-stage="2"] .cy.c-2,
+    .cycle-slide[data-stage="3"] .cy.c-1, .cycle-slide[data-stage="3"] .cy.c-2, .cycle-slide[data-stage="3"] .cy.c-3
+      { opacity: 1; }
+    .cycle-slide .cy-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 2cqh; min-height: 0; }
+    .cycle-slide svg { width: 100%; max-height: 72cqh; height: auto; display: block; }
+  </style>
+
+  <div class="cy-wrap">
+    <svg viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg" role="img"
+         aria-label="Statistical foundations and agentic systems in a two-way cycle: the theory says where to put the bottleneck, what to hold out and what to audit, and the systems make the theory testable.">
+      <defs>
+        <marker id="cy-arr-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+          <path d="M0,0 L10,5 L0,10 Z" fill="var(--c-published)"/>
+        </marker>
+        <marker id="cy-arr-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+          <path d="M0,0 L10,5 L0,10 Z" fill="#4a8b85"/>
+        </marker>
+      </defs>
+
+      <!-- ---- 1. The two nodes ---- -->
+      <g class="cy c-1">
+        <rect x="40" y="148" width="360" height="132" rx="12"
+              fill="var(--paper)" stroke="var(--c-published)" stroke-width="2.8"/>
+        <text x="220" y="196" text-anchor="middle" font-size="31" font-weight="600" fill="var(--c-published)">
+          Statistical foundations
+        </text>
+        <text x="220" y="230" text-anchor="middle" font-family="var(--display)"
+              font-size="20" font-style="italic" fill="var(--ink-soft)">adaptive data analysis,</text>
+        <text x="220" y="256" text-anchor="middle" font-family="var(--display)"
+              font-size="20" font-style="italic" fill="var(--ink-soft)">multiple hypothesis testing, etc.</text>
+
+        <rect x="800" y="148" width="360" height="132" rx="12"
+              fill="var(--paper)" stroke="#4a8b85" stroke-width="2.8"/>
+        <text x="980" y="196" text-anchor="middle" font-size="31" font-weight="600" fill="#4a8b85">
+          Agentic systems
+        </text>
+        <text x="980" y="230" text-anchor="middle" font-family="var(--display)"
+              font-size="20" font-style="italic" fill="var(--ink-soft)">harness design,</text>
+        <text x="980" y="256" text-anchor="middle" font-family="var(--display)"
+              font-size="20" font-style="italic" fill="var(--ink-soft)">evaluation protocols, etc.</text>
+      </g>
+
+      <!-- ---- 2. Foundations shape the harness ---- -->
+      <g class="cy c-2">
+        <path d="M 404 186 C 560 70, 644 70, 792 186" fill="none"
+              stroke="var(--c-published)" stroke-width="3" marker-end="url(#cy-arr-blue)"/>
+        <text x="598" y="52" text-anchor="middle" font-family="var(--display)"
+              font-size="26" font-style="italic" font-weight="600" fill="var(--c-published)">
+          foundations shape the harness
+        </text>
+        <text x="598" y="82" text-anchor="middle" font-family="var(--display)"
+              font-size="21" font-style="italic" fill="var(--ink-soft)">
+          where to put the bottleneck, what to hold out, what to audit
+        </text>
+      </g>
+
+      <!-- ---- 3. Agents make the theory testable ---- -->
+      <g class="cy c-3">
+        <path d="M 796 242 C 644 358, 560 358, 408 242" fill="none"
+              stroke="#4a8b85" stroke-width="3" marker-end="url(#cy-arr-teal)"/>
+        <text x="602" y="364" text-anchor="middle" font-family="var(--display)"
+              font-size="26" font-style="italic" font-weight="600" fill="#4a8b85">
+          agents make the theory testable
+        </text>
+        <text x="602" y="394" text-anchor="middle" font-family="var(--display)"
+              font-size="21" font-style="italic" fill="var(--ink-soft)">
+          reset, clone, cap what they know, steer on purpose
+        </text>
+      </g>
+    </svg>
+  </div>
+</section></div>
+
+<!-- ============================================================
+     XXVII-a — TRANSITION INTO THE CODA
+     Divider frame that lifts the talk from data science to
+     science generally, and signals the register change before
+     the speculative coda.
+     ============================================================ -->
+<div class="slide-page"><section class="slide" data-title="XXVII-a — Beyond Data Science">
+  <div class="divider">
+    <p class="question reveal d-1">Beyond data science:<br/>how should we <em style="font-style: normal; color: #2e5b9a;">rethink science</em>?</p>
+    <p class="footnote reveal d-2">
+      What follows is raw and unfinished: recent thinking I have been <b>brainstorming</b> with my students and collaborators.
+    </p>
+  </div>
+</section></div>
+
+<!-- ============================================================
+     XXVII-b — FEYNMAN'S THOUGHT EXPERIMENT
+     Picture-led: the library of all scientific knowledge is
+     destroyed, squeezed through a bottleneck, and one sentence
+     survives. The atomic-hypothesis quote is the only body text.
+     Stages:
+       1. The shelves (all of scientific knowledge) + portrait
+       2. The cataclysm — shelves fracture and fade
+       3. The funnel, the surviving sentence, and the quote
+     ============================================================ -->
+<div class="slide-page"><section class="slide feyn-slide" data-title="XXVII-b — Feynman's Thought Experiment" data-stage="0" data-stages="3">
+  <h2 class="frametitle reveal d-1">Feynman&rsquo;s <em>Thought Experiment</em></h2>
+
+  <style>
+    .feyn-slide .fy-stage { opacity: 0; transition: opacity 0.7s var(--ease, ease-out); }
+    .feyn-slide[data-stage="1"] .fy-stage.f-1,
+    .feyn-slide[data-stage="2"] .fy-stage.f-1, .feyn-slide[data-stage="2"] .fy-stage.f-2,
+    .feyn-slide[data-stage="3"] .fy-stage.f-1, .feyn-slide[data-stage="3"] .fy-stage.f-2, .feyn-slide[data-stage="3"] .fy-stage.f-3
+      { opacity: 1; }
+
+    /* The cataclysm: once it strikes (stage 2+) the shelves drain of
+       colour and nearly vanish, leaving ghost outlines behind. */
+    .feyn-slide .fy-books { transition: opacity 0.9s var(--ease, ease-out), filter 0.9s var(--ease, ease-out); }
+    .feyn-slide[data-stage="2"] .fy-books,
+    .feyn-slide[data-stage="3"] .fy-books { opacity: 0.17; filter: grayscale(1); }
+
+    .feyn-slide .fy-layout {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 0.44fr 3fr;
+      gap: 2.6cqi;
+      align-items: center;
+      min-height: 0;
     }
-    .close-slide[data-stage="1"] .stage-li.s-1,
-    .close-slide[data-stage="2"] .stage-li.s-1,
-    .close-slide[data-stage="3"] .stage-li.s-1,
-    .close-slide[data-stage="4"] .stage-li.s-1,
-    .close-slide[data-stage="1"] .stage-li.s-2,
-    .close-slide[data-stage="2"] .stage-li.s-2,
-    .close-slide[data-stage="3"] .stage-li.s-2,
-    .close-slide[data-stage="4"] .stage-li.s-2,
-    .close-slide[data-stage="2"] .stage-li.s-3,
-    .close-slide[data-stage="3"] .stage-li.s-3,
-    .close-slide[data-stage="4"] .stage-li.s-3,
-    .close-slide[data-stage="3"] .stage-li.s-4,
-    .close-slide[data-stage="4"] .stage-li.s-4 {
-      opacity: 1;
-      transform: translateY(0);
+    .feyn-slide .fy-portrait { display: flex; flex-direction: column; align-items: center; gap: 0.7cqh; min-width: 0; }
+    .feyn-slide .fy-portrait img {
+      width: 100%;
+      max-height: 38cqh;
+      object-fit: contain;
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      padding: 0.5cqh 0.5cqi;
+      box-shadow: 0 8px 18px -14px rgba(60,40,20,0.32);
+    }
+    .feyn-slide .fy-cap {
+      font-family: var(--display); font-style: italic;
+      font-size: 1.75cqi; color: var(--ink-soft); text-align: center; margin: 0; white-space: nowrap;
+    }
+    .feyn-slide .fy-right { display: flex; flex-direction: column; gap: 1.6cqh; min-width: 0; min-height: 0; }
+    .feyn-slide .fy-right svg { width: 100%; max-height: 48cqh; height: auto; display: block; }
+
+    .feyn-slide .fy-quote { font-size: 2.45cqi; line-height: 1.5; padding: 1.6cqh 2cqi; }
+    .feyn-slide .fy-quote .fy-lead {
+      font-style: normal; color: var(--ink-soft); font-size: 2.1cqi;
+      display: block; margin-bottom: 0.35em;
+    }
+    .feyn-slide .fy-attrib {
+      font-family: var(--display); font-style: italic;
+      font-size: 1.9cqi; color: var(--ink-soft); text-align: right; margin: 0;
     }
   </style>
 
-  <div style="flex:1; display:flex; align-items:center;">
-    <ul class="bullets reveal d-2" style="max-width: min(96%, 1100px); font-size: 3.0cqi; line-height: 1.45;">
-      <li class="stage-li s-1"><b>Use agents to do what was previously infeasible:</b>
-        <ul>
-          <li class="stage-li s-2" style="white-space: nowrap;">Treat LLMs as <b>extreme compressors</b> of ML strategies under benchmark reuse</li>
-          <li class="stage-li s-2">Map out the <b>data science multiverse</b> at a much larger scale</li>
-        </ul>
-      </li>
-      <li class="stage-li s-3"><b>Risk:</b> agents are highly <b>steerable</b>:
-        <ul>
-          <li class="stage-li s-3">ML agents &rarr; <b>overfit</b> and memorize</li>
-          <li class="stage-li s-3">Data science agents &rarr; <b>automate selective reporting</b></li>
-        </ul>
-      </li>
-      <li class="stage-li s-4"><b>Understand agent-driven data science:</b>
-        <ul>
-          <li class="stage-li s-4">What it makes possible</li>
-          <li class="stage-li s-4">What it puts at risk</li>
-          <li class="stage-li s-4">What tools, theory, audits, and standards we need next</li>
-        </ul>
-      </li>
-    </ul>
+  <div class="fy-layout">
+
+    <div class="fy-portrait fy-stage f-1">
+      <img src="feynman.jpg" alt="Portrait of Richard Feynman." />
+      <p class="fy-cap">Richard Feynman</p>
+    </div>
+
+    <div class="fy-right">
+      <svg viewBox="-40 -44 1120 372" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="All of scientific knowledge is destroyed and squeezed through a bottleneck; one sentence survives.">
+        <defs>
+          <marker id="fy-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M0,0 L10,5 L0,10 Z" fill="var(--ink-soft)"/>
+          </marker>
+        </defs>
+
+        <!-- ---- The library: two shelves of spines ---- -->
+        <g class="fy-stage f-1">
+          <g class="fy-books">
+        <rect x="44" y="38" width="13" height="88" rx="1.5" fill="var(--c-start)" opacity="0.68"/>
+        <rect x="59.5" y="37" width="9" height="89" rx="1.5" fill="var(--c-unpub)" opacity="0.58"/>
+        <rect x="71.0" y="37" width="9" height="89" rx="1.5" fill="var(--warm)" opacity="0.46"/>
+        <rect x="82.5" y="46" width="15" height="80" rx="1.5" fill="var(--c-unpub)" opacity="0.53"/>
+        <rect x="100.0" y="46" width="10" height="80" rx="1.5" fill="var(--c-unpub)" opacity="0.74"/>
+        <rect x="112.5" y="38" width="9" height="88" rx="1.5" fill="var(--c-conclusion)" opacity="0.67"/>
+        <rect x="124.0" y="37" width="9" height="89" rx="1.5" fill="var(--c-auditor)" opacity="0.59"/>
+        <rect x="135.5" y="34" width="11" height="92" rx="1.5" fill="var(--c-auditor)" opacity="0.75"/>
+        <rect x="149.0" y="46" width="13" height="80" rx="1.5" fill="var(--warm)" opacity="0.64"/>
+        <rect x="164.5" y="42" width="10" height="84" rx="1.5" fill="var(--c-auditor)" opacity="0.74"/>
+        <rect x="177.0" y="34" width="11" height="92" rx="1.5" fill="var(--c-auditor)" opacity="0.65"/>
+        <rect x="190.5" y="42" width="11" height="84" rx="1.5" fill="var(--c-unpub)" opacity="0.64"/>
+        <rect x="204.0" y="37" width="9" height="89" rx="1.5" fill="var(--c-unpub)" opacity="0.67"/>
+        <rect x="215.5" y="37" width="15" height="89" rx="1.5" fill="var(--c-start)" opacity="0.72"/>
+        <rect x="233.0" y="37" width="15" height="89" rx="1.5" fill="var(--c-start)" opacity="0.58"/>
+        <rect x="250.5" y="38" width="11" height="88" rx="1.5" fill="var(--c-conclusion)" opacity="0.72"/>
+        <rect x="264.0" y="37" width="9" height="89" rx="1.5" fill="var(--c-published)" opacity="0.63"/>
+        <rect x="275.5" y="46" width="13" height="80" rx="1.5" fill="var(--c-published)" opacity="0.66"/>
+        <rect x="44" y="161" width="9" height="89" rx="1.5" fill="var(--c-start)" opacity="0.51"/>
+        <rect x="55.5" y="162" width="13" height="88" rx="1.5" fill="var(--c-start)" opacity="0.6"/>
+        <rect x="71.0" y="158" width="12" height="92" rx="1.5" fill="var(--ink-faint)" opacity="0.65"/>
+        <rect x="85.5" y="166" width="13" height="84" rx="1.5" fill="var(--c-conclusion)" opacity="0.57"/>
+        <rect x="101.0" y="161" width="15" height="89" rx="1.5" fill="var(--ink-faint)" opacity="0.61"/>
+        <rect x="118.5" y="166" width="9" height="84" rx="1.5" fill="var(--c-start)" opacity="0.69"/>
+        <rect x="130.0" y="158" width="9" height="92" rx="1.5" fill="var(--c-conclusion)" opacity="0.7"/>
+        <rect x="141.5" y="161" width="12" height="89" rx="1.5" fill="var(--c-conclusion)" opacity="0.74"/>
+        <rect x="156.0" y="170" width="13" height="80" rx="1.5" fill="var(--c-conclusion)" opacity="0.57"/>
+        <rect x="171.5" y="166" width="15" height="84" rx="1.5" fill="var(--warm)" opacity="0.66"/>
+        <rect x="189.0" y="158" width="15" height="92" rx="1.5" fill="var(--warm)" opacity="0.72"/>
+        <rect x="206.5" y="162" width="11" height="88" rx="1.5" fill="var(--c-start)" opacity="0.59"/>
+        <rect x="220.0" y="158" width="15" height="92" rx="1.5" fill="var(--warm)" opacity="0.61"/>
+        <rect x="237.5" y="166" width="10" height="84" rx="1.5" fill="var(--warm)" opacity="0.74"/>
+        <rect x="250.0" y="166" width="10" height="84" rx="1.5" fill="var(--c-conclusion)" opacity="0.6"/>
+        <rect x="262.5" y="170" width="13" height="80" rx="1.5" fill="var(--warm)" opacity="0.5"/>
+        <rect x="278.0" y="162" width="11" height="88" rx="1.5" fill="var(--warm)" opacity="0.68"/>
+          </g>
+          <!-- shelf boards -->
+          <rect class="fy-books" x="34" y="126" width="268" height="6" rx="2" fill="var(--ink)" opacity="0.55"/>
+          <rect class="fy-books" x="34" y="250" width="268" height="6" rx="2" fill="var(--ink)" opacity="0.55"/>
+          <text x="168" y="288" text-anchor="middle" font-family="var(--display)"
+                font-size="22" font-style="italic" fill="var(--ink-soft)">
+            All of scientific knowledge
+          </text>
+        </g>
+
+        <!-- ---- The cataclysm: a fracture through the shelves ---- -->
+        <g class="fy-stage f-2">
+          <path d="M 196 12 L 150 92 L 214 118 L 120 208 L 186 232 L 138 264"
+                fill="none" stroke="var(--crimson)" stroke-width="4.5"
+                stroke-linejoin="round" stroke-linecap="round"/>
+          <path d="M 250 30 L 288 96 L 236 132" fill="none" stroke="var(--crimson)"
+                stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity="0.75"/>
+          <text x="168" y="-14" text-anchor="middle" font-family="var(--display)"
+                font-size="24" font-style="italic" font-weight="600" fill="var(--crimson)">
+            &#8230; destroyed
+          </text>
+        </g>
+
+        <!-- ---- The bottleneck: everything squeezed to one sentence ---- -->
+        <g class="fy-stage f-3">
+          <!-- converging walls -->
+          <path d="M 336 30 C 486 96, 556 120, 624 136" fill="none"
+                stroke="var(--ink-soft)" stroke-width="3" opacity="0.55"/>
+          <path d="M 336 254 C 486 188, 556 164, 624 148" fill="none"
+                stroke="var(--ink-soft)" stroke-width="3" opacity="0.55"/>
+          <!-- flow through the neck -->
+          <line x1="352" y1="142" x2="712" y2="142" stroke="var(--ink-soft)"
+                stroke-width="2.6" stroke-dasharray="9 7" marker-end="url(#fy-arr)"/>
+          <!-- the surviving sentence -->
+          <g transform="translate(724, 78)">
+            <rect x="0" y="0" width="248" height="128" rx="8"
+                  fill="var(--paper)" stroke="var(--crimson)" stroke-width="2.6"/>
+            <rect x="24" y="34" width="200" height="7" rx="3.5" fill="var(--ink)" opacity="0.5"/>
+            <rect x="24" y="58" width="200" height="7" rx="3.5" fill="var(--ink)" opacity="0.5"/>
+            <rect x="24" y="82" width="118" height="7" rx="3.5" fill="var(--ink)" opacity="0.5"/>
+          </g>
+          <!-- What the sentence is FOR: it is the seed the next
+               generation has to rebuild everything else from. -->
+          <text x="848" y="248" text-anchor="middle" font-family="var(--display)"
+                font-size="25" font-style="italic" font-weight="600" fill="var(--crimson)">
+            One sentence gets to survive
+          </text>
+          <text x="848" y="282" text-anchor="middle" font-family="var(--display)"
+                font-size="23" font-style="italic" fill="var(--ink-soft)">
+            passed on to the next generation,
+          </text>
+          <text x="848" y="313" text-anchor="middle" font-family="var(--display)"
+                font-size="23" font-style="italic" fill="var(--ink-soft)">
+            from which everything else must be rebuilt
+          </text>
+        </g>
+      </svg>
+
+      <div class="block quote fy-quote fy-stage f-3">
+        <span class="fy-lead">His answer, the atomic hypothesis:</span>
+        &ldquo;&hellip;that all things are made of atoms &mdash; little particles that move around in
+        perpetual motion, attracting each other when they are a little distance apart, but
+        repelling upon being squeezed into one another.&rdquo;
+      </div>
+      <p class="fy-attrib fy-stage f-3">&mdash; Feynman, <i>Lectures on Physics</i>, Vol. I, Ch. 1 (1963)</p>
+    </div>
+
+  </div>
+</section></div>
+
+<!-- ============================================================
+     XXVII-c — A LESS EXTREME VERSION OF THE EXPERIMENT
+     Feynman's cataclysm scaled down to a single paper, run like
+     the Act I pipeline: compress a result into a short prompt and
+     hand it to a fresh agent, which reproduces the result.
+     The payoff is NOT a pass/fail test — it is the prompt itself.
+     Whatever the compressor could drop was already in the agent's
+     prior (established technique); whatever had to be transmitted
+     is the genuinely new idea. Compression as an assay for the
+     essence of a result.
+     Stages:
+       1. A new result
+       2. Compressed into a short prompt
+       3. A fresh agent reproduces the result
+       4. Read the prompt: what was dropped vs what had to survive
+     ============================================================ -->
+<div class="slide-page"><section class="slide modern-slide" data-title="XXVII-c — A Less Extreme Version" data-stage="0" data-stages="5">
+  <h2 class="frametitle reveal d-1">A <em style="color: #2e5b9a;">Less Extreme</em> Feynman Experiment</h2>
+
+  <style>
+    .modern-slide .md-stage { opacity: 0; transition: opacity 0.7s var(--ease, ease-out); }
+    .modern-slide[data-stage="1"] .md-stage.m-1,
+    .modern-slide[data-stage="2"] .md-stage.m-1, .modern-slide[data-stage="2"] .md-stage.m-2,
+    .modern-slide[data-stage="3"] .md-stage.m-1, .modern-slide[data-stage="3"] .md-stage.m-2, .modern-slide[data-stage="3"] .md-stage.m-3,
+    .modern-slide[data-stage="4"] .md-stage.m-1, .modern-slide[data-stage="4"] .md-stage.m-2, .modern-slide[data-stage="4"] .md-stage.m-3, .modern-slide[data-stage="4"] .md-stage.m-4,
+    .modern-slide[data-stage="5"] .md-stage.m-1, .modern-slide[data-stage="5"] .md-stage.m-2, .modern-slide[data-stage="5"] .md-stage.m-3, .modern-slide[data-stage="5"] .md-stage.m-4, .modern-slide[data-stage="5"] .md-stage.m-5
+      { opacity: 1; }
+    .modern-slide .md-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 1.4cqh; min-height: 0; }
+    .modern-slide svg { width: 100%; max-height: 62cqh; height: auto; display: block; }
+    .modern-slide .md-hypo {
+      font-family: var(--display); font-style: italic;
+      font-size: 2.6cqi; line-height: 1.4; color: var(--ink);
+      text-align: center; margin: 0;
+    }
+    .modern-slide .md-hypo b { font-style: normal; color: var(--crimson); font-weight: 600; }
+    .modern-slide .md-caveat {
+      font-family: var(--display); font-style: italic;
+      font-size: 2.15cqi; line-height: 1.4; color: var(--ink-soft);
+      text-align: center; margin: 0;
+    }
+    .modern-slide .md-caveat b { font-style: normal; color: var(--ink-soft); font-weight: 600; }
+  </style>
+
+  <div class="md-wrap">
+    <svg viewBox="-20 60 1240 380" xmlns="http://www.w3.org/2000/svg" role="img"
+         aria-label="A new result is compressed into a short prompt and handed to a fresh agent, which reproduces it. What the compressor could drop was established technique already in the agent's prior; what had to be transmitted is the genuinely new idea.">
+      <defs>
+        <marker id="md-arr-warm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+          <path d="M0,0 L10,5 L0,10 Z" fill="var(--warm)"/>
+        </marker>
+        <marker id="md-arr-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+          <path d="M0,0 L10,5 L0,10 Z" fill="#4a8b85"/>
+        </marker>
+        <marker id="md-arr-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+          <path d="M0,0 L10,5 L0,10 Z" fill="var(--c-unpub)"/>
+        </marker>
+      </defs>
+
+      <!-- ---- 1. A new result ---- -->
+      <g class="md-stage m-1">
+        <path d="M 24 96 L 106 96 L 140 130 L 140 242 L 24 242 Z"
+              fill="var(--paper)" stroke="var(--ink)" stroke-width="2.2" stroke-linejoin="round"/>
+        <path d="M 106 96 L 106 130 L 140 130" fill="none" stroke="var(--ink)" stroke-width="2.2" stroke-linejoin="round"/>
+        <rect x="42" y="150" width="80" height="6" rx="3" fill="var(--ink)" opacity="0.42"/>
+        <rect x="42" y="168" width="80" height="6" rx="3" fill="var(--ink)" opacity="0.42"/>
+        <rect x="42" y="186" width="52" height="6" rx="3" fill="var(--ink)" opacity="0.42"/>
+        <rect x="42" y="208" width="60" height="20" rx="3" fill="var(--c-published)" opacity="0.30"/>
+        <text x="82" y="278" text-anchor="middle" font-family="var(--display)"
+              font-size="25" font-style="italic" font-weight="600" fill="var(--ink)">A new result</text>
+      </g>
+
+      <!-- ---- 2. Compressed into a short prompt ---- -->
+      <g class="md-stage m-2">
+        <line x1="152" y1="169" x2="258" y2="169" stroke="var(--warm)" stroke-width="3" marker-end="url(#md-arr-warm)"/>
+        <text x="204" y="152" text-anchor="middle" font-family="var(--display)"
+              font-size="20" font-style="italic" fill="var(--warm)">compress</text>
+        <rect x="272" y="127" width="238" height="84" rx="9" fill="var(--paper)" stroke="var(--warm)" stroke-width="2.4"/>
+        <text x="391" y="161" text-anchor="middle" font-size="25" font-weight="600" fill="var(--warm)">Short prompt</text>
+        <text x="391" y="190" text-anchor="middle" font-size="21" font-style="italic" fill="var(--warm)">a few sentences</text>
+      </g>
+
+      <!-- ---- 3. A fresh agent reproduces the result ---- -->
+      <g class="md-stage m-3">
+        <line x1="522" y1="169" x2="626" y2="169" stroke="var(--warm)" stroke-width="3" marker-end="url(#md-arr-warm)"/>
+        <g transform="translate(700, 169)">
+          <line x1="0" y1="-74" x2="0" y2="-60" stroke="var(--ink)" stroke-width="2"/>
+          <circle cx="0" cy="-77" r="3.5" fill="#4a8b85"/>
+          <rect x="-30" y="-60" width="60" height="48" rx="8" fill="var(--paper)" stroke="var(--ink)" stroke-width="2"/>
+          <circle cx="-11" cy="-39" r="4" fill="#4a8b85"/>
+          <circle cx="11"  cy="-39" r="4" fill="#4a8b85"/>
+          <line x1="-12" y1="-23" x2="12" y2="-23" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M -50 46 Q -50 0, 0 0 Q 50 0, 50 46 L 50 52 L -50 52 Z"
+                fill="var(--paper)" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"/>
+        </g>
+        <text x="700" y="256" text-anchor="middle" font-family="var(--display)"
+              font-size="24" font-style="italic" font-weight="600" fill="#4a8b85">Fresh agent</text>
+        <text x="700" y="281" text-anchor="middle" font-family="var(--display)"
+              font-size="20" font-style="italic" fill="#4a8b85">has not read the paper</text>
+
+        <line x1="762" y1="169" x2="866" y2="169" stroke="#4a8b85" stroke-width="3" marker-end="url(#md-arr-teal)"/>
+        <rect x="882" y="127" width="304" height="84" rx="9" fill="var(--paper)" stroke="#4a8b85" stroke-width="2.4"/>
+        <text x="1034" y="161" text-anchor="middle" font-size="24" font-weight="600" fill="#4a8b85">Reproduces the result</text>
+        <text x="1034" y="190" text-anchor="middle" font-size="20" font-style="italic" fill="#4a8b85">to a good degree</text>
+      </g>
+
+      <!-- ---- 4. The payoff: read the prompt ---- -->
+      <g class="md-stage m-4">
+        <!-- what the compressor could throw away -->
+        <line x1="391" y1="219" x2="391" y2="266" stroke="var(--c-unpub)" stroke-width="2.4"
+              stroke-dasharray="7 6" marker-end="url(#md-arr-gray)"/>
+        <g opacity="0.5">
+          <g transform="translate(300, 300) rotate(-11)">
+            <rect x="-30" y="-22" width="60" height="44" rx="4" fill="var(--paper)" stroke="var(--c-unpub)" stroke-width="1.8"/>
+            <rect x="-19" y="-9" width="38" height="4" rx="2" fill="var(--c-unpub)"/>
+            <rect x="-19" y="1" width="26" height="4" rx="2" fill="var(--c-unpub)"/>
+          </g>
+          <g transform="translate(391, 312) rotate(7)">
+            <rect x="-30" y="-22" width="60" height="44" rx="4" fill="var(--paper)" stroke="var(--c-unpub)" stroke-width="1.8"/>
+            <rect x="-19" y="-9" width="38" height="4" rx="2" fill="var(--c-unpub)"/>
+            <rect x="-19" y="1" width="26" height="4" rx="2" fill="var(--c-unpub)"/>
+          </g>
+          <g transform="translate(482, 300) rotate(14)">
+            <rect x="-30" y="-22" width="60" height="44" rx="4" fill="var(--paper)" stroke="var(--c-unpub)" stroke-width="1.8"/>
+            <rect x="-19" y="-9" width="38" height="4" rx="2" fill="var(--c-unpub)"/>
+            <rect x="-19" y="1" width="26" height="4" rx="2" fill="var(--c-unpub)"/>
+          </g>
+        </g>
+        <text x="391" y="366" text-anchor="middle" font-family="var(--display)"
+              font-size="21" font-style="italic" fill="var(--ink-soft)">dropped: established technique,</text>
+        <text x="391" y="391" text-anchor="middle" font-family="var(--display)"
+              font-size="21" font-style="italic" fill="var(--ink-soft)">already in the agent&rsquo;s prior</text>
+
+        <!-- what had to be transmitted -->
+        <rect x="264" y="119" width="254" height="100" rx="12" fill="none"
+              stroke="var(--crimson)" stroke-width="2.6" stroke-dasharray="9 6"/>
+        <text x="391" y="103" text-anchor="middle" font-family="var(--display)"
+              font-size="23" font-style="italic" font-weight="600" fill="var(--crimson)">
+          what had to survive: the new idea
+        </text>
+      </g>
+    </svg>
+
+    <p class="md-hypo md-stage m-4">
+      <b>Hypothesis:</b> compression surfaces the essence of a new result.
+    </p>
+    <p class="md-caveat md-stage m-5">
+      <b>Caveat:</b> an agent that has already read the paper is recalling, not reconstructing.
+    </p>
+  </div>
+</section></div>
+
+<!-- ============================================================
+     XXVII-d — LEARNING TO LIVE WITH THE MULTIVERSE
+     The closing slide, and the last thing the room sees. Agents
+     make a multiplicity of defensible interpretations cheap to
+     produce, and not only in statistics: a dataset, a physical
+     phenomenon, a document all fan out the same way. The point is
+     that we are not going to collapse this back to one answer, so
+     the open problem is how to reason, report and decide under
+     multiplicity.
+     Stages:
+       1. Three sources, three disciplines
+       2. Each sprays into one cloud of defensible answers
+       3. The single privileged answer we are not going to get
+          (struck through, and dropped again at stage 4)
+       4. What replaces it: characterize the spread, decide under it
+     ============================================================ -->
+<div class="slide-page"><section class="slide living-slide" data-title="XXVII-d — Living with the Multiverse" data-stage="0" data-stages="4">
+  <h2 class="frametitle reveal d-1">Learning to <em style="color: #2e5b9a;">Live</em> with the Multiverse</h2>
+
+  <style>
+    .living-slide .lv { opacity: 0; transition: opacity 0.7s var(--ease, ease-out); }
+    .living-slide[data-stage="1"] .lv.q-1,
+    .living-slide[data-stage="2"] .lv.q-1, .living-slide[data-stage="2"] .lv.q-2,
+    .living-slide[data-stage="3"] .lv.q-1, .living-slide[data-stage="3"] .lv.q-2, .living-slide[data-stage="3"] .lv.q-3,
+    .living-slide[data-stage="4"] .lv.q-1, .living-slide[data-stage="4"] .lv.q-2, .living-slide[data-stage="4"] .lv.q-4,
+    .living-slide[data-stage="2"] .lv.t-2,
+    .living-slide[data-stage="3"] .lv.t-2,
+    .living-slide[data-stage="4"] .lv.t-2, .living-slide[data-stage="4"] .lv.t-4
+      { opacity: 1; }
+    .living-slide .lv-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 1cqh; min-height: 0; }
+    .living-slide svg { width: 100%; max-height: 60cqh; height: auto; display: block; }
+    .living-slide .lv-line { font-family: var(--display); font-style: italic; line-height: 1.35; text-align: center; margin: 0; }
+    .living-slide .lv-a { font-size: 2.4cqi; color: var(--ink); }
+    .living-slide .lv-c { font-size: 2.4cqi; color: var(--ink); }
+    .living-slide .lv-c b { font-style: normal; font-weight: 600; color: #2e5b9a; }
+  </style>
+
+  <div class="lv-wrap">
+    <svg viewBox="0 0 1200 452" xmlns="http://www.w3.org/2000/svg" role="img"
+         aria-label="A dataset, a phenomenon and a document each spray into one cloud of many defensible answers; there is no single privileged answer, so the spread itself must be characterized and reported.">
+      <defs>
+        <marker id="lv-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+          <path d="M0,0 L10,5 L0,10 Z" fill="var(--ink-soft)"/>
+        </marker>
+      </defs>
+
+      <!-- ---- 1. Three sources ---- -->
+      <g class="lv q-1">
+        <!-- a dataset -->
+        <g transform="translate(84, 88)">
+          <ellipse cx="0" cy="-24" rx="40" ry="10" fill="var(--paper)" stroke="var(--ink)" stroke-width="2"/>
+          <path d="M -40 -24 L -40 24 A 40 10 0 0 0 40 24 L 40 -24" fill="var(--paper)" stroke="var(--ink)" stroke-width="2"/>
+          <ellipse cx="0" cy="-24" rx="40" ry="10" fill="var(--paper)" stroke="var(--ink)" stroke-width="2"/>
+          <ellipse cx="0" cy="0" rx="40" ry="10" fill="none" stroke="var(--ink)" stroke-width="1.3" opacity="0.55"/>
+        </g>
+        <text x="84" y="146" text-anchor="middle" font-family="var(--display)"
+              font-size="30" font-style="italic" fill="var(--ink-soft)">a dataset</text>
+
+        <!-- a phenomenon -->
+        <g transform="translate(84, 220)">
+          <line x1="-40" y1="-30" x2="-40" y2="26" stroke="var(--ink)" stroke-width="2"/>
+          <line x1="-40" y1="26" x2="42" y2="26" stroke="var(--ink)" stroke-width="2"/>
+          <path d="M -32 20 C -12 19, -6 17, -2 2 C 3 -14, 10 -26, 36 -28"
+                fill="none" stroke="var(--c-start)" stroke-width="2.8"/>
+        </g>
+        <text x="84" y="278" text-anchor="middle" font-family="var(--display)"
+              font-size="30" font-style="italic" fill="var(--ink-soft)">a phenomenon</text>
+
+        <!-- a document -->
+        <g transform="translate(84, 352)">
+          <path d="M -30 -32 L 10 -32 L 30 -12 L 30 32 L -30 32 Z"
+                fill="var(--paper)" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M 10 -32 L 10 -12 L 30 -12" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"/>
+          <rect x="-18" y="-2" width="36" height="5" rx="2.5" fill="var(--ink)" opacity="0.4"/>
+          <rect x="-18" y="10" width="24" height="5" rx="2.5" fill="var(--ink)" opacity="0.4"/>
+        </g>
+        <text x="84" y="410" text-anchor="middle" font-family="var(--display)"
+              font-size="30" font-style="italic" fill="var(--ink-soft)">a document</text>
+      </g>
+
+      <!-- ---- 2. One cloud of defensible answers ---- -->
+      <g class="lv q-2">
+          <line x1="140" y1="88" x2="539" y2="291" stroke="var(--c-published)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="88" x2="689" y2="218" stroke="var(--c-published)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="88" x2="555" y2="326" stroke="var(--c-published)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="88" x2="745" y2="229" stroke="var(--c-published)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="88" x2="648" y2="134" stroke="var(--c-published)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="88" x2="487" y2="180" stroke="var(--c-published)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="88" x2="673" y2="76" stroke="var(--c-published)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="88" x2="740" y2="132" stroke="var(--c-published)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="88" x2="560" y2="67" stroke="var(--c-published)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="88" x2="805" y2="308" stroke="var(--c-published)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="88" x2="766" y2="265" stroke="var(--c-published)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="220" x2="497" y2="166" stroke="var(--c-start)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="220" x2="645" y2="92" stroke="var(--c-start)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="220" x2="791" y2="179" stroke="var(--c-start)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="220" x2="536" y2="335" stroke="var(--c-start)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="220" x2="526" y2="373" stroke="var(--c-start)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="220" x2="631" y2="243" stroke="var(--c-start)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="220" x2="596" y2="220" stroke="var(--c-start)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="220" x2="546" y2="65" stroke="var(--c-start)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="220" x2="763" y2="133" stroke="var(--c-start)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="220" x2="736" y2="124" stroke="var(--c-start)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="220" x2="796" y2="361" stroke="var(--c-start)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="352" x2="728" y2="316" stroke="var(--c-auditor)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="352" x2="672" y2="304" stroke="var(--c-auditor)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="352" x2="525" y2="217" stroke="var(--c-auditor)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="352" x2="751" y2="122" stroke="var(--c-auditor)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="352" x2="781" y2="359" stroke="var(--c-auditor)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="352" x2="617" y2="178" stroke="var(--c-auditor)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="352" x2="630" y2="185" stroke="var(--c-auditor)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="352" x2="804" y2="186" stroke="var(--c-auditor)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="352" x2="495" y2="84" stroke="var(--c-auditor)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="352" x2="716" y2="396" stroke="var(--c-auditor)" stroke-width="1.1" opacity="0.20"/>
+          <line x1="140" y1="352" x2="645" y2="222" stroke="var(--c-auditor)" stroke-width="1.1" opacity="0.20"/>
+          <circle cx="539" cy="291" r="5.2" fill="var(--c-published)" opacity="0.72"/>
+          <circle cx="689" cy="218" r="5.2" fill="var(--c-published)" opacity="0.72"/>
+          <circle cx="555" cy="326" r="5.2" fill="var(--c-published)" opacity="0.72"/>
+          <circle cx="745" cy="229" r="5.2" fill="var(--c-published)" opacity="0.72"/>
+          <circle cx="648" cy="134" r="5.2" fill="var(--c-published)" opacity="0.72"/>
+          <circle cx="487" cy="180" r="5.2" fill="var(--c-published)" opacity="0.72"/>
+          <circle cx="673" cy="76" r="5.2" fill="var(--c-published)" opacity="0.72"/>
+          <circle cx="740" cy="132" r="5.2" fill="var(--c-published)" opacity="0.72"/>
+          <circle cx="560" cy="67" r="5.2" fill="var(--c-published)" opacity="0.72"/>
+          <circle cx="805" cy="308" r="5.2" fill="var(--c-published)" opacity="0.72"/>
+          <circle cx="766" cy="265" r="5.2" fill="var(--c-published)" opacity="0.72"/>
+          <circle cx="497" cy="166" r="5.2" fill="var(--c-start)" opacity="0.72"/>
+          <circle cx="645" cy="92" r="5.2" fill="var(--c-start)" opacity="0.72"/>
+          <circle cx="791" cy="179" r="5.2" fill="var(--c-start)" opacity="0.72"/>
+          <circle cx="536" cy="335" r="5.2" fill="var(--c-start)" opacity="0.72"/>
+          <circle cx="526" cy="373" r="5.2" fill="var(--c-start)" opacity="0.72"/>
+          <circle cx="631" cy="243" r="5.2" fill="var(--c-start)" opacity="0.72"/>
+          <circle cx="596" cy="220" r="5.2" fill="var(--c-start)" opacity="0.72"/>
+          <circle cx="546" cy="65" r="5.2" fill="var(--c-start)" opacity="0.72"/>
+          <circle cx="763" cy="133" r="5.2" fill="var(--c-start)" opacity="0.72"/>
+          <circle cx="736" cy="124" r="5.2" fill="var(--c-start)" opacity="0.72"/>
+          <circle cx="796" cy="361" r="5.2" fill="var(--c-start)" opacity="0.72"/>
+          <circle cx="728" cy="316" r="5.2" fill="var(--c-auditor)" opacity="0.72"/>
+          <circle cx="672" cy="304" r="5.2" fill="var(--c-auditor)" opacity="0.72"/>
+          <circle cx="525" cy="217" r="5.2" fill="var(--c-auditor)" opacity="0.72"/>
+          <circle cx="751" cy="122" r="5.2" fill="var(--c-auditor)" opacity="0.72"/>
+          <circle cx="781" cy="359" r="5.2" fill="var(--c-auditor)" opacity="0.72"/>
+          <circle cx="617" cy="178" r="5.2" fill="var(--c-auditor)" opacity="0.72"/>
+          <circle cx="630" cy="185" r="5.2" fill="var(--c-auditor)" opacity="0.72"/>
+          <circle cx="804" cy="186" r="5.2" fill="var(--c-auditor)" opacity="0.72"/>
+          <circle cx="495" cy="84" r="5.2" fill="var(--c-auditor)" opacity="0.72"/>
+          <circle cx="716" cy="396" r="5.2" fill="var(--c-auditor)" opacity="0.72"/>
+          <circle cx="645" cy="222" r="5.2" fill="var(--c-auditor)" opacity="0.72"/>
+        <text x="646" y="442" text-anchor="middle" font-family="var(--display)"
+              font-size="31" font-style="italic" font-weight="600" fill="var(--ink)">
+          many defensible answers
+        </text>
+      </g>
+
+      <!-- ---- 3. The one answer we are not going to get ---- -->
+      <g class="lv q-3">
+        <rect x="862" y="182" width="320" height="88" rx="9"
+              fill="var(--paper)" stroke="var(--c-unpub)" stroke-width="2.4"/>
+        <text x="1022" y="236" text-anchor="middle" font-size="30" font-style="italic" fill="var(--ink-soft)">
+          one privileged answer
+        </text>
+        <line x1="850" y1="288" x2="1194" y2="164" stroke="var(--crimson)" stroke-width="4" stroke-linecap="round"/>
+      </g>
+
+      <!-- ---- 4. What replaces it: the spread itself ---- -->
+      <g class="lv q-4">
+        <line x1="836" y1="226" x2="890" y2="226" stroke="var(--ink-soft)" stroke-width="2.4" marker-end="url(#lv-arr)"/>
+        <path d="M 906 44 C 976 128, 1088 168, 1088 226 C 1088 284, 976 324, 906 408"
+              fill="var(--c-published)" fill-opacity="0.10" stroke="var(--ink-soft)" stroke-width="2.4"/>
+        <text x="1000" y="442" text-anchor="middle" font-family="var(--display)"
+              font-size="31" font-style="italic" font-weight="600" fill="var(--ink)">
+          characterize the spread
+        </text>
+      </g>
+    </svg>
+
+    <p class="lv-line lv-a lv t-2">
+      Agents make a multiplicity of defensible interpretations cheap to produce.
+    </p>
+    <p class="lv-line lv-c lv t-4">
+      <b>The open problem:</b> how to reason, report, and decide under multiplicity, in every field where agents can interpret.
+    </p>
   </div>
 </section></div>
 
